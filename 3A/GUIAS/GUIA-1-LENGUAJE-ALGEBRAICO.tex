@@ -1,0 +1,176 @@
+\documentclass[12pt,addpoints,x11names]{exam}
+\usepackage{pgf,tikz}
+\usepackage{multicol}
+\usepackage{tkz-euclide}
+\usepackage{fourier}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usetikzlibrary{arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usetkzobj{all}
+\usepackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=1.5cm,paperheight=33cm]{geometry}
+\setromanfont[Mapping={tex-text}]{Linux Biolinum O}
+\setsansfont[Mapping={tex-text}]{Cantarell}
+\setmonofont[Mapping={tex-text},Scale=0.8]{Pragmata Pro}
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\setlength\columnsep{30pt}
+\everymath{\displaystyle}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\QQ{\mathbb{Q}}
+\def\ZZ{\mathbb{Z}}
+\def\II{\mathbb{I}}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{SlateGray1}{SlateGray1}{#2}}}
+\everymath{\displaystyle}
+\extraheadheight{1in}
+\extrafootheight{.75in}
+\pagestyle{headandfoot}
+\firstpageheader{\includegraphics[scale=.56]{logolmlabw}}
+{\Large\textbf{Guía 1}\\
+  Lenguaje Algebraico\\
+  Tercero Medio HC\\
+  marzo 2018}
+{}
+\runningheader{Guía 1 - Lenguaje Algebraico / Tercero Medio HC}{}{Dpto.
+  Matemática - LMLA $\cdot$ 2018, pág. \thepage}
+\footer{}{}{}
+\def\mytitle{Guía 1 3HC Lenguaje Algebraico}
+\def\mykeywords{expresiones racionales}
+\def\mysubject{lenguaje algebraico}
+\def\myauthor{Prof. Hans Sigrist}
+\definecolor{links}{HTML}{000000}
+\hypersetup{%
+  colorlinks,%
+  linkcolor=,%
+  citecolor=black,%
+  urlcolor=links,%
+  pdftitle={\mytitle},%
+  pdfauthor={\myauthor},%
+  pdfsubject={\mysubject},%
+  pdfkeywords={\mykeywords}%
+}
+% \printanswers
+\newcommand*\Matching[1]{%
+  \ifprintanswers%
+  \textbf{#1}%
+  \else%
+  \rule{2.1in}{0.5pt}%
+  \fi%
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+  \setlength\matchlenb{\linewidth}%
+  \addtolength\matchlenb{-\matchlena}%
+  \parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}%
+}
+\begin{document}
+\addpoints
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+\pointname{ puntos}
+\pointpoints{ punto}{ puntos}
+\bracketedpoints
+\boxedpoints
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\renewcommand{\choicelabel}{\thechoice)}
+\chqword{Pregunta}
+\chpword{Puntos}
+\chbpword{Bonus}
+\chsword{Total}\hqword{Pregunta}
+\hpword{Puntos}
+\cellwidth{3mm}
+\setlength\answerskip{2ex}
+\setlength\answerlinelength{2in}
+\fullwidth{\noindent\large\textbf{Nombre:}\enspace\makebox[5.2in]{\hrulefill}
+  \textbf{Curso:}\enspace\makebox[0.5in]{\hrulefill}}
+\fullwidth{%
+  \begin{description}
+  \item[Objetivos:] Transformar expresiones algebraicas. Operar con potencias de
+    exponente fraccionario.
+  \end{description}
+}
+\fullwidth{\noindent{\large \textbf{I. Transformación de expresiones
+      algebraicas}}}
+\fullwidth{Calcule el valor de las siguientes expresiones algebraicas,
+  reduciendo lo mínimo lo posible.}
+
+\begin{questions}
+
+  \begin{multicols}{2}
+    \question $\frac{2x-1}{3}+\frac{x-5}{6}+\frac{x-4}{4}=$
+    
+    \question $\frac{2x-3}{9}+\frac{x+2}{6}+\frac{5x+8}{12}=$
+    
+    \question $\frac{2x+5}{x}-\frac{x-3}{2x}-\frac{27}{8x^2}=$
+    
+    \question $\frac{a-b}{ab}+\frac{b-c}{bc}+\frac{c-a}{ca}=$
+    
+    \question $\frac{a-x}{x}+\frac{a+x}{a}-\frac{a^2-x^2}{2ax}=$
+
+    \question $\frac{1}{x+2}+\frac{1}{x+3}=$
+
+    \question $\frac{a}{x+a}-\frac{b}{x+b}=$
+
+    \question $\frac{a}{x^2-4}+\frac{b}{(x-2)^2}=$
+
+    \question $\frac{3}{x-3}+\frac{2x}{x^2-9}=$
+
+    \question $\frac{1}{2x-3y}-\frac{x+y}{4x^2-9y^2}=$
+
+    \question $\frac{1}{1-x^3}-\frac{1}{(1-x)^3}=$
+
+    \question $\frac{x+a}{x-2a}-\frac{x^2+2a^2}{x^2-4a^2}=$
+
+    \question $\frac{1}{4x-4}-\frac{1}{5x+5}+\frac{1}{1-x^2}=$
+
+    \question $\frac{3}{1+a}-\frac{2}{1-a}-\frac{5a}{a^2-1}=$
+
+    \question $\frac{a}{(a-b)(a-c)}+\frac{b}{(b-c)(b-a)}+\frac{c}{(c-a)(c-b)}=$
+
+\end{multicols}
+
+\fullwidth{\noindent{\large \textbf{II. Operar con potencias de exponente fraccionario}}}
+\fullwidth{Realice las acciones que se solicitan en cada pregunta.}
+
+\begin{multicols}{2}
+  
+    \question Ordene en forma creciente $\sqrt{3}$, $\sqrt[3]{6}$,
+      $\sqrt[4]{10}$.
+      
+    \question \textbf{Exprese como radical positivo de índice $12$ la siguiente expresión:} $x^{\frac{1}{3}}=$
+
+    \question Idem anterior $a^{-1}:a^{\frac{-1}{2}}=$
+
+    \question Idem anterior $\sqrt[4]{ax^3}\times\sqrt[3]{a^{-1}x^{-2}}=$
+      
+    \question Idem anterior $\frac{1}{a^{\frac{-3}{4}}}=$
+
+    \question Idem anterior $\frac{1}{\sqrt[8]{a^{-14}}}=$
+
+    \question Idem anterior $\sqrt[6]{\frac{1}{a^{-2}}}=$
+
+    \question \textbf{Exprese como radicales del mismo mínimo orden:} $\sqrt{a}$, $\sqrt[9]{a^5}$.
+      
+    \question Idem anterior $\sqrt[5]{a^3}$, $\sqrt{a}$.
+      
+    \question Idem anterior $\sqrt[8]{x^3}$, $\sqrt[9]{x^6}$, $\sqrt[20]{x^5}$.
+      
+    \question Idem anterior $\sqrt[16]{x^4}$, $\sqrt[12]{x^{10}}$.
+      
+    \question Idem anterior $\sqrt[21]{a^8b^4}$, $\sqrt[7]{ab}$.
+
+  
+\end{multicols}
+\end{questions}
+\end{document}
+
+% Local Variables:
+% TeX-engine: xetex
+% End:

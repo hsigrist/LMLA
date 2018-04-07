@@ -1,0 +1,231 @@
+\documentclass[12pt,addpoints,x11names]{exam}
+%____________________________________________________________________________________
+\usepackage{pgf,tikz}
+\usepackage{tkz-euclide}
+\usepackage{fourier}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usetikzlibrary{arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usetkzobj{all}
+\usepackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=1.5cm,paperheight=33cm]{geometry}
+%____________________________________________________________________________________
+\setromanfont[Mapping={tex-text}]{Linux Biolinum O}
+\setsansfont[Mapping={tex-text}]{Cantarell}
+\setmonofont[Mapping={tex-text},Scale=0.8]{Pragmata Pro}
+%____________________________________________________________________________________
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\everymath{\displaystyle}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\QQ{\mathbb{Q}}
+\def\ZZ{\mathbb{Z}}
+\def\II{\mathbb{I}}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{SlateGray1}{SlateGray1}{#2}}}
+%____________________________________________________________________________________
+\everymath{\displaystyle}
+\extraheadheight{1.5in}
+\extrafootheight{.3in}
+%____________________________________________________________________________________
+\pagestyle{headandfoot}
+\firstpageheader{\includegraphics[scale=.7]{logolmlabw}}
+{\Large\textbf{Evaluación Sumativa 1}\\
+  Números Complejos\\
+  Tercero Medio TP\\
+  marzo 2018}
+{\begin{tikzpicture}
+    \draw (0,0) rectangle (4,4);
+    \draw (2.5,0) rectangle (4,1.5);
+ \end{tikzpicture}}
+\runningheader{Evaluación 1 - Números Complejos / Tercero Medio TP}{}{Dpto. Matemática - LMLA $\cdot$ 2018, pág. \thepage}
+\footer{}{}{}
+%____________________________________________________________________________________
+\def\mytitle{Evaluación Sumativa 1 Números complejos}
+\def\mykeywords{imaginarios, potencias imaginarias, conjugado, módulo}
+\def\mysubject{números complejos}
+\def\myauthor{Prof. Hans Sigrist}
+\definecolor{links}{HTML}{000000}
+%____________________________________________________________________________________
+\hypersetup{%
+  colorlinks,%
+  linkcolor=,%
+  citecolor=black,%
+  urlcolor=links,%
+  pdftitle={\mytitle},%
+  pdfauthor={\myauthor},%
+  pdfsubject={\mysubject},%
+  pdfkeywords={\mykeywords}%
+}
+%____________________________________________________________________________________
+ \printanswers
+%____________________________________________________________________________________
+\newcommand*\Matching[1]{%
+  \ifprintanswers%
+  \textbf{#1}%
+  \else%
+  \rule{2.1in}{0.5pt}%
+  \fi%
+}
+%____________________________________________________________________________________
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+  \setlength\matchlenb{\linewidth}%
+  \addtolength\matchlenb{-\matchlena}%
+  \parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}%
+}
+%____________________________________________________________________________________
+\begin{document}
+%____________________________________________________________________________________
+\addpoints
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+\pointname{ puntos}
+\pointpoints{ punto}{ puntos}
+\bracketedpoints
+\boxedpoints
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\renewcommand{\choicelabel}{\thechoice)}
+\chqword{Pregunta}
+\chpword{Puntos}
+\chbpword{Bonus}
+\chsword{Total}\hqword{Pregunta}
+\hpword{Puntos}
+\cellwidth{3mm}
+\setlength\answerskip{2ex}
+\setlength\answerlinelength{2in}
+%____________________________________________________________________________________
+\fullwidth{\noindent\large\textbf{Nombre:}\enspace\makebox[5.2in]{\hrulefill} \textbf{Curso:}\enspace\makebox[0.5in]{\hrulefill}}
+\fullwidth{%
+  \begin{description}
+  \item[Objetivos:] Calcular raíces imaginarias. Calcular potencias de números imaginarios. Obtener el conjugado y el módulo de números complejos. Realizar operatoria combinada en números complejos.
+  \item[Instrucciones:] \textbf{Tiempo de duración de la Evaluación 80 minutos}. Lea atentamente las situaciones plantaedas, así como las intrucciones y conteste ofreciendo un desarrollo según corresponda. Evite borrones, use solamente lápiz grafito, no se permite el uso de calculadora ni celulares.
+  \item[Puntaje:] Puntaje total: \numpoints\  puntos 7.0 y 60\%: \pgfmathparse{div(\numpoints*60,100)}\pgfmathresult\  puntos 4.0.
+  \end{description}
+}
+%----------------------------------------------------------------------------------------------------------------------------------------
+\fullwidth{\noindent{\large \textbf{I. Raíces imaginarias}}}
+\begin{questions}
+ \question[2] $\sqrt{-169}=$
+   \begin{solutionbox}{.5in}
+    $\sqrt{-169}=\sqrt{169\cdot(-1)}=\sqrt{169}\cdot\sqrt{-1}=13i$
+  \end{solutionbox}
+\question[2] $\sqrt{-100}=$
+   \begin{solutionbox}{.5in}
+    $\sqrt{-100}=\sqrt{100\cdot(-1)}=\sqrt{100}\cdot\sqrt{-1}=10i$
+  \end{solutionbox}
+\question[2] $\sqrt{-81}=$
+   \begin{solutionbox}{1in}
+    $\sqrt{-81}=\sqrt{81\cdot(-1)}=\sqrt{81}\cdot\sqrt{-1}=9i$
+  \end{solutionbox}
+\question[2] $\sqrt{-144}=$
+   \begin{solutionbox}{1in}
+    $\sqrt{-144}=\sqrt{144\cdot(-1)}=\sqrt{144}\cdot\sqrt{-1}=12i$
+  \end{solutionbox}
+\question[2] $\sqrt{-289}=$
+  \begin{solutionbox}{1in}
+    $\sqrt{-289}=\sqrt{289\cdot(-1)}=\sqrt{289}\cdot\sqrt{-1}=17i$
+  \end{solutionbox}
+
+  \pagebreak
+%----------------------------------------------------------------------------------------------------------------------------------------
+\fullwidth{\noindent{\large \textbf{II. Cálculo de potencias imaginarias}}}
+\question[3] $i^{32}+2i^{29}=$
+  \begin{solutionbox}{1.5in}
+    $i^{32}+2i^{29}=1+2i$
+  \end{solutionbox}
+ \question[3] $i^{121}-3i^{422}+2i^{329}=$
+   \begin{solutionbox}{1.5in}
+    $i^{121}-3i^{422}+2i^{329}=i-3\cdot(-1)+2\cdot(i)=i+3+2i=3+3i$
+  \end{solutionbox}
+\question[3] $3i^{4}+12i^{3}-23i^{2}=$
+   \begin{solutionbox}{1.5in}
+     $3i^{4}+12i^{3}-23i^{2}=3\cdot1+12\cdot(-i)-23\cdot(-1)=3-12i+23=26-12i$
+  \end{solutionbox}
+\question[3] $i^{11}+i^{12}+i^{13}+i^{14}+i^{15}=$
+  \begin{solutionbox}{1.5in}
+     $i^{11}+i^{12}+i^{13}+i^{14}+i^{15}=-i+1+i+(-1)+(-i)=-i+1-1-i=-2i$
+  \end{solutionbox}
+  \pagebreak
+%----------------------------------------------------------------------------------------------------------------------------------------
+\fullwidth{\noindent{\large \textbf{III. Cálculo de módulo y conjugado de números complejos}}}
+
+En los siguientes ejercicios, considere:
+\begin{eqnarray*}
+  z_1&=&2+3i\\
+  z_2&=&1-i\\
+  z_3&=&2+i\\
+  z_4&=&3+4i
+\end{eqnarray*}
+
+ \question[3] $\overline{z_4}+\overline{z_3}=$
+   \begin{solutionbox}{1.3in}
+     $\overline{z_4}+\overline{z_3}=3-4i+2-i=5-5i$
+  \end{solutionbox}
+\question[3] $\overline{z_3}-3\cdot\overline{z_1}=$
+   \begin{solutionbox}{1.3in}
+     $\overline{z_3}-3\cdot\overline{z_1}=2-i-3\cdot(2-3i)=2-i-6+9i=-4+8i$
+  \end{solutionbox}
+\question[3] $|z_1|+|z_2|=$
+   \begin{solutionbox}{1.3in}
+     $|z_1|+|z_2|=\sqrt{2^{2}+3^{2}}+\sqrt{1^{2}+1^{2}}=\sqrt{4+9}+\sqrt{1+1}=\sqrt{13}+\sqrt{2}$
+  \end{solutionbox}
+\question[3] $|z_4|-|z_3|=$
+  \begin{solutionbox}{1.3in}
+     $|z_4|-|z_3|=\sqrt{3^{2}+4^{2}}-\sqrt{2^{2}+1^{2}}=\sqrt{9+16}-\sqrt{4+1}=\sqrt{25}-\sqrt{5}=5-\sqrt{5}$
+  \end{solutionbox}
+  \pagebreak
+%----------------------------------------------------------------------------------------------------------------------------------------
+\fullwidth{\noindent{\large \textbf{IV. Operatoria combinada en números complejos}}}
+
+En los siguientes ejercicios, considere:
+\begin{eqnarray*}
+  z_5&=&1+i\\
+  z_6&=&4+3i\\
+  z_7&=&2-6i\\
+  z_8&=&1-7i
+\end{eqnarray*}
+
+ 
+\question[3] $z_7+z_5=$
+  \begin{solutionbox}{1.2in}
+     $z_7+z_5=1-7i+1+i=2-6i$
+  \end{solutionbox}
+\question[3] $z_5-2\cdot z_8+4\cdot z_6=$
+  \begin{solutionbox}{1.2in}
+     $z_5-2\cdot z_8+4\cdot z_6=1+i-2\cdot(1-7i)+4\cdot(4+3i)=1+i-2+14i+16+12i=15+27i$
+  \end{solutionbox}
+\question[3] $z_7\cdot z_8=$
+  \begin{solutionbox}{1.2in}
+     $z_7\cdot z_8=(2-6i)\cdot(1-7i)=2-14i-6i-42=-40-20i$
+  \end{solutionbox}
+\question[3] $\frac{z_5}{z_6}=$
+  \begin{solutionbox}{1.2in}
+     $\frac{z_5}{z_6}=\frac{1+i}{4+3i}=\frac{(1+i)(4-3i)}{(4-3i)(4-3i)}=\frac{16-12i-12i-9}{16+9}=\frac{7-24i}{25}$
+  \end{solutionbox}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{questions}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

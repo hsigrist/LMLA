@@ -1,0 +1,198 @@
+\documentclass[12pt,addpoints,x11names]{exam}
+\usepackage{pgf,tikz}
+\usepackage{multicol}
+\usepackage{tkz-euclide}
+\usepackage{fourier}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usetikzlibrary{arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usetkzobj{all}
+\usepackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=1.5cm,paperheight=33cm]{geometry}
+\setromanfont[Mapping={tex-text}]{Linux Biolinum O}
+\setsansfont[Mapping={tex-text}]{Cantarell}
+\setmonofont[Mapping={tex-text},Scale=0.8]{Pragmata Pro}
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\everymath{\displaystyle}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\QQ{\mathbb{Q}}
+\def\ZZ{\mathbb{Z}}
+\def\II{\mathbb{I}}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{SlateGray1}{SlateGray1}{#2}}}
+\everymath{\displaystyle}
+\extraheadheight{1in}
+\extrafootheight{.75in}
+\pagestyle{headandfoot}
+\firstpageheader{\includegraphics[scale=.56]{logolmlabw}}
+{\Large\textbf{Guía Formativa 1}\\
+  Números Complejos\\
+  Tercero Medio TP\\
+  marzo 2018}
+{}
+\runningheader{Guía 1 - Números Complejos / Tercero Medio TP}{}{Dpto. Matemática - LMLA $\cdot$ 2018, pág. \thepage}
+\footer{}{}{}
+\def\mytitle{Guia Formativa 1 3TP Números Complejos}
+\def\mykeywords{imaginarios, potencias imaginarios}
+\def\mysubject{Números imaginarios}
+\def\myauthor{Prof. Hans Sigrist}
+\definecolor{links}{HTML}{000000}
+\hypersetup{%
+  colorlinks,%
+  linkcolor=,%
+  citecolor=black,%
+  urlcolor=links,%
+  pdftitle={\mytitle},%
+  pdfauthor={\myauthor},%
+  pdfsubject={\mysubject},%
+  pdfkeywords={\mykeywords}%
+}
+% \printanswers
+\newcommand*\Matching[1]{%
+  \ifprintanswers%
+  \textbf{#1}%
+  \else%
+  \rule{2.1in}{0.5pt}%
+  \fi%
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+  \setlength\matchlenb{\linewidth}%
+  \addtolength\matchlenb{-\matchlena}%
+  \parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}%
+}
+\begin{document}
+\addpoints
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+\pointname{ puntos}
+\pointpoints{ punto}{ puntos}
+\bracketedpoints
+\boxedpoints
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\renewcommand{\choicelabel}{\thechoice)}
+\chqword{Pregunta}
+\chpword{Puntos}
+\chbpword{Bonus}
+\chsword{Total}\hqword{Pregunta}
+\hpword{Puntos}
+\cellwidth{3mm}
+\setlength\answerskip{2ex}
+\setlength\answerlinelength{2in}
+\fullwidth{\noindent\large\textbf{Nombre:}\enspace\makebox[5.2in]{\hrulefill} \textbf{Curso:}\enspace\makebox[0.5in]{\hrulefill}}
+\fullwidth{%
+  \begin{description}
+  \item[Objetivos:] Comprender qué es un número imaginario, cómo se operan y calcular potencias de $i$.
+  \end{description}
+}
+\fullwidth{\noindent{\large \textbf{I. Escriba en términos de $i$}}}
+\begin{questions}
+
+\question $\sqrt{-9}$
+  \answerline
+  \question $\sqrt{-64}$
+  \answerline
+  \question $\sqrt{-\frac{1}{4}}$
+  \answerline
+  \question $\sqrt{-5}$
+  \answerline
+  \question $\sqrt{-8}$
+  \answerline
+ 
+
+
+\fullwidth{\noindent{\large \textbf{II. Calcula el valor de las siguientes potencias de $i$, reduce al máximo tu resultado.}}}
+
+\question $i^7-7i^7=$
+  \answerline
+
+\question $2i^9+12i^{12}=$
+  \answerline
+
+\question $3i^3+12i^{12}-21i^{21}+11i^{11}=$
+  \answerline
+
+\question $(2i^8+3i^9)-(12i^7-12i^9)=$
+  \answerline
+
+\question $i^{33}(i^{267}+i^{342}-i^{455}+i^{222})=$
+  \answerline
+
+\newpage
+
+
+\twocolumn
+\fullwidth{\noindent{\large \textbf{III. Módulo y conjugado de complejos.}}}
+
+Dados $z_1=1-i$ y $z_2=2+i$, obtenga:
+
+
+\question $\overline{z_1}$
+   \begin{solutionbox}{1in}
+    
+  \end{solutionbox}
+
+\question $\overline{z_2}$
+   \begin{solutionbox}{1in}
+    
+  \end{solutionbox}
+
+\question $\overline{\overline{z_1}}$
+   \begin{solutionbox}{1in}
+    
+  \end{solutionbox}
+
+\question $\overline{\overline{z_2}}$
+   \begin{solutionbox}{1in}
+    
+  \end{solutionbox}
+
+\question $\overline{(z_1+z_2)}$
+   \begin{solutionbox}{1in}
+    
+  \end{solutionbox}
+
+\vspace{3cm}
+  
+\question $\overline{(z_1-z_2)}$
+   \begin{solutionbox}{1in}
+    
+  \end{solutionbox}
+
+\question $\overline{z_1}-\overline{z_2}$
+   \begin{solutionbox}{1in}
+    
+  \end{solutionbox}
+
+\question $\overline{z_1}+\overline{z_2}$
+   \begin{solutionbox}{1in}
+    
+  \end{solutionbox}
+
+\question $|z_1|$
+   \begin{solutionbox}{1in}
+    
+  \end{solutionbox}
+
+\question $|\overline{z_2}|$
+   \begin{solutionbox}{1in}
+    
+  \end{solutionbox}
+
+\question $|z_1|^{2}$
+  \begin{solutionbox}{1in}
+    
+  \end{solutionbox}
+  
+\end{questions}
+\end{document}
+% Local Variables:
+% TeX-engine: xetex
+% End:

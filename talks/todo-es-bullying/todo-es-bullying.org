@@ -1,0 +1,62 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t
+#+OPTIONS: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+OPTIONS: email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
+#+OPTIONS: tasks:t tex:t timestamp:t title:t toc:t todo:t |:t
+#+TITLE: ¿Todo es bullying?
+#+SUBTITLE: Seminario Escuela para Padres
+#+DATE: <2018-03-04 dom>
+#+AUTHOR: Hans Sigrist
+#+EMAIL: hsigrist@liceomixto.cl
+#+LANGUAGE: es
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 25.2.1 (Org mode 9.1.7)
+#+startup: beamer
+#+LATEX_CLASS: beamer
+#+latex_header: \mode<beamer>{\usetheme[faculty=med]{fibeamer}}
+#+LATEX_CLASS_OPTIONS:
+#+LATEX_HEADER:
+#+LATEX_HEADER_EXTRA:
+#+DESCRIPTION:
+#+KEYWORDS:
+#+SUBTITLE: Seminario Escuela para Padres
+#+LATEX_COMPILER: xelatex
+#+DATE: \today
+#+latex_header: \AtBeginSection[]{\begin{frame}<beamer>\frametitle{Temario Sección \thesection}\tableofcontents[currentsection]\end{frame}}
+
+* This is the first structural section
+
+** Frame 1
+*** Thanks to Eric Fraga                                           :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.48
+    :BEAMER_ENV: block
+    :END:
+    for the first viable Beamer setup in Org
+*** Thanks to everyone else                                        :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.48
+    :BEAMER_ACT: <2->
+    :BEAMER_ENV: block
+    :END:
+    for contributing to the discussion
+**** This will be formatted as a beamer note                       :B_note:
+     :PROPERTIES:
+     :BEAMER_env: note
+     :END:
+** Frame 2 (where we will not use columns)
+*** Request
+    Please test this stuff!
+
+#+ATTR_BEAMER: :environment nonindentlist
+- item 1, not indented
+- item 2, not indented
+- item 3, not indented
+
+#+ATTR_BEAMER: :overlay <+->
+- item 1
+- item 2
+
+#+ATTR_BEAMER: :options [Lagrange]
+Let $G$ be a finite group, and let $H$ be
+a subgroup of $G$.  Then the order of $H$ divides the order of $G$.

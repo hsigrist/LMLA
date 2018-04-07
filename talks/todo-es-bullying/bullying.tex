@@ -1,0 +1,305 @@
+\documentclass[12pt,spanish,x11names,svgnames]{beamer}
+%-------------------------------------------------------------------------------------------------------
+\usetheme{Hytex}
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme[RGB={7,29,66}]{structure}
+\usepackage{tcolorbox}
+\usepackage{fourier}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usepackage[style=spanish]{csquotes}
+\usepackage{pstricks-add}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{pgf,tikz}
+\usetikzlibrary{mindmap,trees,arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{marvosym}
+\setbeamertemplate{caption}[numbered]
+\usepackage{hyperref}
+%-------------------------------------------------------------------------------------------------------
+\def\talkclass{Presentación}
+\def\talkcar{Comunidad Escolar}
+\def\talkdate{\today}
+\def\talkversion{TLK-1001}
+\def\talktitle{¿Todo es bullying?}
+\def\talksubtitle{Una visión crítica}
+\def\talkkeywords{bullying, pensamiento crítico}
+\def\talksubject{maltrato escolar}
+\def\talkblog{https://hsigrist.github.io}
+\def\talkpubpdf{copyurlfromrepository}
+\def\talkcopyright{\myauthor}
+\def\talkaffiliation{Liceo Mixto Los Andes}
+\def\talkauthor{Hans Sigrist}
+\def\talkgrade{Lic. \& Mag. Matemática}
+\def\talkemail{hsigrist@liceomixto.cl}
+\definecolor{links}{HTML}{000000}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\ZZ{\mathbb{Z}}
+\def\QQ{\mathbb{Q}}
+\def\II{\mathbb{I}}
+\definecolor{bluu}{RGB}{7,29,66}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{bluu}{bluu}{\textcolor{white}{#2}}}}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{proposicion}[teorema]{Proposición}
+\newtheorem{corolario}[teorema]{Corolario}
+\newtheorem{definicion}[teorema]{Definición}
+\newtheorem{ejemplo}[teorema]{Ejemplo}
+\newtheorem{nota}[teorema]{Nota}
+%-------------------------------------------------------------------------------------------------------
+\hypersetup{colorlinks,linkcolor=,citecolor=black,urlcolor=links,pdftitle={pdftitle},pdfauthor={\talkauthor},pdfsubject={\talksubject},pdfkeywords={\talkkeywords}}
+%-------------------------------------------------------------------------------------------------------
+\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Biolinum
+    O}
+\setsansfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Biolinum
+    O}
+\setmonofont[Mapping={tex-text},Numbers={OldStyle},Ligatures=Rare,Scale=0.8]{Pragmata
+    Pro Mono}
+%-------------------------------------------------------------------------------------------------------
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\everymath{\displaystyle}
+\AtBeginSection[]{\begin{frame}<beamer>\frametitle{Agenda}\tableofcontents[sectionstyle=show/hide,subsectionstyle=hide/show/hide,currentsection]\end{frame}\addtocounter{framenumber}{-1}}
+%-------------------------------------------------------------------------------------------------------
+\title{\talktitle}
+\subtitle{\talksubtitle}
+\author{\talkauthor}
+\institute{\talkaffiliation}
+\date{\footnotesize{\emph{\href{\talkblog}{\talkemail}}}}
+%-------------------------------------------------------------------------------------------------------
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{¿Qué no es bullying?}
+\begin{frame}[c]\frametitle{Se trata de tramos etáreos}
+  \begin{alertblock}{Entre adultos, agresión}
+    \pause No hablamos de bullying entre adultos, aquello es regulado por leyes civiles.
+  \end{alertblock}
+\pause
+  \begin{alertblock}{Desde un adulto hacia un menor de edad}
+    \pause Tampoco confundir con ``maltrato escolar'', que es la agresión del educador
+    hacia el educando (alumno/a).
+  \end{alertblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Malos sinónimos}
+  \begin{alertblock}{}
+    El bullying o acoso escolar no es lo mismo que mala conducta, conflicto escolar, conducta agresiva, conducta violenta o maltrato escolar. 
+  \end{alertblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Conflictos escolares}
+  \begin{exampleblock}{Son interpersonales}
+    Los conflictos escolares se resuelven en la inmediatez, pues son concernientes a relaciones interpersonales. No requieren intervención de profesionales. No alteran la armonía escolar.
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{No son ejemplos}
+  \begin{alertblock}{Las siguientes acciones no constituyen ejemplos de bullying}
+    \begin{itemize}
+      \pause
+    \item<+-> armar equipos de trabajo
+    \item<+-> pelearse con el mejor amigo
+    \item<+-> una pelea aislada en el patio
+    \item<+-> no admitir a alguien en Facebook
+    \item<+-> tener un grupo de ``mejores amigos''
+    \item<+-> ponerse apodos entre todos
+    \item<+-> ir al cine y no invitar a todos
+    \item<+-> no invitar a alguien a mi casa
+    \item<+-> no pasarle la tarea a alguien   
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{¿Qué si es bullying?}
+\begin{frame}
+  \frametitle{Si son ejemplos}
+  \begin{exampleblock}{Las siguientes acciones si constituyen ejemplos de
+      bullying}
+    \pause
+    \begin{itemize}
+    \item<+-> hacer comentarios despectivos sobre un compañero o su familia
+    \item<+-> humillarlo delante de los demás
+    \item<+-> organizar un plan el día de su cumpleaños para que los demás
+        tengan que elegir
+    \item<+-> organizar a un grupo de compañeros para que no sean amigos de alguien y no le hablen, no lo acompañen, no asistan a su cumpleaños, etc.   
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{Características del bullying}
+\begin{frame}
+  \frametitle{¿Cómo identificarlo?}
+  \begin{block}{Algunas características del bullying son}
+    \pause
+    \begin{itemize}
+    \item<+-> implica desbalance de poder
+    \item<+-> tiende a ser frecuente
+    \item<+-> puede ser físico, verbal o indirecto
+    \end{itemize}
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Tipos de bullying}
+  \begin{exampleblock}{El matonaje, bullying o agresión la podemos encontrar en diversos tipos, entre ellos:}
+    \pause
+    \begin{itemize}
+    \item<+-> bloqueo social
+    \item<+-> hostigamiento
+    \item<+-> manipulación social
+    \item<+-> coacción a conductas
+    \item<+-> matonaje racial
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Tipos de bullying}
+  \begin{exampleblock}{El matonaje, bullying o agresión la podemos encontrar en diversos tipos, entre ellos:}
+    \begin{itemize}
+    \item<+-> matonaje sexual
+    \item<+-> exclusión social
+    \item<+-> amenaza a la integridad
+    \item<+-> intimidación
+    \item<+-> matonaje cibernético
+    \item<+-> privar a otros de su propiedad, robarla o malograrla
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{Ley de convivencia escolar 20.536}
+\begin{frame}
+  \frametitle{Regula la violencia escolar en Chile}
+  \begin{block}{Ley 20.536}
+    En nuestro país, existe la LEY 201536 SOBRE VIOLENCIA ESCOLAR, promulgada el 17 de septiembre de 2011 y que especifica en su párrafo 3º, sobre convivencia escolar:
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Vigente desde 2011}
+  \begin{block}{Artículo 16 B}
+    Se entenderá por acoso escolar toda acción u omisión constitutiva de agresión u hostigamiento reiterado, realizada fuera o dentro del establecimiento educacional por estudiantes que, en forma individual o colectiva, atenten en contra de otro estudiante, valiéndose para ello de una situación de superioridad o de indefensión del estudiante afectado, que provoque en este último, maltrato, humillación o fundado temor de verse expuesto a un mal de carácter grave, ya sea por medios tecnológicos o cualquier otro medio, tomando en cuenta su edad y condición.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{Malas prácticas}
+\begin{frame}
+  \frametitle{Engendran estrategias de sobrevivencia}
+  \begin{alertblock}{Malas prácticas, malos consejos, errores comunes, estrategias inútiles, expresiones inapropiadas:}
+    \begin{itemize}
+    \item<+-> aprende a defenderte (odio por odio = más violencia)
+    \item<+-> dense la mano y háganse amigos -sin hablar- (aumenta el odio y
+        refuerza humillación)
+      \item<+-> es molestoso, le gusta que lo molesten, no es amistoso, le gusta llamar la atención, por todo reclama, nunca está contento, …​ califican como hostigamiento, el niño desarrolla entonces estrategias para sobrevivir/defenderse y la situación empeora   
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{Citas}
+\begin{frame}
+  \frametitle{Citas, ejemplos, consejos}
+\begin{block}{}
+  Si un perro te muerde y tu muerdes al perro, ambos deben usar un bozal.
+\end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Citas, ejemplos, consejos}
+  \begin{block}{}
+    Usa las cosas y ama a las personas, lo inverso es inútil.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Citas, ejemplos, consejos}
+  \begin{block}{}
+    No dejes que aplasten tus sueños: si tienes alma de dentista sé dentista, no oficinista: las aves asadas no vuelan.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Citas, ejemplos, consejos}
+  \begin{block}{}
+    Aceptemos la diversidad y la protesta: los pájaros hambrientos y lo pájaros con el vientre lleno no pueden volar juntos.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Citas, ejemplos, consejos}
+  \begin{block}{}
+    Denuncia el hostigamiento: Los pájaros nacidos en jaulas creen que volar es una enfermedad. 
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Citas, ejemplos, consejos}
+  \begin{block}{}
+    Los empates morales no existen: dos malas no hacen una buena.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Citas, ejemplos, consejos}
+  \begin{block}{}
+    Diferencie entre problema y persona: con los problemas enfático, con las personas amable y respetuosa.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Citas, ejemplos, consejos}
+  \begin{block}{}
+    Víctima y victimario siguen siendo personas: no existen humanos de segunda clase.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Citas, ejemplos, consejos}
+  \begin{block}{}
+    No forzar nada, nunca.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Citas, ejemplos, consejos}
+  \begin{block}{}
+    Enseña a tu hijo a reconocer apariencias: el agua en la botella cree que tiene forma de botella.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Citas, ejemplos, consejos}
+  \begin{block}{}
+    Educa para ser feliz.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Citas, ejemplos, consejos}
+  \begin{block}{}
+    Enséñale a ser agradecido.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}[c]\frametitle{Apéndice}
+\centering\decofourleft\quad\decofourright
+
+\textbf{\emph {Saludos a todas/os, ¡Muchas gracias!}}
+
+Una copia del presente trabajo, se encuentra en el enlace \framedhref{\talkpubpdf}{\talkpubpdf}.
+
+\end{frame}
+\end{document}
+%-------------------------------------------------------------------------------------------------------
+% !TEX program = xelatex

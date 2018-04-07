@@ -1,0 +1,192 @@
+\documentclass[12pt,addpoints,x11names]{exam}
+\usepackage{pgf,tikz}
+\usepackage{multicol}
+\usepackage{tkz-euclide}
+\usepackage{fourier}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{scalerel,amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usetikzlibrary{arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usetkzobj{all}
+\usepackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=1.5cm,paperheight=33cm]{geometry}
+\setromanfont[Mapping={tex-text}]{Linux Biolinum O}
+\setsansfont[Mapping={tex-text}]{Cantarell}
+\setmonofont[Mapping={tex-text},Scale=0.8]{Pragmata Pro}
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\setlength\columnsep{30pt}
+\everymath{\displaystyle}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\QQ{\mathbb{Q}}
+\def\ZZ{\mathbb{Z}}
+\def\II{\mathbb{I}}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{SlateGray1}{SlateGray1}{#2}}}
+\everymath{\displaystyle}
+\extraheadheight{1in}
+\extrafootheight{.75in}
+\pagestyle{headandfoot}
+\firstpageheader{\includegraphics[scale=.56]{logolmlabw}}
+{\Large\textbf{Guía 1}\\
+  Sucesiones Numéricas\\
+  Cuarto Medio HC\\
+  marzo 2018}
+{}
+\runningheader{Guía 1 - Sucesiones y Series / Cuarto Medio HC}{}{Dpto.
+  Matemática - LMLA $\cdot$ 2018, pág. \thepage}
+\footer{}{}{}
+\def\mytitle{Guía 1 4HC Sucesiones y Series}
+\def\mykeywords{sucesiones, recurrencia, PA, PG}
+\def\mysubject{series}
+\def\myauthor{Prof. Hans Sigrist}
+\definecolor{links}{HTML}{000000}
+\hypersetup{%
+  colorlinks,%
+  linkcolor=,%
+  citecolor=black,%
+  urlcolor=links,%
+  pdftitle={\mytitle},%
+  pdfauthor={\myauthor},%
+  pdfsubject={\mysubject},%
+  pdfkeywords={\mykeywords}%
+}
+% \printanswers
+\newcommand*\Matching[1]{%
+  \ifprintanswers%
+  \textbf{#1}%
+  \else%
+  \rule{2.1in}{0.5pt}%
+  \fi%
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+  \setlength\matchlenb{\linewidth}%
+  \addtolength\matchlenb{-\matchlena}%
+  \parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}%
+}
+\begin{document}
+\addpoints
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+\pointname{ puntos}
+\pointpoints{ punto}{ puntos}
+\bracketedpoints
+\boxedpoints
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\renewcommand{\choicelabel}{\thechoice)}
+\chqword{Pregunta}
+\chpword{Puntos}
+\chbpword{Bonus}
+\chsword{Total}\hqword{Pregunta}
+\hpword{Puntos}
+\cellwidth{3mm}
+\setlength\answerskip{2ex}
+\setlength\answerlinelength{2in}
+\fullwidth{\noindent\large\textbf{Nombre:}\enspace\makebox[5.2in]{\hrulefill}
+  \textbf{Curso:}\enspace\makebox[0.5in]{\hrulefill}}
+\fullwidth{%
+  \begin{description}
+  \item[Objetivos:] Analizan las transformaciones que producen diferentes tipos de
+iteraciones y establecen relaciones cuantitativas y cualitativas entre los
+objetos que se obtienen en una sucesión numérica.
+  \end{description}
+}
+\fullwidth{\noindent{\large \textbf{I. Sucesiones numéricas}}}
+
+\begin{questions}
+
+\begin{multicols}{2}
+
+\fullwidth{\textbf{Escriba los cuatro primeros términos de la sucesión que inicia con:}}
+
+\question $4$ y suma $9$ a cada término siguiente.
+
+\question $45$ y resta $6$ a cada término siguiente.
+
+\question $2$ y multiplica por $3$ cada término siguiente.
+
+\question $96$ y divide por $2$ cada término siguiente.
+
+
+\fullwidth{\textbf{Para cada una de las siguientes sucesiones escriba su fórmula y
+  encuentre los siguientes dos términos.}}
+
+\question $8,\ 16,\ 24,\ 32,\ldots$
+
+\question $2,\ 5,\ 8,\ 11,\ldots$
+
+\question $36,\ 31,\ 26,\ 21,\ldots$
+
+\question $243,\ 81,\ 27,\ 9,\ldots$
+
+
+\fullwidth{\textbf{Las siguientes preguntas están relacionadas con el término
+    general de una sucesión.}}
+
+\question Una sucesión está definida por $u_n=3n-2$, hallar:
+\begin{itemize}
+  \item $u_1=$
+  \item $u_5=$
+  \item $u_{27}=$
+\end{itemize}
+
+\question Calcule los $5$ primeros términos de la sucesión definida por
+$u_n=2n+5$.
+
+\question Encuentre el término $27$ y el $41$ de la sucesión $5,\ 11,\ 17,\ldots$
+
+
+\question Encuentre el término $13$ y el $109$ de la sucesión $71,\ 70,\ 69,\ldots$
+
+
+\question Encuentre el término $17$ y el $54$ de la sucesión $10$,
+$\scalerel{11}{\scriptstyle\frac{1}{2}}$, $13$,\ldots
+
+
+\question Encuentre el término $20$ y el $13$ de la sucesión $-3,\ -2,\ -1,\ldots$
+
+
+\question Encuentre el término $90$ y el $16$ de la sucesión $-4,\ 2.5,\ 9,\ldots$
+
+
+\question Encuentre el término $37$ y el $89$ de la sucesión $-2.8,\ 0,\ 2.8,\ldots$
+
+
+
+\fullwidth{\textbf{Encuentre el último término de las siguientes sucesiones:}}
+
+\question $5,\ 7,\ 9,\ldots$ hasta completar $20$ términos.
+
+\question $7,\ 3,\ -1,\ldots$ hasta completar $15$ términos.
+
+\question $\scalerel{13}{\scriptstyle\frac{1}{2}}$, $9$,
+$\scalerel{4}{\scriptstyle\frac{1}{2}}$,\ldots hasta completar $13$ términos.
+
+\question $.6,\ 1.2,\ 1.8,\ldots$ hasta completar $12$ términos.
+
+
+
+\fullwidth{\textbf{Encuentre el último término y la suma de las siguientes sucesiones:}}
+
+\question $14,\ 64,\ 114$ hasta completar $20$ términos.
+
+\question $1,\ 1.2,\ 1.4,\ldots$ hasta completar $12$ términos.
+
+\question $9,\ 5,\ 1,\ldots$ hasta completar $100$ términos.
+
+\question $\frac{1}{14},\ \frac{-1}{4},\ \frac{-3}{4}$ hasta completar $21$ términos.
+
+\end{multicols}
+
+\end{questions}
+\end{document}
+
+% Local Variables:
+% TeX-engine: xetex
+% End:

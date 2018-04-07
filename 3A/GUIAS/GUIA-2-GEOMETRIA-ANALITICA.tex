@@ -1,0 +1,143 @@
+\documentclass[12pt,addpoints,x11names]{exam}
+\usepackage{pgf,tikz}
+\usepackage{multicol}
+\usepackage{tkz-euclide}
+\usepackage{fourier}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usetikzlibrary{arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usetkzobj{all}
+\usepackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=1.5cm,paperheight=33cm]{geometry}
+\setromanfont[Mapping={tex-text}]{Linux Biolinum O}
+\setsansfont[Mapping={tex-text}]{Cantarell}
+\setmonofont[Mapping={tex-text},Scale=0.8]{Pragmata Pro}
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\setlength\columnsep{30pt}
+\everymath{\displaystyle}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\QQ{\mathbb{Q}}
+\def\ZZ{\mathbb{Z}}
+\def\II{\mathbb{I}}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{SlateGray1}{SlateGray1}{#2}}}
+\everymath{\displaystyle}
+\extraheadheight{1in}
+\extrafootheight{.75in}
+\def\mytitle{Guía 2 - Geometría Analítica / Tercero Medio HC}
+\def\dpto{Dpto. Matemática - LMLA $\cdot$ 2018, pág. \thepage}
+\def\mykeywords{geometría cartesiana, geometría analítica}
+\def\mysubject{geometría analítica}
+\def\myauthor{Prof. Hans Sigrist}
+\pagestyle{headandfoot}
+\firstpageheader{\includegraphics[scale=.56]{logolmlabw}}
+{\Large\textbf{Guía 2}\\
+  Geometría Analítica\\
+  Tercero Medio HC\\
+  marzo 2018}
+{}
+\runningheader{\mytitle}{}{\dpto}
+\footer{}{}{}
+\definecolor{links}{HTML}{000000}
+\hypersetup{%
+  colorlinks,%
+  linkcolor=,%
+  citecolor=black,%
+  urlcolor=links,%
+  pdftitle={\mytitle},%
+  pdfauthor={\myauthor},%
+  pdfsubject={\mysubject},%
+  pdfkeywords={\mykeywords}%
+}
+% \printanswers
+\newcommand*\Matching[1]{%
+  \ifprintanswers%
+  \textbf{#1}%
+  \else%
+  \rule{2.1in}{0.5pt}%
+  \fi%
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+  \setlength\matchlenb{\linewidth}%
+  \addtolength\matchlenb{-\matchlena}%
+  \parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}%
+}
+\begin{document}
+\addpoints
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+\pointname{ puntos}
+\pointpoints{ punto}{ puntos}
+\bracketedpoints
+\boxedpoints
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\renewcommand{\choicelabel}{\thechoice)}
+\chqword{Pregunta}
+\chpword{Puntos}
+\chbpword{Bonus}
+\chsword{Total}\hqword{Pregunta}
+\hpword{Puntos}
+\cellwidth{3mm}
+\setlength\answerskip{2ex}
+\setlength\answerlinelength{2in}
+\fullwidth{\noindent\large\textbf{Nombre:}\enspace\makebox[5.2in]{\hrulefill}
+  \textbf{Curso:}\enspace\makebox[0.5in]{\hrulefill}}
+\fullwidth{%
+  \begin{description}
+  \item[Objetivos:] Obtener la distancia entre dos puntos en el plano.
+    Determinar el ángulo de inclinación usando propiedades trigonómetricas.
+    Determinar las ecuaciones principal y general de la recta.
+  \end{description}
+}
+  \begin{questions}
+      \fullwidth{\noindent{\large \textbf{I. Pendiente y ángulo de
+            inclinación}}}
+      \fullwidth{Calcula en cada caso la pendiente y el ángulo de inclinación de la
+        recta que pasa por los puntos dados.}
+        \question $A(4,6)$ y $B(2,3)$
+        \question $A(-3,2)$ y $B(-3,5)$
+        \question $A(4,8)$ y $B(-7,8)$ 
+          
+       \fullwidth{\noindent{\large \textbf{II. Ecuaciones principal y general de la
+             recta.}}}
+
+       \fullwidth{Encuentra la ecuación principal de la recta que pasa por los
+         puntos:}
+         \question $A(3,4)$ y $B(7,3)$
+         \question $A(-5,2)$ y $B(-3,-1)$
+         \question $A\left(\frac{1}{2},\frac{1}{3}\right)$ y $B(0,1)$
+        
+       \fullwidth{Encuentra la ecuación general de la recta que pasa por los
+         puntos:}
+         \question $A(5,-2)$ y $B(6,8)$
+         \question $A(2,3)$ y $B(4,7)$
+         \question $A\left(\frac{1}{4},\frac{1}{2}\right)$ y $\left(\frac{1}{8},1\right)$
+
+       \fullwidth{Determina las ecuaciones principal y general de la recta que
+         pasa por el punto dado y tiene la pendiente que se indica.}
+         \question $A(6,4)$ y $m=-3$
+         \question $B(0,4)$ y $m=1$
+         \question $C(5,5)$ y $m=0$
+
+       \fullwidth{Escribe las ecuaciones principal y general de la recta de modo
+         que $m$ y $n$ sean, respectivamente:}
+         \question $1$ y $-1$
+         \question $5$ y $0$
+         \question $8$ y $3$
+         \question $\frac{3}{5}$ y $\frac{1}{4}$
+         \question $-1$ y $2$
+         \question $0$ y $2$
+  
+\end{questions}
+\end{document}
+% Local Variables:
+% TeX-engine: xetex
+% End:
