@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.1.26)  21 APR 2018 19:29
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.1.26)  21 APR 2018 19:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**\input METODOS-RESOLUCION.tex
-(./METODOS-RESOLUCION.tex
+**\input FUNCION-CUADRATICA.tex
+(./FUNCION-CUADRATICA.tex
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2017/07/13 v3.42 A class for typesetting presentations
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
@@ -2188,8 +2188,8 @@ xt},Numbers={OldStyle},Scale=0.8].
 . \hyphenchar \font =-1\relax 
 .................................................
 LaTeX Info: Redefining \ttfamily on input line 77.
-(./METODOS-RESOLUCION.aux)
-\openout1 = `METODOS-RESOLUCION.aux'.
+(./FUNCION-CUADRATICA.aux)
+\openout1 = `FUNCION-CUADRATICA.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
 LaTeX Font Info:    ... okay on input line 89.
@@ -2291,9 +2291,9 @@ LaTeX Info: Redefining \ref on input line 89.
 LaTeX Info: Redefining \pageref on input line 89.
 LaTeX Info: Redefining \nameref on input line 89.
 
-(./METODOS-RESOLUCION.out) (./METODOS-RESOLUCION.out)
+(./FUNCION-CUADRATICA.out) (./FUNCION-CUADRATICA.out)
 \@outlinefile=\write7
-\openout7 = `METODOS-RESOLUCION.out'.
+\openout7 = `FUNCION-CUADRATICA.out'.
 
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
 (Font)              `operators' in the math version `normal' on input line 89.
@@ -2409,7 +2409,7 @@ Dictionary: translator-theorem-dictionary, Language: Spanish
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/08/02 v2.7j siunitx: Abbreviated units
 )
-(./METODOS-RESOLUCION.nav)
+(./FUNCION-CUADRATICA.nav)
 \c__siunitx_mathsf_int=\count418
 LaTeX Font Info:    Try loading font information for FML+futmi on input line 89
 .
@@ -2449,62 +2449,41 @@ LaTeX Font Info:    Font shape `TU/PragmataProMono(0)/m/n' will be
  [1
 
 ]
-(./METODOS-RESOLUCION.toc) [2
+(./FUNCION-CUADRATICA.toc) [2
 
 ] [3
 
-] [4
-
-] (./METODOS-RESOLUCION.toc) [5
-
-] [6
-
 ]
-[7
+LaTeX Font Info:    Try loading font information for U+futs on input line 117.
 
-] (./METODOS-RESOLUCION.toc) [8
-
-] [9
-
-] [10
-
-] (./METODOS-RESOLUCION.toc) [11
-
-]
-[12
-
-] [13
-
-]
-LaTeX Font Info:    Try loading font information for U+futs on input line 225.
- (/usr/share/texlive/texmf-dist/tex/latex/fourier/ufuts.fd
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/ufuts.fd
 File: ufuts.fd 2004/03/26 Fontinst v1.926 font definitions for U/futs.
-) [14
+) [4
 
 ]
 \tf@nav=\write8
-\openout8 = `METODOS-RESOLUCION.nav'.
+\openout8 = `FUNCION-CUADRATICA.nav'.
 
 \tf@toc=\write9
-\openout9 = `METODOS-RESOLUCION.toc'.
+\openout9 = `FUNCION-CUADRATICA.toc'.
 
 \tf@snm=\write10
-\openout10 = `METODOS-RESOLUCION.snm'.
+\openout10 = `FUNCION-CUADRATICA.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 227.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 227.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
 
-(./METODOS-RESOLUCION.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 227.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 227.
+(./FUNCION-CUADRATICA.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 119.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 119.
  ) 
 Here is how much of TeX's memory you used:
- 46883 strings out of 492998
- 971865 string characters out of 6136605
- 1160962 words of memory out of 5000000
- 49893 multiletter control sequences out of 15000+600000
+ 46813 strings out of 492998
+ 970315 string characters out of 6136605
+ 1155601 words of memory out of 5000000
+ 49829 multiletter control sequences out of 15000+600000
  546139 words of font info for 89 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  58i,17n,95p,10386b,771s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on METODOS-RESOLUCION.pdf (14 pages).
+Output written on FUNCION-CUADRATICA.pdf (4 pages).

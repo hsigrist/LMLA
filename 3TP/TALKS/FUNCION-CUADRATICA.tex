@@ -33,10 +33,10 @@
 \def\talkcar{3TP}
 \def\talkdate{\today}
 \def\talkversion{}
-\def\talktitle{Métodos de Resolución}
-\def\talksubtitle{Resolución de ec. seg. grado según su naturaleza}
-\def\talkkeywords{métodos resolución, estrategias}
-\def\talksubject{ecuación de segundo grado}
+\def\talktitle{La Función Cuadrática}
+\def\talksubtitle{Elementos de la parábola, modelos cuadráticos}
+\def\talkkeywords{parábola, concavidad, discriminante}
+\def\talksubject{función cuadrática}
 \def\talkblog{https://hsigrist.github.io}
 \def\talkpubpdf{https://github.com/hsigrist/LMLA/blob/master/3TP/TALKS/METODOS-RESOLUCION.pdf}
 \def\talkcopyright{\myauthor}
@@ -91,127 +91,19 @@
 \titlepage
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
-\section{Tipo I}
+\section{Discriminante}
 \begin{frame}
-  \frametitle{Ecuaciones seg. grado puras}
-  \begin{block}{Propiedad}
-    \begin{align*}
-      ax^2+c&=0\\
-      a,c\in\RR\wedge a&\neq0
-    \end{align*}
-    Si la ecuación tiene solución en los números reales, las raíces de las
-    ecuaciones son una la inversa aditiva de la otra, es decir, si una es $a$,
-    entonces la otra será $-a$. Si la ecuación no tiene solución en los números
-    reales, estas son complejas conjugadas.
-  \end{block}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Ecuaciones seg. grado puras}
-  \begin{exampleblock}{Problemas}
-    Resuelve las siguientes ecuaciones de seg. grado puras y verifica la
-    propiedad anterior.
-    \begin{align}
-      (x+40)(x-40)&=900\\
-      \frac{6x^2-11}{114+x^2}&=1\\
-      (14x+5)(1-x)&=x(9-x)\\
-      2\sqrt{1+0.5x^2}&=\sqrt{166}\\
-      \frac{1}{4z^2}-\frac{1}{9z^2}&=\frac{1}{24}
-    \end{align}
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\section{Tipo II}
-\begin{frame}
-  \frametitle{Ecuaciones seg. grado factorizables}
-  \begin{block}{Propiedad}
-    \begin{align*}
-      ax^2+bx&=0\\
-      a,b\in\RR\wedge a&\neq0
-    \end{align*}
-    En este caso siempre hay dos soluciones reales, donde una de ellas es
-    siempre cero y la otra es un número real cualquiera.
-  \end{block}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Ecuaciones seg. grado factorizables}
-  \begin{exampleblock}{Problemas}
-    Resuelve las siguientes ecuaciones de seg. grado factorizables y verifica la
-    propiedad anterior.
-    \begin{align}
-      5x^2-41x&=0\\
-      \frac{19x^2+12}{(3x+2)(2x-3)}&=-2\\
-      \frac{x^2+4}{(x-3)(x-5)}&=\frac{4}{15}\\
-      (7-11x)(11-7x)-(1-x^2)&=4(19-4x)\\
-      4+\left(6y-\frac{3}{4}\right)&=\frac{73}{16}
-    \end{align}
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\section{Tipo III}
-\begin{frame}
-  \frametitle{Ecuaciones seg. grado trinomio factorizable}
-  \begin{block}{Propiedad}
-    \begin{align*}
-      ax^2+bx+c&=0\\
-      a,b,c\in\RR\wedge a&\neq0
-    \end{align*}
-    En este caso pueden existir dos soluciones reales y distintas o dos soluciones reales e iguales.
-  \end{block}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Ecuaciones seg. grado trinomio factorizable}
-  \begin{exampleblock}{Problemas}
-    Resuelve las siguientes ecuaciones de seg. grado trinomio factorizable y verifica la
-    propiedad anterior.
-    \begin{align}
-      \frac{2x+11}{x}+\frac{x-5}{3}&=5\\
-      (x-\sqrt{3x})(8x+\sqrt{3x})&=18\\
-      4x^2-4x+1&=0\\
-      1&=\frac{x+1}{\sqrt{7+x}}\\
-      \sqrt{2x+\frac{1}{8x}}&=1
-    \end{align}
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\section{Tipo IV}
-\begin{frame}
-  \frametitle{Ecuaciones seg. grado forma general}
-  \begin{block}{Propiedad}
-    \begin{align*}
-      ax^2+bx+c&=0\\
-      a,b,c\in\RR\wedge a&\neq0
-    \end{align*}
-    En este caso su solución viene dada por la expresión
+  \frametitle{Naturaleza de las soluciones}
+  \begin{block}{El símbolo $\Delta$}
+    Anteriormente vimos que una ecuación de seg. grado general se podía resolver
+    por medio de la \textbf{fórmula general}, dada por
     \begin{align*}
       x&=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
     \end{align*}
-    conocida como la \textbf{formula general} para resolver \textbf{cualquier}
-    ecuación de segundo grado.
+    en esta expresión, la cantidad subradical de la raíz $b^2-4ac$ se denomina
+    \textbf{discriminante} y se simboliza por $\Delta$.
   \end{block}
 \end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Ecuaciones seg. grado general}
-  \begin{exampleblock}{Problemas}
-    Resuelve las siguientes ecuaciones de seg. grado trinomio y establezca la
-    naturaleza de las soluciones ($\in\RR\vee\CC$).
-    \begin{align}
-      \sqrt{5x+6}-\sqrt{x+7}&=1\\
-      2\sqrt{2x+1}&=\sqrt{x+5}+\sqrt{4x-7}\\
-      (2+y)^2&=100-y^2\\
-      \frac{x+5}{x}+\frac{2x-3}{x}&=\frac{x-3}{x-2}\\
-      \frac{9}{4-x}&=\frac{x+4}{x+2}
-    \end{align}
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-
-
-
-
 
 
 %-------------------------------------------------------------------------------------------------------
