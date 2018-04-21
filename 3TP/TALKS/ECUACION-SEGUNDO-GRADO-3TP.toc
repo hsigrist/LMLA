@@ -1,4 +1,5 @@
 \select@language {spanish}
 \select@language {spanish}
-\beamer@sectionintoc {1}{Ecuación de segundo grado (ESG)}{2}{0}{1}
-\beamer@sectionintoc {2}{Elementos ESG}{4}{0}{2}
+\beamer@sectionintoc {1}{Ecuación de segundo grado}{2}{0}{1}
+\beamer@sectionintoc {2}{Elementos}{4}{0}{2}
+\beamer@sectionintoc {3}{Tipos de ecuaciones de segundo grado}{6}{0}{3}

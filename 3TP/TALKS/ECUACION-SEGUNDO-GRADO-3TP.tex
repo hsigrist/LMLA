@@ -59,7 +59,7 @@
 \newtheorem{ejemplo}[teorema]{Ejemplo}
 \newtheorem{nota}[teorema]{Nota}
 %-------------------------------------------------------------------------------------------------------
-\hypersetup{pdfpagemode=FullScreen,colorlinks,linkcolor=bluu,citecolor=black,urlcolor=links,pdftitle={pdftitle},pdfauthor={\talkauthor},pdfsubject={\talksubject},pdfkeywords={\talkkeywords}}
+\hypersetup{pdfpagemode=FullScreen,colorlinks,linkcolor=,citecolor=black,urlcolor=links,pdftitle={pdftitle},pdfauthor={\talkauthor},pdfsubject={\talksubject},pdfkeywords={\talkkeywords}}
 %-------------------------------------------------------------------------------------------------------
 \setmainfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Biolinum
     O}
@@ -83,7 +83,7 @@
 \titlepage
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
-\section{Ecuación de segundo grado (ESG)}
+\section{Ecuación de segundo grado}
 \begin{frame}
   \frametitle{Variable cuadrática}
   \begin{exampleblock}{Problema}
@@ -93,14 +93,14 @@
   \end{exampleblock}
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
-\section{Elementos ESG}
+\section{Elementos}
 \begin{frame}
   \frametitle{Coeficientes cuadráticos}
   \begin{block}{Ecuación de segundo grado}
-    \begin{eqnarray}
+    \begin{align*}
       \label{eq:1}
-      ax^2+bx+c&=&0
-    \end{eqnarray}
+      ax^2+bx+c&=0
+    \end{align*}
     \begin{description}
     \item[$a$] coeficiente cuadrático (grado $2$)
     \item[$b$] coeficiente lineal (grado $1$)
@@ -109,6 +109,29 @@
   \end{block}
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
+\section{Tipos de ecuaciones de segundo grado}
+\begin{frame}
+  \frametitle{Según sus coeficientes}
+  \begin{exampleblock}{Se expresan como:}
+    \begin{align*}
+      x^2-4x-140&=0\hspace{1cm}\text{\emph{ecuación seg. grado completa}}\\
+      5x^2-20&=0\hspace{1cm}\text{\emph{ecuación seg. pura}}\\
+      16x^2-8x&=0\hspace{1cm}\text{\emph{ecuación seg. grado factorizable}}
+    \end{align*}
+  \end{exampleblock}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{frame}[c]\frametitle{Apéndice}
 \centering\decofourleft\quad\decofourright
 
@@ -120,3 +143,4 @@ Una copia del presente trabajo, se encuentra en el enlace \framedhref{\talkpubpd
 %-------------------------------------------------------------------------------------------------------
 \end{document}
 %-------------------------------------------------------------------------------------------------------
+% !TEX program = xelatex
