@@ -33,9 +33,9 @@
 \def\talkcar{3TP}
 \def\talkdate{\today}
 \def\talkversion{}
-\def\talktitle{Ecuación de Segundo Grado}
-\def\talksubtitle{problematización, elementos, tipos}
-\def\talkkeywords{ecuación de segundo grado}
+\def\talktitle{Métodos de Resolución}
+\def\talksubtitle{Resolución de ec. seg. grado según su naturaleza}
+\def\talkkeywords{métodos resolución, estrategias}
 \def\talksubject{ecuación de segundo grado}
 \def\talkblog{https://hsigrist.github.io}
 \def\talkpubpdf{https://github.com/hsigrist/LMLA/blob/master/3TP/TALKS/ECUACION-SEGUNDO-GRADO-3TP.pdf}
@@ -47,6 +47,7 @@
 \definecolor{links}{HTML}{000000}
 \def\NN{\mathbb{N}}
 \def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
 \def\ZZ{\mathbb{Z}}
 \def\QQ{\mathbb{Q}}
 \def\II{\mathbb{I}}
@@ -90,109 +91,129 @@
 \titlepage
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
-\section{Ecuación de segundo grado}
+\section{Tipo I}
 \begin{frame}
-  \frametitle{Variable cuadrática}
-  \begin{exampleblock}{Problema}
-    Un distribuidor compró cierta cantidad de objetos por $\$280$. Si hubiera
-    comprado cuatro menos, cada objeto habría costado $\$8$ más. ¿Cuántos
-    objetos compró?
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\section{Elementos}
-\begin{frame}
-  \frametitle{Coeficientes cuadráticos}
-  \begin{block}{Ecuación de segundo grado}
+  \frametitle{Ecuaciones seg. grado puras}
+  \begin{block}{Propiedad}
     \begin{align*}
-      \label{eq:1}
-      ax^2+bx+c&=0
+      ax^2+c&=0\\
+      a,c\in\RR\wedge a&\neq0
     \end{align*}
-    \begin{description}
-    \item[$a$] coeficiente cuadrático (grado $2$)
-    \item[$b$] coeficiente lineal (grado $1$)
-    \item[$c$] coeficiente constante (grado $0$)
-    \end{description}
+    Si la ecuación tiene solución en los números reales, las raíces de las
+    ecuaciones son una la inversa aditiva de la otra, es decir, si una es $a$,
+    entonces la otra será $-a$. Si la ecuación no tiene solución en los números
+    reales, estas son complejas conjugadas.
   \end{block}
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
-\section{Tipos de ecuaciones de segundo grado}
 \begin{frame}
-  \frametitle{Según sus coeficientes}
-  \begin{exampleblock}{Se expresan como:}
-    \begin{align*}
-      5x^2-20&=0\hspace{1cm}\text{\emph{ecuación seg. grado pura}}\\
-      8x^2-24x&=0\hspace{1cm}\text{\emph{ecuación seg. grado factorizable}}\\
-      x^2+12x+35&=0\hspace{1cm}\text{\emph{ecuación seg. grado trinomio factorizable}}\\
-      3x^2+5x-1&=0\hspace{1cm}\text{\emph{ecuación seg. grado completa}}
-    \end{align*}
+  \frametitle{Ecuaciones seg. grado puras}
+  \begin{exampleblock}{Problemas}
+    Resuelve las siguientes ecuaciones de seg. grado puras y verifica la
+    propiedad anterior.
+    \begin{align}
+      (x+40)(x-40)&=900\\
+      \frac{6x^2-11}{114+x^2}&=1\\
+      (14x+5)(1-x)&=x(9-x)\\
+      2\sqrt{1+0.5x^2}&=\sqrt{166}\\
+      \frac{1}{4z^2}-\frac{1}{9z^2}&=\frac{1}{24}
+    \end{align}
   \end{exampleblock}
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
-\section{Ejercicios}
+\section{Tipo II}
 \begin{frame}
-  \frametitle{Coeficientes}
-  Construya la ecuación de segundo grado a partir de sus coeficientes y
-  determine el tipo de ecuación. Use \textbf{Tipo I}: \emph{ecuación seg. grado
-    pura}, \textbf{Tipo II}: \emph{ecuación seg. grado factorizable},
-  \textbf{Tipo III}: \emph{ecuación seg. grado trinomio factorizable} y
-  \textbf{Tipo IV}: \emph{ecuación seg. grado completa}.
-  
-  \centering
-  \begin{tabular}[t]{|+c|^c|^c|^c|^c|}
-    \hline
-    \rowstyle{\bfseries}%
-    $a$&$b$&$c$&ecuación&tipo\\
-    \hline
-    $1$&$-1$&$1$&&\\
-    \hline
-    $0$&$4$&$5$&&\\
-    \hline
-    $1$&$-3$&$18$&&\\
-    \hline
-    $1$&$-12$&$27$&&\\
-    \hline
-    $5$&$25$&$0$&&\\
-    \hline
-    $1$&$4$&$7$&&\\
-    \hline
-    $2$&$5$&$11$&&\\
-    \hline
-    $3$&$-27$&$0$&&\\
-    \hline
-    $1$&$10$&$25$&&\\
-    \hline
-\end{tabular}
+  \frametitle{Ecuaciones seg. grado factorizables}
+  \begin{block}{Propiedad}
+    \begin{align*}
+      ax^2+bx&=0\\
+      a,b\in\RR\wedge a&\neq0
+    \end{align*}
+    En este caso siempre hay dos soluciones reales, donde una de ellas es
+    siempre cero y la otra es un número real cualquiera.
+  \end{block}
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
 \begin{frame}
-  \frametitle{Tipos}
-  Establezca la naturaleza de las ecuaciones siguientes.
-
-  \centering
-  \begin{tabular}[t]{|+c|+c|}
-    \hline
-    \rowstyle{\bfseries}
-    ecuación& tipo\\
-    \hline
-    $3(x^2-5)=2x^2+9$&\\
-    \hline
-    $(x+4)^2+(x-3)^2=(x+5)^2$&\\
-    \hline
-    $\frac{3(x^2-5)}{5}-\frac{2(x^2-70)}{7}=17+x$&\\
-    \hline
-    $(x+6)(x-6)-8=1-4x$& \\
-    \hline
-    $\frac{x^2-5}{3}+\frac{4x^2-1}{5}=\frac{14x^2-1}{15}$&\\
-    \hline
-    $\frac{x}{x+2}+\frac{x}{x-2}=1$&\\
-    \hline
-    $\frac{9}{2}-\frac{(x-6)^2}{2}=x-1$&\\
-    \hline
-    $\sqrt{2x+\frac{1}{8x}}=1$&\\
-    \hline
-  \end{tabular}
+  \frametitle{Ecuaciones seg. grado factorizables}
+  \begin{exampleblock}{Problemas}
+    Resuelve las siguientes ecuaciones de seg. grado factorizables y verifica la
+    propiedad anterior.
+    \begin{align}
+      5x^2-41x&=0\\
+      \frac{19x^2+12}{(3x+2)(2x-3)}&=-2\\
+      \frac{x^2+4}{(x-3)(x-5)}&=\frac{4}{15}\\
+      (7-11x)(11-7x)-(1-x^2)&=4(19-4x)\\
+      4+\left(6y-\frac{3}{4}\right)&=\frac{73}{16}
+    \end{align}
+  \end{exampleblock}
 \end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{Tipo III}
+\begin{frame}
+  \frametitle{Ecuaciones seg. grado trinomio factorizable}
+  \begin{block}{Propiedad}
+    \begin{align*}
+      ax^2+bx+c&=0\\
+      a,b,c\in\RR\wedge a&\neq0
+    \end{align*}
+    En este caso pueden existir dos soluciones reales y distintas o dos soluciones reales e iguales.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Ecuaciones seg. grado trinomio factorizable}
+  \begin{exampleblock}{Problemas}
+    Resuelve las siguientes ecuaciones de seg. grado trinomio factorizable y verifica la
+    propiedad anterior.
+    \begin{align}
+      \frac{2x+11}{x}+\frac{x-5}{3}&=5\\
+      (x-\sqrt{3x})(8x+\sqrt{3x})&=18\\
+      4x^2-4x+1&=0\\
+      1&=\frac{x+1}{\sqrt{7+x}}\\
+      \sqrt{2x+\frac{1}{8x}}&=1
+    \end{align}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{Tipo IV}
+\begin{frame}
+  \frametitle{Ecuaciones seg. grado forma general}
+  \begin{block}{Propiedad}
+    \begin{align*}
+      ax^2+bx+c&=0\\
+      a,b,c\in\RR\wedge a&\neq0
+    \end{align*}
+    En este caso su solución viene dada por la expresión
+    \begin{align*}
+      x&=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+    \end{align*}
+    conocida como la \textbf{formula general} para resolver \textbf{cualquier}
+    ecuación de segundo grado.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Ecuaciones seg. grado general}
+  \begin{exampleblock}{Problemas}
+    Resuelve las siguientes ecuaciones de seg. grado trinomio y establezca la
+    naturaleza de las soluciones ($\in\RR\vee\CC$).
+    \begin{align}
+      \sqrt{5x+6}-\sqrt{x+7}&=1\\
+      2\sqrt{2x+1}&=\sqrt{x+5}+\sqrt{4x-7}\\
+      (2+y)^2&=100-y^2\\
+      \frac{x+5}{x}+\frac{2x-3}{x}&=\frac{x-3}{x-2}\\
+      \frac{9}{4-x}&=\frac{x+4}{x+2}
+    \end{align}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 %-------------------------------------------------------------------------------------------------------
 \begin{frame}[c]\frametitle{Apéndice}
 \centering\decofourleft\quad\decofourright

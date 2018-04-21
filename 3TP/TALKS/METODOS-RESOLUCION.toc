@@ -1,0 +1,6 @@
+\select@language {spanish}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Tipo I}{2}{0}{1}
+\beamer@sectionintoc {2}{Tipo II}{5}{0}{2}
+\beamer@sectionintoc {3}{Tipo III}{8}{0}{3}
+\beamer@sectionintoc {4}{Tipo IV}{11}{0}{4}
