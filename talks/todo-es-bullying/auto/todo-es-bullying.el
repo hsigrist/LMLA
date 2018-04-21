@@ -1,8 +1,8 @@
 (TeX-add-style-hook
- "bullying"
+ "todo-es-bullying"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
-                     '(("beamer" "12pt" "spanish" "x11names" "svgnames")))
+                     '(("beamer" "12pt" "spanish" "x11names")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("csquotes" "style=spanish")))
    (add-to-list 'LaTeX-verbatim-environments-local "semiverbatim")
@@ -17,8 +17,10 @@
     "latex2e"
     "beamer"
     "beamer12"
+    "pgfpages"
     "tcolorbox"
     "fourier"
+    "float"
     "fontspec"
     "graphicx"
     "amssymb"

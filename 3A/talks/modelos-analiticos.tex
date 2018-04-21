@@ -1,0 +1,202 @@
+\documentclass[12pt,spanish,x11names]{beamer}
+%-------------------------------------------------------------------------------------------------------
+% \usepackage{pgfpages}
+% \setbeameroption{hide notes}
+% \setbeameroption{show notes}
+% \setbeameroption{show notes on second screen=right}
+\usetheme{Hytex}
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme[RGB={7,29,66}]{structure}
+\usepackage{tcolorbox}
+\usepackage{fourier}
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usepackage[style=spanish]{csquotes}
+\usepackage{pstricks-add}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{pgf,tikz}
+\usetikzlibrary{mindmap,trees,arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{marvosym}
+\setbeamertemplate{caption}[numbered]
+\usepackage{hyperref}
+%-------------------------------------------------------------------------------------------------------
+\def\talkclass{Presentación}
+\def\talkcar{3HC}
+\def\talkdate{\today}
+\def\talkversion{}
+\def\talktitle{Modelos Analíticos}
+\def\talksubtitle{Posiciones relativas: transversal de gravedad}
+\def\talkkeywords{pendiente, razones trigonométricas, distancia entre dos
+  puntos, transversal de gravedad, punto medio}
+\def\talksubject{geometría analítica}
+\def\talkblog{https://hsigrist.github.io}
+\def\talkpubpdf{https://www.dropbox.com/s/tuhjx03333fl5vu/todo-es-bullying.pdf?dl=0}
+\def\talkcopyright{\myauthor}
+\def\talkaffiliation{Liceo Mixto Los Andes}
+\def\talkauthor{Hans Sigrist}
+\def\talkgrade{Lic. \& Mag. Matemática}
+\def\talkemail{hsigrist@liceomixto.cl}
+\definecolor{links}{HTML}{000000}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\ZZ{\mathbb{Z}}
+\def\QQ{\mathbb{Q}}
+\def\II{\mathbb{I}}
+\definecolor{bluu}{RGB}{7,29,66}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{bluu}{bluu}{\textcolor{white}{#2}}}}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{proposicion}[teorema]{Proposición}
+\newtheorem{corolario}[teorema]{Corolario}
+\newtheorem{definicion}[teorema]{Definición}
+\newtheorem{ejemplo}[teorema]{Ejemplo}
+\newtheorem{nota}[teorema]{Nota}
+%-------------------------------------------------------------------------------------------------------
+\hypersetup{pdfpagemode=FullScreen,colorlinks,linkcolor=,citecolor=black,urlcolor=links,pdftitle={pdftitle},pdfauthor={\talkauthor},pdfsubject={\talksubject},pdfkeywords={\talkkeywords}}
+%-------------------------------------------------------------------------------------------------------
+\setmainfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Biolinum
+    O}
+\setsansfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Libertine
+    O}
+\setmonofont[Mapping={tex-text},Numbers={OldStyle},Ligatures=Rare,Scale=0.8]{Pragmata
+    Pro Mono}
+%-------------------------------------------------------------------------------------------------------
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\everymath{\displaystyle}
+\AtBeginSection[]{\begin{frame}<beamer>\frametitle{Agenda}\tableofcontents[sectionstyle=show/hide,subsectionstyle=hide/show/hide,currentsection]\end{frame}\addtocounter{framenumber}{-1}}
+%-------------------------------------------------------------------------------------------------------
+\title{\talktitle}
+\subtitle{\talksubtitle}
+\author{\talkauthor}
+\institute{\talkaffiliation}
+\date{\footnotesize{\emph{\href{\talkblog}{\talkemail}}}}
+%-------------------------------------------------------------------------------------------------------
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{Elementos del triángulo}
+\begin{frame}
+  \frametitle{Transversal de gravedad}
+  \begin{block}{Definición}
+    Considere el $\triangle ABC$ de la Figura \ref{fig:tg}. Una transversal de gravedad es un trazo de
+    recta dibujado desde un vértice al punto medio del lado opuesto.
+
+    \begin{figure}[h]
+      \centering
+      \begin{tikzpicture}[scale=.5]
+        \tkzDefPoint(-1,1){A}
+        \tkzDefPoint(5,1){B}
+        \tkzDefEquilateral(A,B)\tkzGetPoint{C}
+        \tkzDrawPolygon(A,B,C)
+        \tkzCentroid(A,B,C)\tkzGetPoint{G}
+        \tkzDrawPoint(G)
+        \tkzDrawLines[add = 0 and 2/3](A,G B,G C,G)
+        \tkzLabelPoint[left](A){$A$}
+        \tkzLabelPoint[right](B){$B$}
+        \tkzLabelPoint[above](C){$C$}
+        \tkzLabelLine[pos=1.8](A,G){$t_A$}
+        \tkzLabelLine[pos=1.8](B,G){$t_B$}
+        \tkzLabelLine[pos=1.8](C,G){$t_C$}
+     \end{tikzpicture}
+      \caption{Triángulo $ABC$}
+      \label{fig:tg}
+    \end{figure}
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Transversal de gravedad}
+  \begin{minipage}[t]{.6\linewidth}
+     \begin{figure}[h]
+      \centering
+      \begin{tikzpicture}
+        \tkzInit[xmax=4, ymax=5]
+        \tkzAxeXY
+        \tkzGrid
+        \tkzDefPoint(0,2){A}
+        \tkzDefPoint(3,0){B}
+        \tkzDefPoint(2,5){C}
+        \tkzDrawPolygon(A,B,C)
+        \tkzCentroid(A,B,C)\tkzGetPoint{G}
+        \tkzDrawLines[add = 0 and 3/4](A,G)
+        \tkzDefMidPoint(B,C) \tkzGetPoint{D}
+        \tkzDrawPoint(D)
+        \tkzLabelPoint[below](D){$D$}
+        \tkzLabelPoint[below](A){$A$}
+        \tkzLabelPoint[right](B){$B$}
+        \tkzLabelPoint[above](C){$C$}
+        \tkzLabelLine[pos=1.8,above](A,G){$t_A$}
+      \end{tikzpicture}
+    \end{figure}
+  \end{minipage}
+  \begin{minipage}[t]{.3\linewidth}
+    \begin{enumerate}
+    \item $A(\ \ ,\ \ )=$
+    \item $B(\ \ ,\ \ )=$
+    \item $C(\ \ ,\ \ )=$
+    \item $D(\ \ ,\ \ )=$
+    \item $d(A,B)=$
+    \item $d(B,C)=$
+    \item $d(C,A)=$
+    \item $d(A,D)=$
+    \item $d(D,B)=$
+    \item $d(D,C)=$
+    \end{enumerate}
+  \end{minipage}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Transversal de gravedad}
+  \begin{minipage}[t]{.6\linewidth}
+     \begin{figure}[h]
+      \centering
+      \begin{tikzpicture}
+        \tkzInit[xmax=4, ymax=5]
+        \tkzAxeXY
+        \tkzGrid
+        \tkzDefPoint(0,2){A}
+        \tkzDefPoint(3,0){B}
+        \tkzDefPoint(2,5){C}
+        \tkzDrawPolygon(A,B,C)
+        \tkzCentroid(A,B,C)\tkzGetPoint{G}
+        \tkzDrawLines[add = 0 and 3/4,color=blue](A,G)
+        \tkzDefMidPoint(B,C) \tkzGetPoint{D}
+        \tkzDrawPoint(D)
+        \tkzDrawPoint(A)
+        \tkzDrawPoint(B)
+        \tkzDrawPoint(C)
+        \tkzMarkAngle(D,B,A)
+        \tkzLabelAngle[pos = .6](D,B,A){$\alpha$}
+        \tkzMarkRightAngles(A,D,C)
+        \tkzLabelPoint[below right](D){$D$}
+        \tkzLabelPoint[below](A){$A$}
+        \tkzLabelPoint[right](B){$B$}
+        \tkzLabelPoint[above](C){$C$}
+        \tkzLabelLine[pos=1.8,above,blue](A,G){$t_A$}
+      \end{tikzpicture}
+    \end{figure}
+  \end{minipage}
+  \begin{minipage}[t]{.3\linewidth}
+    \begin{enumerate}
+    \item (ec. principal) $t_A=$
+    \item (ec. general) $t_A=$
+    \item $\alpha=$
+    \item $P_{\triangle ABC}=$
+    \item $A_{\triangle ABC}=$
+    \end{enumerate}
+  \end{minipage}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\end{document}
+%-------------------------------------------------------------------------------------------------------
+% !TEX program = xelatex

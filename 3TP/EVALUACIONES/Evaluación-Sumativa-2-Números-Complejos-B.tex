@@ -1,0 +1,254 @@
+\documentclass[12pt,addpoints,x11names]{exam}
+%____________________________________________________________________________________
+\usepackage{float}
+\usepackage{pgf,tikz}
+\usepackage{tkz-euclide}
+\usepackage{fourier}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usetikzlibrary{arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usetkzobj{all}
+\usepackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=1.5cm,paperheight=33cm]{geometry}
+%____________________________________________________________________________________
+\setmainfont[Mapping={tex-text}]{Linux Biolinum O}
+\setsansfont[Mapping={tex-text}]{Linux Libertine O}
+\setmonofont[Mapping={tex-text},Scale=0.8]{Pragmata Pro}
+%____________________________________________________________________________________
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\everymath{\displaystyle}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\QQ{\mathbb{Q}}
+\def\ZZ{\mathbb{Z}}
+\def\II{\mathbb{I}}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{SlateGray1}{SlateGray1}{#2}}}
+%____________________________________________________________________________________
+\everymath{\displaystyle}
+\extraheadheight{1.5in}
+\extrafootheight{.3in}
+%____________________________________________________________________________________
+\pagestyle{headandfoot}
+\firstpageheader{\includegraphics[scale=.7]{logolmlabw}}
+{\Large\textbf{Evaluación Sumativa 2}\\
+  Números Complejos\\
+  Tercero Medio TP\\
+  abril 2018}
+{\begin{tikzpicture}
+    \draw (0,0) rectangle (4,4);
+    \draw (2.5,0) rectangle (4,1.5);
+ \end{tikzpicture}}
+\runningheader{Evaluación 2 - Números Complejos / Tercero Medio TP}{}{Dpto. Matemática - LMLA $\cdot$ 2018, pág. \thepage}
+\footer{}{}{}
+%____________________________________________________________________________________
+\def\mytitle{Evaluación Sumativa 2 Números complejos}
+\def\mykeywords{imaginarios, potencias imaginarias, conjugado, módulo}
+\def\mysubject{números complejos}
+\def\myauthor{Prof. Hans Sigrist}
+\definecolor{links}{HTML}{000000}
+%____________________________________________________________________________________
+\hypersetup{%
+  colorlinks,%
+  linkcolor=,%
+  citecolor=black,%
+  urlcolor=links,%
+  pdftitle={\mytitle},%
+  pdfauthor={\myauthor},%
+  pdfsubject={\mysubject},%
+  pdfkeywords={\mykeywords}%
+}
+%____________________________________________________________________________________
+% \printanswers
+%____________________________________________________________________________________
+\newcommand*\Matching[1]{%
+  \ifprintanswers%
+  \textbf{#1}%
+  \else%
+  \rule{2.1in}{0.5pt}%
+  \fi%
+}
+%____________________________________________________________________________________
+\newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}}}
+%____________________________________________________________________________________
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+  \setlength\matchlenb{\linewidth}%
+  \addtolength\matchlenb{-\matchlena}%
+  \parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}%
+}
+%____________________________________________________________________________________
+\newcommand*{\TrueFalse}[1]{%
+\ifprintanswers
+    \ifthenelse{\equal{#1}{T}}{%
+        \textbf{VERDADERO}\hspace*{14pt}F
+    }{
+        V\hspace*{14pt}\textbf{FALSO}
+    }
+\else
+    {V}\hspace*{20pt}F
+\fi
+} 
+\newlength\TFlengthA
+\newlength\TFlengthB
+\settowidth\TFlengthA{\hspace*{.7in}}
+\newcommand\TFQuestion[2]{%
+    \setlength\TFlengthB{\linewidth}
+    \addtolength\TFlengthB{-\TFlengthA}
+    \parbox[t]{\TFlengthA}{\TrueFalse{#1}}\parbox[t]{\TFlengthB}{#2}}
+%____________________________________________________________________________________
+\begin{document}
+%____________________________________________________________________________________
+\addpoints
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+\pointname{ puntos}
+\pointpoints{ punto}{ puntos}
+\bracketedpoints
+\boxedpoints
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\renewcommand{\choicelabel}{\thechoice)}
+\chqword{Pregunta}
+\chpword{Puntos}
+\chbpword{Bonus}
+\chsword{Total}\hqword{Pregunta}
+\hpword{Puntos}
+\cellwidth{3mm}
+\setlength\answerskip{2ex}
+\setlength\answerlinelength{2in}
+%____________________________________________________________________________________
+\fullwidth{\noindent\large\textbf{Nombre:}\enspace\makebox[5.2in]{\hrulefill} \textbf{Curso:}\enspace\makebox[0.5in]{\hrulefill}}
+\fullwidth{%
+  \begin{description}
+  \item[Objetivos:] Obtener el conjugado y el módulo de números complejos. Realizar operatoria combinada en números complejos.
+  \item[Instrucciones:] \textbf{Tiempo de duración de la Evaluación 80 minutos}. Lea atentamente las situaciones plantaedas, así como las intrucciones y conteste ofreciendo un desarrollo según corresponda. Evite borrones, use solamente lápiz grafito, no se permite el uso de calculadora ni celulares.
+  \item[Puntaje:] Puntaje total: \numpoints\  puntos 7.0 y 60\%: \pgfmathparse{div(\numpoints*60,100)}\pgfmathresult\  puntos 4.0.
+  \end{description}
+}
+%____________________________________________________________________________________
+\begin{questions}
+\fullwidth{\noindent{\large \textbf{I. Formas canónica, vectorial y
+      representación cartesiana de números complejos.}}}
+
+\fullwidth{Considere los números complejos representados en el
+  plano cartesiano siguiente y a partir de ellos responda encerrando en un
+  círculo \textbf{V} o bien \textbf{F} la afirmación correcta:}
+
+\begin{minipage}[c]{.55\linewidth}
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=.5]
+      \tkzInit[xmax=7,ymax=7,xmin=-7,ymin=-7]
+      \tkzAxeXY
+      \tkzGrid
+      \tkzDrawX[noticks]
+      \tkzDrawY[noticks]
+      \tkzDefPoint(0,0){O}
+      \tkzDefPoint(4,2){A}
+      \tkzDefPoint(-2,6){B}
+      \tkzDefPoint(4,-5){C}
+      \tkzDefPoint(-6,-6){D}
+      \tkzDrawVectors(O,A O,B O,C O,D)
+      \tkzLabelSegment[right=10pt](O,A){$\vec{z}$}
+      \tkzLabelSegment[left=10pt](O,B){$\vec{w}$}
+      \tkzLabelSegment[above=3pt](O,C){$\vec{u}$}
+      \tkzLabelSegment[above=3pt](O,D){$\vec{v}$}
+    \end{tikzpicture}
+  \end{figure}
+\end{minipage}
+
+\begin{minipage}[c]{.48\linewidth}
+  \question[2]\TFQuestion{T}{$u+z=8-3i$}
+  \question[2]\TFQuestion{T}{$2z=8+4i$}
+  \question[2]\TFQuestion{T}{$z=(2,-4)$}
+  \question[2]\TFQuestion{T}{$-3u=12+15i$}
+  \question[2]\TFQuestion{T}{$w=(-2,6)$}
+  \question[2]\TFQuestion{T}{$v=-6-6i$}
+  \question[2]\TFQuestion{F}{$u=4+5i$}
+\end{minipage}
+
+
+\question[10] Complete la siguiente tabla (2 pts. c/u):
+  \begin{center}
+    \begin{tabular}[t]{|>{\centering\arraybackslash}m{4cm}|>{\centering\arraybackslash}m{4cm}|}
+      \hline
+      \textbf{Forma canónica}&\textbf{Forma vectorial}\\
+      \hline
+      $u=12-12i$ & \\[.7cm]
+      \hline
+                             & $v=(-8,8)$\\[.7cm]
+      \hline
+      $z=-3-9i$ & \\[.7cm]
+      \hline
+                             & $w=(-1,2)$\\[.7cm]
+      \hline
+      $t=\frac{1}{2}+\frac{1}{2}i$ & \\[.7cm]
+      \hline
+    \end{tabular}
+  \end{center}
+  \pagebreak
+%----------------------------------------------------------------------------------------------------------------------------------------
+\fullwidth{\noindent{\large \textbf{II. Operatoria combinada en números complejos}}}
+
+En los siguientes ejercicios, considere:
+\begin{eqnarray*}
+  z_1&=&1-i\\
+  z_2&=&4-3i\\
+  z_3&=&2+6i\\
+  z_4&=&1+7i
+\end{eqnarray*}
+ 
+\question[3] $z_3+z_1=$
+  \begin{solutionbox}{1.2in}
+     $z_3+z_1=1-7i+1+i=2-6i$
+  \end{solutionbox}
+\question[3] $z_1-2\cdot z_4+4\cdot z_2=$
+  \begin{solutionbox}{1.2in}
+     $z_1-2\cdot z_4+4\cdot z_2=1+i-2\cdot(1-7i)+4\cdot(4+3i)=1+i-2+14i+16+12i=15+27i$
+  \end{solutionbox}
+\question[3] $z_3\cdot z_4=$
+  \begin{solutionbox}{1.2in}
+     $z_3\cdot z_4=(2-6i)\cdot(1-7i)=2-14i-6i-42=-40-20i$
+  \end{solutionbox}
+\question[3] $\frac{z_1}{z_2}=$
+  \begin{solutionbox}{1.2in}
+     $\frac{z_1}{z_2}=\frac{1+i}{4+3i}=\frac{(1+i)(4-3i)}{(4-3i)(4-3i)}=\frac{16-12i-12i-9}{16+9}=\frac{7-24i}{25}$
+  \end{solutionbox}
+%____________________________________________________________________________________
+\pagebreak
+
+\fullwidth{\noindent{\large \textbf{III. Cálculo de módulo y conjugado de números complejos}}}
+En los siguientes ejercicios, considere:
+
+\begin{eqnarray*}
+  z_5&=&2-3i\\
+  z_6&=&1+i\\
+  z_7&=&2-i\\
+  z_8&=&3-4i
+\end{eqnarray*}
+
+\question[3] $\overline{z_8}+\overline{z_7}=$
+   \begin{solutionbox}{1.3in}
+     $\overline{z_8}+\overline{z_7}=3-4i+2-i=5-5i$
+  \end{solutionbox}
+\question[3] $\overline{z_7}-3\cdot\overline{z_5}=$
+   \begin{solutionbox}{1.3in}
+     $\overline{z_7}-3\cdot\overline{z_5}=2-i-3\cdot(2-3i)=2-i-6+9i=-4+8i$
+  \end{solutionbox}
+\question[3] $|z_5|+|z_6|=$
+   \begin{solutionbox}{1.3in}
+     $|z_5|+|z_6|=\sqrt{2^{2}+3^{2}}+\sqrt{1^{2}+1^{2}}=\sqrt{4+9}+\sqrt{1+1}=\sqrt{13}+\sqrt{2}$
+  \end{solutionbox}
+\question[3] $|z_8|-|z_7|=$
+  \begin{solutionbox}{1.3in}
+     $|z_8|-|z_7|=\sqrt{3^{2}+4^{2}}-\sqrt{2^{2}+1^{2}}=\sqrt{9+16}-\sqrt{4+1}=\sqrt{25}-\sqrt{5}=5-\sqrt{5}$
+  \end{solutionbox}
+\end{questions}
+%____________________________________________________________________________________
+\end{document}

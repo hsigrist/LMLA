@@ -1,8 +1,8 @@
 (TeX-add-style-hook
- "bullying"
+ "ECUACION-SEGUNDO-GRADO-3TP"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
-                     '(("beamer" "12pt" "spanish" "x11names" "svgnames")))
+                     '(("beamer" "12pt" "spanish" "x11names")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("csquotes" "style=spanish")))
    (add-to-list 'LaTeX-verbatim-environments-local "semiverbatim")
@@ -19,6 +19,7 @@
     "beamer12"
     "tcolorbox"
     "fourier"
+    "float"
     "fontspec"
     "graphicx"
     "amssymb"

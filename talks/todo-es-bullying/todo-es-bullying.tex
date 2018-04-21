@@ -1,10 +1,16 @@
-\documentclass[12pt,spanish,x11names,svgnames]{beamer}
+\documentclass[12pt,spanish,x11names]{beamer}
+% \documentclass[12pt,spanish,x11names,aspectratio=169]{beamer}
 %-------------------------------------------------------------------------------------------------------
+\usepackage{pgfpages}
+% \setbeameroption{hide notes}
+% \setbeameroption{show notes}
+\setbeameroption{show notes on second screen=right}
 \usetheme{Hytex}
 \setbeamertemplate{navigation symbols}{}
 \usecolortheme[RGB={7,29,66}]{structure}
 \usepackage{tcolorbox}
 \usepackage{fourier}
+\usepackage{float}
 \usepackage{fontspec}
 \usepackage{graphicx}
 \usepackage{amssymb,amsmath}
@@ -32,7 +38,7 @@
 \def\talkkeywords{bullying, pensamiento crítico}
 \def\talksubject{maltrato escolar}
 \def\talkblog{https://hsigrist.github.io}
-\def\talkpubpdf{copyurlfromrepository}
+\def\talkpubpdf{https://www.dropbox.com/s/tuhjx03333fl5vu/todo-es-bullying.pdf?dl=0}
 \def\talkcopyright{\myauthor}
 \def\talkaffiliation{Liceo Mixto Los Andes}
 \def\talkauthor{Hans Sigrist}
@@ -54,7 +60,7 @@
 \newtheorem{ejemplo}[teorema]{Ejemplo}
 \newtheorem{nota}[teorema]{Nota}
 %-------------------------------------------------------------------------------------------------------
-\hypersetup{colorlinks,linkcolor=,citecolor=black,urlcolor=links,pdftitle={pdftitle},pdfauthor={\talkauthor},pdfsubject={\talksubject},pdfkeywords={\talkkeywords}}
+\hypersetup{pdfpagemode=FullScreen,colorlinks,linkcolor=,citecolor=black,urlcolor=links,pdftitle={pdftitle},pdfauthor={\talkauthor},pdfsubject={\talksubject},pdfkeywords={\talkkeywords}}
 %-------------------------------------------------------------------------------------------------------
 \setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Biolinum
     O}
@@ -79,28 +85,114 @@
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
 \section{¿Qué no es bullying?}
-\begin{frame}[c]\frametitle{Se trata de tramos etáreos}
+\begin{frame}
+  \frametitle{No es un delito}
+  \pause 
+  \begin{exampleblock}{}
+    {\large\emph{ ``El acoso escolar no configura un delito en sí mismo. En
+        otras palabras, no existe el delito de bullying. Pero sí existen
+        conductas asociadas que pueden agravar una acción de acoso escolar si se
+        transforman en delitos, como por ejemplo cuando se cometen lesiones o
+        cuando se amenaza''. }} \vskip5mm \hspace*\fill{\small---
+      \framedhref{http://www.biobiochile.cl/noticias/nacional/educacion/2016/06/15/como-sanciona-la-ley-chilena-a-los-estudiantes-y-docentes-que-cometen-bullying.shtml}{Sala
+        de Prensa, Fiscalía de Chile - 04/07/2014}}
+  \end{exampleblock}
+  
+  \note[item]{Las \textbf{lesiones} son los daños físicos causados por una o más
+    personas a otra (s) persona (s), empleando distintos tipos de objetos que
+    revisten el carácter de arma, por ejemplo puños, garrotes, palos, armas
+    blancas o de fuego, zapatos, piedras, etc.}
+
+  \note[item]{La \textbf{amenaza} por su parte es un delito por el cual una
+    persona anuncia a otra que causará un mal que constituya delito a ella o a
+    su familia, sea cometida contra su persona, honra o propiedad...}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{La ley no impone sanciones por bullying}
+  \pause 
+  \begin{exampleblock}{}
+    {\large\emph{ ``La ley no impone sanciones directas contra los estudiantes o
+        adultos que cometan bullying en comunidades educativas. Son los
+        establecimientos los que deben definir las sanciones para cada caso en
+        sus reglamentos internos''. }} \vskip5mm \hspace*\fill{\small---
+      \framedhref{http://www.dpp.cl/sala_prensa/noticias_detalle/4595/fueron-lesiones-no-bullying}{Nacional,
+        biobiochile.cl - 15/06/2016}}
+  \end{exampleblock}
+  
+  \note[item]{De acuerdo a la ley, los responsables de prevenir el acoso y promover la
+    buena convivencia son ``los alumnos, alumnas, padres, madres, apoderados,
+    profesionales y asistentes de la educación, así como los equipos docentes y
+    directivos de los establecimientos educacionales''.}
+  
+  \note[item]{En caso de que el colegio no aplique ``las medidas correctivas,
+    pedagógicas o disciplinarias que su propio reglamento interno disponga'',
+    éste podrá ser sancionado por las autoridades educacionales con una multa de
+    hasta $50 UTM$ (unos $\$2.334.600$). Dicha multa puede duplicarse en caso de
+    reincidencia.}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Fueron lesiones no bullying}
+  \pause 
+  \begin{exampleblock}{}
+    {\large\emph{ ``\ldots lo que  se sancionó es un delito de lesiones y no una
+      conducta de bullying,  pues sí bien es cierto, el bullying, es reprochado
+      social y moralmente, éste no constituye delito, por lo que señalar que la
+      condena dictada en contra de mi cliente fue por bullying, es informar
+      erróneamente lo establecido en el ámbito de la justicia penal''.}} \vskip5mm
+    \hspace*\fill{\small--- \framedhref{http://www.dpp.cl/sala_prensa/noticias_detalle/4595/fueron-lesiones-no-bullying}{Sala de Prensa, Defensoría Penal Pública - 24/07/2013}}
+  \end{exampleblock}
+
+  \note[item]{Un joven de 19 años fue condenado el lunes pasado (*) por el tribunal de
+    garantía de Punta Arenas, a la pena de 61 días de presidio remitido como
+    autor de lesiones en contra de un ex compañero de curso.}
+
+  \note[item]{Luego de una discusión entre ambos en la sala de clases, quien hoy
+    aparece como victima en su calidad de practicante de judo propinó una llave
+    al hoy imputado, tirándolo al suelo. Minutos después, el imputado encara a
+    su agresor en el patio del establecimiento y le propina un golpe en el
+    rostro fracturándole la nariz, todo esto al interior del establecimiento
+    educacional.}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}[c]
+  \frametitle{Se trata de tramos etáreos}
   \begin{alertblock}{Entre adultos, agresión}
     \pause No hablamos de bullying entre adultos, aquello es regulado por leyes civiles.
+    \note{Existe una mala concepción u error del pensamiento, al asignarle
+      carácter de bullying a relaciones interpersonales entre adultos:
+      relaciones amorosas, laborales, civiles, sociales, políticas, etc.}
   \end{alertblock}
-\pause
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}[c]
+  \frametitle{Se trata de tramos etáreos}
   \begin{alertblock}{Desde un adulto hacia un menor de edad}
     \pause Tampoco confundir con ``maltrato escolar'', que es la agresión del educador
     hacia el educando (alumno/a).
+    \note{En este caso pueden aplicar situaciones dolosas que configuran delito.}
   \end{alertblock}
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
 \begin{frame}
   \frametitle{Malos sinónimos}
   \begin{alertblock}{}
-    El bullying o acoso escolar no es lo mismo que mala conducta, conflicto escolar, conducta agresiva, conducta violenta o maltrato escolar. 
+    El bullying o acoso escolar no es lo mismo que mala conducta, conducta
+    agresiva, conducta violenta, maltrato escolar ni que \alert{conflicto escolar}. 
+    \note{Puede usarse ``acoso escolar'' como sinónimo al anglicismo ``bullying''.}
   \end{alertblock}
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
 \begin{frame}
   \frametitle{Conflictos escolares}
   \begin{exampleblock}{Son interpersonales}
-    Los conflictos escolares se resuelven en la inmediatez, pues son concernientes a relaciones interpersonales. No requieren intervención de profesionales. No alteran la armonía escolar.
+    \pause Los conflictos escolares se resuelven en la inmediatez, pues son
+    concernientes a relaciones interpersonales. No requieren intervención de
+    profesionales. No alteran la armonía escolar.
+    \note{El día a día en la jornada escolar no puede ser interpretada como un
+      constante desequilibrio de la armonía. Atender a las variables etáreas,
+      formativas y actitudinales.}
   \end{exampleblock}
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
@@ -133,7 +225,9 @@
     \item<+-> humillarlo delante de los demás
     \item<+-> organizar un plan el día de su cumpleaños para que los demás
         tengan que elegir
-    \item<+-> organizar a un grupo de compañeros para que no sean amigos de alguien y no le hablen, no lo acompañen, no asistan a su cumpleaños, etc.   
+      \item<+-> organizar a un grupo de compañeros para que no sean amigos de
+        alguien y no le hablen, no lo acompañen, no asistan a su cumpleaños,
+        etc.
     \end{itemize}
   \end{exampleblock}
 \end{frame}
@@ -190,7 +284,14 @@
 \begin{frame}
   \frametitle{Vigente desde 2011}
   \begin{block}{Artículo 16 B}
-    Se entenderá por acoso escolar toda acción u omisión constitutiva de agresión u hostigamiento reiterado, realizada fuera o dentro del establecimiento educacional por estudiantes que, en forma individual o colectiva, atenten en contra de otro estudiante, valiéndose para ello de una situación de superioridad o de indefensión del estudiante afectado, que provoque en este último, maltrato, humillación o fundado temor de verse expuesto a un mal de carácter grave, ya sea por medios tecnológicos o cualquier otro medio, tomando en cuenta su edad y condición.
+    Se entenderá por acoso escolar toda acción u omisión constitutiva de
+    agresión u hostigamiento reiterado, realizada fuera o dentro del
+    establecimiento educacional por estudiantes que, en forma individual o
+    colectiva, atenten en contra de otro estudiante, valiéndose para ello de una
+    situación de superioridad o de indefensión del estudiante afectado, que
+    provoque en este último, maltrato, humillación o fundado temor de verse
+    expuesto a un mal de carácter grave, ya sea por medios tecnológicos o
+    cualquier otro medio, tomando en cuenta su edad y condición.
   \end{block}
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
@@ -202,7 +303,10 @@
     \item<+-> aprende a defenderte (odio por odio = más violencia)
     \item<+-> dense la mano y háganse amigos -sin hablar- (aumenta el odio y
         refuerza humillación)
-      \item<+-> es molestoso, le gusta que lo molesten, no es amistoso, le gusta llamar la atención, por todo reclama, nunca está contento, …​ califican como hostigamiento, el niño desarrolla entonces estrategias para sobrevivir/defenderse y la situación empeora   
+      \item<+-> es molestoso, le gusta que lo molesten, no es amistoso, le gusta
+        llamar la atención, por todo reclama, nunca está contento, …​ califican
+        como hostigamiento, el niño desarrolla entonces estrategias para
+        sobrevivir/defenderse y la situación empeora
     \end{itemize}
   \end{alertblock}
 \end{frame}
@@ -297,7 +401,7 @@
 
 \textbf{\emph {Saludos a todas/os, ¡Muchas gracias!}}
 
-Una copia del presente trabajo, se encuentra en el enlace \framedhref{\talkpubpdf}{\talkpubpdf}.
+Una copia del presente trabajo, se encuentra en el enlace \framedhref{\talkpubpdf}{\talktitle}.
 
 \end{frame}
 \end{document}

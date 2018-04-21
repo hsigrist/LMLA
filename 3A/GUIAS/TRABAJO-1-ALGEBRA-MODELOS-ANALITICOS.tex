@@ -1,0 +1,163 @@
+\documentclass[12pt,addpoints,x11names]{exam}
+%-------------------------------------------------------------------------------------------------------
+\usepackage{pgf,tikz}
+\usepackage{sectsty}
+\usepackage{multicol}
+\usepackage{tkz-euclide}
+\usepackage{fourier}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usetikzlibrary{arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usetkzobj{all}
+\usepackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=1.5cm,paperheight=33cm]{geometry}
+%-------------------------------------------------------------------------------------------------------
+\setmainfont[Mapping={tex-text}]{Linux Biolinum O}
+\setsansfont[Mapping={tex-text}]{Linux Libertine O}
+\setmonofont[Mapping={tex-text},Scale=0.8]{Pragmata Pro}
+\allsectionsfont{\sffamily}
+% -------------------------------------------------------------------------------------------------------
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\setlength\columnsep{30pt}
+\everymath{\displaystyle}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\QQ{\mathbb{Q}}
+\def\ZZ{\mathbb{Z}}
+\def\II{\mathbb{I}}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{SlateGray1}{SlateGray1}{#2}}}
+\everymath{\displaystyle}
+\extraheadheight{1in}
+\extrafootheight{.75in}
+\def\mytitle{Trabajo 1 Álgebra \& Modelos Analíticos / Tercero Medio HC}
+\def\dpto{Dpto. Matemática - LMLA $\cdot$ 2018, pág. \thepage}
+\def\mykeywords{geometría analítica}
+\def\mysubject{geometría analítica}
+\def\myauthor{Prof. Hans Sigrist}
+%-------------------------------------------------------------------------------------------------------
+\pagestyle{headandfoot}
+\firstpageheader{\includegraphics[scale=.56]{logolmlabw}}
+{\Large\textbf{Guía 2}\\
+  Geometría Analítica\\
+  Tercero Medio HC\\
+  marzo 2018}
+{}
+\runningheader{\mytitle}{}{\dpto}
+\footer{}{}{}
+%-------------------------------------------------------------------------------------------------------
+\definecolor{links}{HTML}{000000}
+\hypersetup{%
+  colorlinks,%
+  linkcolor=,%
+  citecolor=black,%
+  urlcolor=links,%
+  pdftitle={\mytitle},%
+  pdfauthor={\myauthor},%
+  pdfsubject={\mysubject},%
+  pdfkeywords={\mykeywords}%
+}
+%-------------------------------------------------------------------------------------------------------
+% \printanswers
+%-------------------------------------------------------------------------------------------------------
+\newcommand*\Matching[1]{%
+  \ifprintanswers%
+  \textbf{#1}%
+  \else%
+  \rule{2.1in}{0.5pt}%
+  \fi%
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+  \setlength\matchlenb{\linewidth}%
+  \addtolength\matchlenb{-\matchlena}%
+  \parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}%
+}
+%-------------------------------------------------------------------------------------------------------
+\begin{document}
+\addpoints
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+\pointname{ puntos}
+\pointpoints{ punto}{ puntos}
+\bracketedpoints
+\boxedpoints
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\renewcommand{\choicelabel}{\thechoice)}
+\chqword{Pregunta}
+\chpword{Puntos}
+\chbpword{Bonus}
+\chsword{Total}\hqword{Pregunta}
+\hpword{Puntos}
+\cellwidth{3mm}
+\setlength\answerskip{2ex}
+\setlength\answerlinelength{2in}
+%-------------------------------------------------------------------------------------------------------
+\fullwidth{\noindent\large\textbf{Nombre:}\enspace\makebox[5.2in]{\hrulefill}
+  \textbf{Curso:}\enspace\makebox[0.5in]{\hrulefill}}
+\fullwidth{%
+  \begin{description}
+  \item[Objetivos:] Obtener la distancia entre dos puntos en el plano.
+    Determinar el ángulo de inclinación usando propiedades trigonométricas.
+    Determinar las ecuaciones principal y general de la recta.
+  \end{description}
+}
+%-------------------------------------------------------------------------------------------------------
+\section{Punto medio, distancia, elementos
+  del triángulo, ecuación de la recta.}
+
+\begin{questions}
+  \fullwidth{El siguiente problema requiere que observe el triángulo de la
+    Figura \ref{fig:fig1}.}
+
+  \begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+      \tkzInit[xmax=6, ymax=4]
+      \tkzAxeXY
+      \tkzGrid
+      \tkzClip
+      \tkzDefPoint(5,1){A}
+      \tkzDefPoint(2,2){B}
+      \tkzDefPoint(4,3){C}
+      \tkzDrawSegments(A,B B,C C,A)
+      \tkzDrawPoints(A,B,C)
+      \tkzLabelPoint[right](A){$A$}
+      \tkzLabelPoint[left](B){$B$}
+      \tkzLabelPoint[above](C){$C$}
+    \end{tikzpicture}
+    \caption{Triángulo $ABC$}
+    \label{fig:fig1}
+  \end{figure}
+
+  \question[8] lorem jnsjxjb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+\end{questions}
+\end{document}
+% Local Variables:
+% TeX-engine: xetex
+% End:

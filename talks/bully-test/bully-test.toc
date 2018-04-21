@@ -1,0 +1,4 @@
+\select@language {spanish}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Emoji}{2}{0}{1}
+\beamer@sectionintoc {2}{Bully-Test}{5}{0}{2}

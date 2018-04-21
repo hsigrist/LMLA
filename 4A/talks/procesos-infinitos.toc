@@ -1,0 +1,3 @@
+\select@language {spanish}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Sucesiones y series}{2}{0}{1}

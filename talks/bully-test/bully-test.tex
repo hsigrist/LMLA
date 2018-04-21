@@ -1,0 +1,152 @@
+\documentclass[12pt,spanish,x11names,svgnames]{beamer}
+%-------------------------------------------------------------------------------------------------------
+\usetheme{Hytex}
+\usepackage{pgfpages}
+%\setbeameroption{show notes on second screen=right}
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme[RGB={20,13,67}]{structure}
+\usepackage{tcolorbox}
+\usepackage{fourier}
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usepackage[style=spanish]{csquotes}
+\usepackage{pstricks-add}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{pgf,tikz}
+\usetikzlibrary{mindmap,trees,arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{marvosym}
+\setbeamertemplate{caption}[numbered]
+\usepackage{hyperref}
+%-------------------------------------------------------------------------------------------------------
+\def\talkclass{Presentación}
+\def\talkcar{Comunidad escolar}
+\def\talkdate{\today}
+\def\talkversion{TLK-1002}
+\def\talktitle{bully-test}
+\def\talksubtitle{¿Qué tipo de testigo eres?}
+\def\talkkeywords{bullying, bully-test, acoso escolar}
+\def\talksubject{acoso escolar}
+\def\talkblog{https://hsigrist.github.io}
+\def\talkpubpdf{https://www.dropbox.com/s/627vvg7phl1nyoe/bully-test.pdf?dl=0}
+\def\talkcopyright{\myauthor}
+\def\talkaffiliation{Liceo Mixto Los Andes}
+\def\talkauthor{Hans Sigrist}
+\def\talkgrade{Lic. \& Mag. Matemática}
+\def\talkemail{hsigrist@liceomixto.cl}
+\definecolor{links}{HTML}{000000}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\ZZ{\mathbb{Z}}
+\def\QQ{\mathbb{Q}}
+\def\II{\mathbb{I}}
+\definecolor{bluu}{RGB}{7,29,66}
+\definecolor{scarlet}{RGB}{255,36,0}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{bluu}{bluu}{\textcolor{white}{#2}}}}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{proposicion}[teorema]{Proposición}
+\newtheorem{corolario}[teorema]{Corolario}
+\newtheorem{definicion}[teorema]{Definición}
+\newtheorem{ejemplo}[teorema]{Ejemplo}
+\newtheorem{nota}[teorema]{Nota}
+%-------------------------------------------------------------------------------------------------------
+\hypersetup{pdfpagemode=FullScreen,colorlinks,linkcolor=,citecolor=black,urlcolor=links,pdftitle={pdftitle},pdfauthor={\talkauthor},pdfsubject={\talksubject},pdfkeywords={\talkkeywords}}
+%-------------------------------------------------------------------------------------------------------
+\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux
+  Biolinum O}
+\setsansfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Biolinum
+  O}
+\setmonofont[Mapping={tex-text},Numbers={OldStyle},Ligatures=Rare,Scale=0.8]{Pragmata
+  Pro Mono}
+%-------------------------------------------------------------------------------------------------------
+\graphicspath{{/home/hsigrist/LMLA/2018/talks/test-bullying/}}
+\everymath{\displaystyle}
+\AtBeginSection[]{\begin{frame}<beamer>\frametitle{Agenda}\tableofcontents[sectionstyle=show/hide,subsectionstyle=hide/show/hide,currentsection]\end{frame}\addtocounter{framenumber}{-1}}
+%-------------------------------------------------------------------------------------------------------
+\title{\talktitle}
+\subtitle{\talksubtitle}
+\author{\talkauthor}
+\institute{\talkaffiliation}
+\date{\footnotesize{\emph{\href{\talkblog}{\talkemail}}}}
+%-------------------------------------------------------------------------------------------------------
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{Emoji}
+\begin{frame}
+  \frametitle{Emoji soy testigo}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale=.35]{emoji}
+  \end{figure}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Emoji soy testigo}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale=.51]{eyes}
+  \end{figure}
+\end{frame}
+
+\section{Bully-Test}
+\begin{frame}[c]\frametitle{¿Qué tipo de testigo eres?}
+  \begin{block}{Pregunta 1}
+    Un compañero de clase publicó un video de él mismo cantando en línea y la
+    gente está dejando comentarios negativos sobre él. ¿Haces algo al respecto?
+  \end{block}
+  \pause
+  \begin{exampleblock}{Si}
+    Hablar y hacer saber a los demás que no es bueno burlarse de las
+    personas, puede hacer una gran diferencia. Intenta publicar Emoji️ testigo
+    para demostrar que no te gustan los malos comentarios.
+  \end{exampleblock}
+  \pause
+  \begin{alertblock}{No}
+    Es difícil saber cómo responder al acoso cibernético. Defender a otro niño
+    no siempre es fácil y requiere coraje. Una forma es publicar el Emoji
+    testigo en un mensaje hiriente para mostrar tu repudio.
+  \end{alertblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}[c]\frametitle{Apéndice}
+\centering\decofourleft\quad\decofourright
+
+\textbf{\emph {Saludos a todas/os, ¡Muchas gracias!}}
+
+Una copia del presente trabajo, se encuentra en el enlace \framedhref{\talkpubpdf}{\talktitle}.
+\end{frame}
+\end{document}
+%-------------------------------------------------------------------------------------------------------
+% !TEX program = xelatex

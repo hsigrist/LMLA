@@ -1,0 +1,3 @@
+\select@language {spanish}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Elementos del triángulo}{2}{0}{1}

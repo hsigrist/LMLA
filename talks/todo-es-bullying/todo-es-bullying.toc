@@ -1,0 +1,8 @@
+\select@language {spanish}
+\select@language {spanish}
+\beamer@sectionintoc {1}{¿Qué no es bullying?}{2}{0}{1}
+\beamer@sectionintoc {2}{¿Qué si es bullying?}{26}{0}{2}
+\beamer@sectionintoc {3}{Características del bullying}{32}{0}{3}
+\beamer@sectionintoc {4}{Ley de convivencia escolar 20.536}{49}{0}{4}
+\beamer@sectionintoc {5}{Malas prácticas}{52}{0}{5}
+\beamer@sectionintoc {6}{Citas}{56}{0}{6}

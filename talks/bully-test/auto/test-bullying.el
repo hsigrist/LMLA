@@ -1,5 +1,5 @@
 (TeX-add-style-hook
- "bullying"
+ "test-bullying"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("beamer" "12pt" "spanish" "x11names" "svgnames")))
@@ -17,8 +17,10 @@
     "latex2e"
     "beamer"
     "beamer12"
+    "pgfpages"
     "tcolorbox"
     "fourier"
+    "float"
     "fontspec"
     "graphicx"
     "amssymb"
@@ -66,7 +68,8 @@
     "nota")
    (LaTeX-add-xcolor-definecolors
     "links"
-    "bluu")
+    "bluu"
+    "scarlet")
    (LaTeX-add-polyglossia-langs
     '("spanish" "defaultlanguage" "")))
  :latex)
