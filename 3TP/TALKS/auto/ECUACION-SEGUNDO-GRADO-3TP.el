@@ -17,6 +17,7 @@
     "latex2e"
     "beamer"
     "beamer12"
+    "array"
     "tcolorbox"
     "fourier"
     "float"
@@ -36,6 +37,7 @@
     "marvosym"
     "hyperref")
    (TeX-add-symbols
+    '("rowstyle" 1)
     '("framedhref" 2)
     "talkclass"
     "talkcar"
@@ -56,7 +58,8 @@
     "RR"
     "ZZ"
     "QQ"
-    "II")
+    "II"
+    "currentrowstyle")
    (LaTeX-add-labels
     "eq:1")
    (LaTeX-add-amsthm-newtheorems
@@ -70,6 +73,9 @@
    (LaTeX-add-xcolor-definecolors
     "links"
     "bluu")
+   (LaTeX-add-array-newcolumntypes
+    "+"
+    "^")
    (LaTeX-add-polyglossia-langs
     '("spanish" "defaultlanguage" "")))
  :latex)

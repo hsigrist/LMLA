@@ -7,6 +7,7 @@
 \usetheme{Hytex}
 \setbeamertemplate{navigation symbols}{}
 \usecolortheme[RGB={7,29,66}]{structure}
+\usepackage{array}
 \usepackage{tcolorbox}
 \usepackage{fourier}
 \usepackage{float}
@@ -33,7 +34,7 @@
 \def\talkdate{\today}
 \def\talkversion{}
 \def\talktitle{Ecuación de Segundo Grado}
-\def\talksubtitle{Elementos, resolución, usos}
+\def\talksubtitle{problematización, elementos, tipos}
 \def\talkkeywords{ecuación de segundo grado}
 \def\talksubject{ecuación de segundo grado}
 \def\talkblog{https://hsigrist.github.io}
@@ -59,13 +60,19 @@
 \newtheorem{ejemplo}[teorema]{Ejemplo}
 \newtheorem{nota}[teorema]{Nota}
 %-------------------------------------------------------------------------------------------------------
+\newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+#1\ignorespaces
+}
+%-------------------------------------------------------------------------------------------------------
 \hypersetup{pdfpagemode=FullScreen,colorlinks,linkcolor=,citecolor=black,urlcolor=links,pdftitle={pdftitle},pdfauthor={\talkauthor},pdfsubject={\talksubject},pdfkeywords={\talkkeywords}}
 %-------------------------------------------------------------------------------------------------------
 \setmainfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Biolinum
     O}
 \setsansfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Libertine
     O}
-\setmonofont[Mapping={tex-text},Numbers={OldStyle},Ligatures=Rare,Scale=0.8]{Pragmata
+\setmonofont[Mapping={tex-text},Numbers={OldStyle},Scale=0.8]{Pragmata
     Pro Mono}
 %-------------------------------------------------------------------------------------------------------
 \graphicspath{{/home/hsigrist/Dropbox/images/}}
@@ -114,24 +121,79 @@
   \frametitle{Según sus coeficientes}
   \begin{exampleblock}{Se expresan como:}
     \begin{align*}
-      x^2-4x-140&=0\hspace{1cm}\text{\emph{ecuación seg. grado completa}}\\
-      5x^2-20&=0\hspace{1cm}\text{\emph{ecuación seg. pura}}\\
-      16x^2-8x&=0\hspace{1cm}\text{\emph{ecuación seg. grado factorizable}}
+      5x^2-20&=0\hspace{1cm}\text{\emph{ecuación seg. grado pura}}\\
+      8x^2-24x&=0\hspace{1cm}\text{\emph{ecuación seg. grado factorizable}}\\
+      x^2+12x+35&=0\hspace{1cm}\text{\emph{ecuación seg. grado trinomio factorizable}}\\
+      3x^2+5x-1&=0\hspace{1cm}\text{\emph{ecuación seg. grado completa}}
     \end{align*}
   \end{exampleblock}
 \end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{Ejercicios}
+\begin{frame}
+  \frametitle{Coeficientes}
+  Construya la ecuación de segundo grado a partir de sus coeficientes y
+  determine el tipo de ecuación. Use \textbf{Tipo I}: \emph{ecuación seg. grado
+    pura}, \textbf{Tipo II}: \emph{ecuación seg. grado factorizable},
+  \textbf{Tipo III}: \emph{ecuación seg. grado trinomio factorizable} y
+  \textbf{Tipo IV}: \emph{ecuación seg. grado completa}.
+  
+  \centering
+  \begin{tabular}[t]{|+c|^c|^c|^c|^c|}
+    \hline
+    \rowstyle{\bfseries}%
+    $a$&$b$&$c$&ecuación&tipo\\
+    \hline
+    $1$&$-1$&$1$&&\\
+    \hline
+    $0$&$4$&$5$&&\\
+    \hline
+    $1$&$-3$&$18$&&\\
+    \hline
+    $1$&$-12$&$27$&&\\
+    \hline
+    $5$&$25$&$0$&&\\
+    \hline
+    $1$&$4$&$7$&&\\
+    \hline
+    $2$&$5$&$11$&&\\
+    \hline
+    $3$&$-27$&$0$&&\\
+    \hline
+    $1$&$10$&$25$&&\\
+    \hline
+\end{tabular}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Tipos}
+  Establezca la naturaleza de las ecuaciones siguientes.
 
-
-
-
-
-
-
-
-
-
-
-
+  \centering
+  \begin{tabular}[t]{|+c|+c|}
+    \hline
+    \rowstyle{\bfseries}
+    ecuación& tipo\\
+    \hline
+    $3(x^2-5)=2x^2+9$&\\
+    \hline
+    $(x+4)^2+(x-3)^2=(x+5)^2$&\\
+    \hline
+    $\frac{3(x^2-5)}{5}-\frac{2(x^2-70)}{7}=17+x$&\\
+    \hline
+    $(x+6)(x-6)-8=1-4x$& \\
+    \hline
+    $\frac{x^2-5}{3}+\frac{4x^2-1}{5}=\frac{14x^2-1}{15}$&\\
+    \hline
+    $\frac{x}{x+2}+\frac{x}{x-2}=1$&\\
+    \hline
+    $\frac{9}{2}-\frac{(x-6)^2}{2}=x-1$&\\
+    \hline
+    $\sqrt{2x+\frac{1}{8x}}=1$&\\
+    \hline
+  \end{tabular}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
 \begin{frame}[c]\frametitle{Apéndice}
 \centering\decofourleft\quad\decofourright
 
