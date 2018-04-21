@@ -57,6 +57,8 @@
     "ZZ"
     "QQ"
     "II")
+   (LaTeX-add-labels
+    "eq:1")
    (LaTeX-add-amsthm-newtheorems
     "teorema"
     "lema"
