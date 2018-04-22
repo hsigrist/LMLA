@@ -38,7 +38,7 @@
 \def\talkkeywords{parábola, concavidad, discriminante}
 \def\talksubject{función cuadrática}
 \def\talkblog{https://hsigrist.github.io}
-\def\talkpubpdf{https://github.com/hsigrist/LMLA/blob/master/3TP/TALKS/METODOS-RESOLUCION.pdf}
+\def\talkpubpdf{https://github.com/hsigrist/LMLA/blob/master/3TP/TALKS/FUNCION-CUADRATICA.pdf}
 \def\talkcopyright{\myauthor}
 \def\talkaffiliation{Liceo Mixto Los Andes}
 \def\talkauthor{Hans Sigrist}
@@ -104,6 +104,134 @@
     \textbf{discriminante} y se simboliza por $\Delta$.
   \end{block}
 \end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Naturaleza de las soluciones}
+  \begin{block}{Propiedades}
+    \begin{align*}
+    \Delta>0&\Rightarrow 2\text{ sol.},\RR,\neq\\
+    \Delta=0&\Rightarrow 2\text{ sol.},\RR,=\\
+    \Delta<0&\Rightarrow 2\text{ sol.},\CC,\text{ conjugadas}
+    \end{align*}
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{La función cuadrática}
+\begin{frame}
+  \frametitle{Es una función epiyectiva}
+  \begin{block}{Definición}
+    Una función cuadrática es de la forma $f(x)=ax^2+bx+c$, donde $a,b,c\in\RR$
+    y $a\neq0$.
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Caso $a=1$, $b=0$ y $c=0$}
+  \pause
+  En este caso tenemos la función $f(x)=x^2$. Con esta función construyamos una
+  tabla de valores de la forma $(x,f(x))$:
+
+  \centering
+  \begin{tabular}[t]{|c|c|}
+    \hline
+    $x$ & $f(x)$\\
+    \hline
+    $-4$ & \\      
+    \hline
+    $-3$ & \\      
+    \hline
+    $-2$ & \\      
+    \hline
+    $-1$ & \\      
+    \hline
+    $0$ & \\      
+    \hline
+    $1$ & \\      
+    \hline
+    $2$ & \\      
+    \hline
+    $3$ & \\      
+    \hline
+    $4$ & \\
+    \hline
+  \end{tabular}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{La parábola}
+  Con los pares ordenados anteriores diseñemos la parábola:
+    \begin{minipage}[t]{.6\linewidth}
+     \begin{figure}[h]
+      \centering
+      \begin{tikzpicture}[scale=.5]
+        \tkzInit[xmax=5,xmin=-5,ymax=10,ymin=0]
+        \tkzAxeXY
+        \tkzGrid
+        \tkzDefPoint(-3,9){B}
+        \tkzDefPoint(-2,4){C}
+        \tkzDefPoint(-1,1){D}
+        \tkzDefPoint(0,0){E}
+        \tkzDefPoint(1,1){F}
+        \tkzDefPoint(2,4){G}
+        \tkzDefPoint(3,9){H}
+        \tkzDrawPoint(B)
+        \tkzDrawPoint(C)
+        \tkzDrawPoint(D)
+        \tkzDrawPoint(E)
+        \tkzDrawPoint(F)
+        \tkzDrawPoint(G)
+        \tkzDrawPoint(H)
+      \end{tikzpicture}
+    \end{figure}
+  \end{minipage}
+  \begin{minipage}[t]{.3\linewidth}
+  \begin{tabular}[t]{|c|c|}
+    \hline
+    $x$ & $f(x)$\\
+    \hline
+    $-3$ & $9$\\      
+    \hline
+    $-2$ & $4$\\      
+    \hline
+    $-1$ & $1$\\      
+    \hline
+    $0$ & $0$\\      
+    \hline
+    $1$ & $1$\\      
+    \hline
+    $2$ & $4$\\      
+    \hline
+    $3$ & $9$\\      
+    \hline
+  \end{tabular}
+  \end{minipage}
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 %-------------------------------------------------------------------------------------------------------

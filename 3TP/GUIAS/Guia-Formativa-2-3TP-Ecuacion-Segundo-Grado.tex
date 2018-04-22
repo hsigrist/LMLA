@@ -1,0 +1,242 @@
+\documentclass[twocolumns,12pt,addpoints,x11names]{exam}
+%--------------------------------------------------------------------------------------------------------------------------
+\usepackage{pgf,tikz}
+\usepackage{multicol}
+\usepackage{tkz-euclide}
+\usepackage{fourier}
+\usepackage{fontspec}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usetikzlibrary{arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usetkzobj{all}
+\usepackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=1.5cm,paperheight=33cm]{geometry}
+%----------------------------------------------------------------------------------------------------------------------------------------
+\setmainfont[Mapping={tex-text}]{Linux Biolinum O}
+\setsansfont[Mapping={tex-text}]{Linux Libertine O}
+\setmonofont[Mapping={tex-text},Scale=0.8]{Pragmata Pro}
+%----------------------------------------------------------------------------------------------------------------------------------------
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\everymath{\displaystyle}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\QQ{\mathbb{Q}}
+\def\ZZ{\mathbb{Z}}
+\def\II{\mathbb{I}}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{SlateGray1}{SlateGray1}{#2}}}
+%----------------------------------------------------------------------------------------------------------------------------------------
+\everymath{\displaystyle}
+\extraheadheight{1in}
+\extrafootheight{.75in}
+%----------------------------------------------------------------------------------------------------------------------------------------
+\pagestyle{headandfoot}
+\firstpageheader{\includegraphics[scale=.56]{logolmlabw}}
+{\Large\textbf{Guía Formativa 2}\\
+  Ecuaciones de segundo grado\\
+  Tercero Medio TP\\
+  mayo 2018}
+{}
+\runningheader{Guía 2 - Ecuaciones de segundo grado / Tercero Medio TP}{}{Dpto. Matemática - LMLA $\cdot$ 2018, pág. \thepage}
+\footer{}{}{}
+%----------------------------------------------------------------------------------------------------------------------------------------
+\def\mytitle{sxsx}
+\def\mykeywords{xs}
+\def\mysubject{xs}
+\def\myauthor{Prof. Hans Sigrist}
+\definecolor{links}{HTML}{000000}
+%----------------------------------------------------------------------------------------------------------------------------------------
+\hypersetup{%
+  colorlinks,%
+  linkcolor=,%
+  citecolor=black,%
+  urlcolor=links,%
+  pdftitle={\mytitle},%
+  pdfauthor={\myauthor},%
+  pdfsubject={\mysubject},%
+  pdfkeywords={\mykeywords}%
+}
+%----------------------------------------------------------------------------------------------------------------------------------------
+% \printanswers
+%----------------------------------------------------------------------------------------------------------------------------------------
+\newcommand*\Matching[1]{%
+  \ifprintanswers%
+  \textbf{#1}%
+  \else%
+  \rule{2.1in}{0.5pt}%
+  \fi%
+}
+%----------------------------------------------------------------------------------------------------------------------------------------
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+  \setlength\matchlenb{\linewidth}%
+  \addtolength\matchlenb{-\matchlena}%
+  \parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}%
+}
+%----------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+%----------------------------------------------------------------------------------------------------------------------------------------
+\addpoints
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+\pointname{ puntos}
+\pointpoints{ punto}{ puntos}
+\bracketedpoints
+\boxedpoints
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\renewcommand{\choicelabel}{\thechoice)}
+\chqword{Pregunta}
+\chpword{Puntos}
+\chbpword{Bonus}
+\chsword{Total}\hqword{Pregunta}
+\hpword{Puntos}
+\cellwidth{3mm}
+\setlength\answerskip{2ex}
+\setlength\answerlinelength{2in}
+%----------------------------------------------------------------------------------------------------------------------------------------
+\fullwidth{\noindent\large\textbf{Nombre:}\enspace\makebox[5.2in]{\hrulefill} \textbf{Curso:}\enspace\makebox[0.5in]{\hrulefill}}
+\fullwidth{%
+  \begin{description}
+  \item[Objetivos:] Resolver ecuaciones de segundo grado utilizando diversos métodos. Analizar la naturaleza y características de sus soluciones.
+  \end{description}
+}
+%----------------------------------------------------------------------------------------------------------------------------------------
+\begin{multicols}{2}
+\begin{questions}
+\fullwidth{\noindent{\large \textbf{I. Ecuaciones de segundo grado incompletas de la forma $ax^{2}+c=0$.}}}
+\fullwidth{Resuelva las siguientes ecuaciones incompletas.}
+  \question $4x^{2}-16=0$
+  \question $3x^{2}-27=0$
+  \question $2x^{2}-10=0$
+  \question $5x^{2}-20=0$
+  \question $3x^{2}-13=0$
+  \question $6x^{2}-28=0$
+  \question $7x^{2}-13=0$
+  \question $11x^{2}-23=0$
+  \question $-6x^{2}+12=0$
+  \question $-4x^{2}+256=0$
+  \question $6561-81x^{2}=0$
+  \question $1225x^{2}-25=0$
+  \question $36x^{2}=1296$
+  \question $2x^{2}+32=0$
+  \question $4x^{2}+500=0$
+  \question $16x^{2}+256=0$
+  \question $10x^{2}+1000=0$
+%----------------------------------------------------------------------------------------------------------------------------------------
+\fullwidth{\noindent{\large \textbf{II. Ecuaciones de segundo grado incompletas de la forma $ax^{2}+bx=0$.}}}
+\fullwidth{Resuelva las siguientes ecuaciones incompletas.}
+  \question $x^{2}-9x=0$
+  \question $x^{2}-16x=0$
+  \question $x^{2}-32x=0$
+  \question $x^{2}+21x=0$
+  \question $2x^{2}+4x=0$
+  \question $4x^{2}+18x=0$
+  \question $-2x^{2}-4x=0$
+  \question $5x^{2}-7x=0$
+  \question $3x^{2}-9x=0$
+  \question $7x^{2}+12x=0$
+  \question $8x^{2}-24x=0$
+  \question $9x^{2}-27x=0$
+  \question $7x^{2}-21x=0$
+  \question $6x^{2}-42x=0$
+  \question $-3x^{2}+33x=0$
+  \question $-4x^{2}+52x=0$
+  \question $-6x^{2}+102x=0$
+%----------------------------------------------------------------------------------------------------------------------------------------
+\fullwidth{\noindent{\large \textbf{III. Ecuaciones de segundo grado completas de la forma $ax^{2}+bx+c=0$.}}}
+\fullwidth{Resuelva las siguientes ecuaciones completas \textbf{usando factorización}.}
+  \question $x^{2}+8x+15=0$
+  \question $x^{2}+10x+21=0$
+  \question $x^{2}+12x+27=0$
+  \question $x^{2}+11x+24=0$
+  \question $x^{2}+14x+24=0$
+  \question $x^{2}+17x+42=0$
+  \question $x^{2}+19x+65=0$
+  \question $x^{2}+25x+66=0$
+  \question $x^{2}-20x+1=0$
+  \question $x^{2}-12x+27=0$
+  \question $x^{2}-4x-21=0$
+  \question $x^{2}+x-42=0$
+  \question $x^{2}-5x+6=0$
+  \question $x^{2}-4x+4=0$
+  \question $x^{2}-5x-24=0$
+  \question $x^{2}-3x+2=0$
+  \question $x^{2}+x-2=0$
+  \question $x^{2}-x-2=0$
+%----------------------------------------------------------------------------------------------------------------------------------------
+\fullwidth{\noindent{\large \textbf{IV. Ecuaciones de segundo grado completas de la forma $ax^{2}+bx+c=0$ mediante fórmula.}}}
+\fullwidth{Resuelva las siguientes ecuaciones completas \textbf{usando fórmula}.}
+  \question $x^{2}+8x+15=0$
+  \question $x^{2}+7x+3=0$
+  \question $x^{2}-2x-6=0$
+  \question $x^{2}-4x-3=0$
+  \question $x^{2}+6x+7=0$
+  \question $x^{2}-4x+1=0$
+  \question $2x^{2}-2x-3=0$
+  \question $x^{2}-4x+2=0$
+  \question $x^{2}+4x-1=0$
+  \question $2x^{2}+3x-6=0$
+  \question $2x^{2}+7x-6=0$
+  \question $3x^{2}+9x-5=0$
+  \question $-2x^{2}+4x+9=0$
+  \question $-3x^{2}+6x+11=0$
+  \question $-5x^{2}-7x+9=0$
+  \question $-x^{2}-4x+9=0$
+%----------------------------------------------------------------------------------------------------------------------------------------
+\fullwidth{\noindent{\large \textbf{V. Naturaleza de las ecuaciones.}}}
+\fullwidth{Determine la naturaleza de las soluciones de las siguientes ecuaciones de segundo grado mediante análisis del discriminante.}
+  \question $2x^{2}-2x+3=0$
+  \question $3x^{2}-4x-2=0$
+  \question $x^{2}+7x-3=0$
+  \question $x^{2}-3x+2=0$
+  \question $3x^{2}+3x-1=0$
+  \question $5x^{2}+4x-3=0$
+  \question $x^{2}+x+5=0$
+  \question $16x^{2}-8x+1=0$
+  \question $3x^{2}+4x+1=0$
+  \question $5x^{2}+4x-3=0$
+  \question $4x^{2}-3x+2=0$
+  \question $8x^{2}+2x-3=0$
+%----------------------------------------------------------------------------------------------------------------------------------------
+\fullwidth{\noindent{\large \textbf{VI. Propiedades de las soluciones.}}}
+\fullwidth{Calcule la \textbf{suma} y el \textbf{producto} de las soluciones de las siguientes ecuaciones de segundo grado.}
+  \question $25x^{2}-20x+1=0$
+  \question $3x^{2}-2x+7=0$
+  \question $x^{2}+11x-13=0$
+  \question $5x^{2}-6x-14=0$
+  \question $x^{2}+6x+5=0$
+  \question $x^{2}-6x+5=0$
+  \question $3x^{2}+x+2=0$
+  \question $2x^{2}+x-1=0$
+  \question $3x^{2}-5x-2=0$
+  \question $3x^{2}+5x+2=0$
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{questions}
+\end{multicols}
+%----------------------------------------------------------------------------------------------------------------------------------------
+\end{document}
+%----------------------------------------------------------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------------------------------------------------------
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

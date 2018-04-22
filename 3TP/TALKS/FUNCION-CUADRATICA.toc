@@ -1,3 +1,4 @@
 \select@language {spanish}
 \select@language {spanish}
 \beamer@sectionintoc {1}{Discriminante}{2}{0}{1}
+\beamer@sectionintoc {2}{La función cuadrática}{5}{0}{2}
