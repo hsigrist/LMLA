@@ -1,0 +1,128 @@
+\documentclass[12pt,spanish,x11names]{beamer}
+%-------------------------------------------------------------------------------------------------------
+% \usepackage{pgfpages}
+% \setbeameroption{hide notes}
+% \setbeameroption{show notes}
+% \setbeameroption{show notes on second screen=right}
+\usetheme{Hytex}
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme[RGB={7,29,66}]{structure}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{tkz-fct}
+\usepackage{array}
+\usepackage{tcolorbox}
+\usepackage{fourier}
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usepackage[style=spanish]{csquotes}
+\usepackage{pstricks-add}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{pgf,tikz}
+\usetikzlibrary{mindmap,trees,arrows}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{marvosym}
+\setbeamertemplate{caption}[numbered]
+\usepackage{hyperref}
+%-------------------------------------------------------------------------------------------------------
+\def\talkclass{Presentación}
+\def\talkcar{3TP}
+\def\talkdate{\today}
+\def\talkversion{}
+\def\talktitle{La Parábola}
+\def\talksubtitle{gráfica, concavidad, intersecciones ejes coordenados}
+\def\talkkeywords{parábola, concavidad, intersecciones}
+\def\talksubject{parábola}
+\def\talkblog{https://hsigrist.github.io}
+\def\talkpubpdf{https://github.com/hsigrist/LMLA/blob/master/3TP/TALKS/FUNCION-CUADRATICA.pdf}
+\def\talkcopyright{\myauthor}
+\def\talkaffiliation{Liceo Mixto Los Andes}
+\def\talkauthor{Hans Sigrist}
+\def\talkgrade{Lic. \& Mag. Matemática}
+\def\talkemail{hsigrist@liceomixto.cl}
+\definecolor{links}{HTML}{000000}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+\def\ZZ{\mathbb{Z}}
+\def\QQ{\mathbb{Q}}
+\def\II{\mathbb{I}}
+\definecolor{bluu}{RGB}{7,29,66}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{bluu}{bluu}{\textcolor{white}{#2}}}}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{proposicion}[teorema]{Proposición}
+\newtheorem{corolario}[teorema]{Corolario}
+\newtheorem{definicion}[teorema]{Definición}
+\newtheorem{ejemplo}[teorema]{Ejemplo}
+\newtheorem{nota}[teorema]{Nota}
+%-------------------------------------------------------------------------------------------------------
+\newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+#1\ignorespaces
+}
+%-------------------------------------------------------------------------------------------------------
+\hypersetup{pdfpagemode=FullScreen,colorlinks,linkcolor=,citecolor=black,urlcolor=links,pdftitle={pdftitle},pdfauthor={\talkauthor},pdfsubject={\talksubject},pdfkeywords={\talkkeywords}}
+%-------------------------------------------------------------------------------------------------------
+\setmainfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Biolinum
+    O}
+\setsansfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Libertine
+    O}
+\setmonofont[Mapping={tex-text},Numbers={OldStyle},Scale=0.8]{Pragmata
+    Pro Mono}
+%-------------------------------------------------------------------------------------------------------
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\everymath{\displaystyle}
+\AtBeginSection[]{\begin{frame}<beamer>\frametitle{Agenda}\tableofcontents[sectionstyle=show/hide,subsectionstyle=hide/show/hide,currentsection]\end{frame}\addtocounter{framenumber}{-1}}
+%-------------------------------------------------------------------------------------------------------
+\title{\talktitle}
+\subtitle{\talksubtitle}
+\author{\talkauthor}
+\institute{\talkaffiliation}
+\date{\footnotesize{\emph{\href{\talkblog}{\talkemail}}}}
+%-------------------------------------------------------------------------------------------------------
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{La parábola}
+\begin{frame}
+  \frametitle{Pertenencia a la parábola}
+  \begin{block}{kjn}
+    snxkjn
+  \end{block}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}[c]\frametitle{Apéndice}
+\centering\decofourleft\quad\decofourright
+
+\textbf{\emph {Carpe diem!}}
+
+Una copia del presente trabajo, se encuentra en el enlace \framedhref{\talkpubpdf}{\talktitle}.
+
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\end{document}
+%-------------------------------------------------------------------------------------------------------
+% !TEX program = xelatex

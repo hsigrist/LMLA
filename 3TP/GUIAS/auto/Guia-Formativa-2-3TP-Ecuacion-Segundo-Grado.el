@@ -5,6 +5,13 @@
                      '(("exam" "twocolumns" "12pt" "addpoints" "x11names")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("geometry" "left=1.5cm" "right=1.5cm" "top=2.5cm" "bottom=1.5cm" "paperheight=33cm")))
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
+   (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
     "exam"
@@ -38,6 +45,10 @@
     "myauthor")
    (LaTeX-add-lengths
     "matchlena"
-    "matchlenb"))
+    "matchlenb")
+   (LaTeX-add-polyglossia-langs
+    '("spanish" "defaultlanguage" ""))
+   (LaTeX-add-xcolor-definecolors
+    "links"))
  :latex)
 

@@ -1,0 +1,5 @@
+\select@language {spanish}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Expresar información por medio de desigualdades}{2}{0}{1}
+\beamer@sectionintoc {2}{Representación gráfica de $\math@bb {R}$}{6}{0}{2}
+\beamer@sectionintoc {3}{Actividades}{15}{0}{3}

@@ -1,0 +1,82 @@
+(TeX-add-style-hook
+ "PARABOLA"
+ (lambda ()
+   (TeX-add-to-alist 'LaTeX-provided-class-options
+                     '(("beamer" "12pt" "spanish" "x11names")))
+   (TeX-add-to-alist 'LaTeX-provided-package-options
+                     '(("xcolor" "usenames" "dvipsnames") ("csquotes" "style=spanish")))
+   (add-to-list 'LaTeX-verbatim-environments-local "semiverbatim")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
+   (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
+   (TeX-run-style-hooks
+    "latex2e"
+    "beamer"
+    "beamer12"
+    "xcolor"
+    "tkz-fct"
+    "array"
+    "tcolorbox"
+    "fourier"
+    "float"
+    "fontspec"
+    "graphicx"
+    "amssymb"
+    "amsmath"
+    "polyglossia"
+    "csquotes"
+    "pstricks-add"
+    "tkz-euclide"
+    "pgf"
+    "tikz"
+    "siunitx"
+    "booktabs"
+    "marvosym"
+    "hyperref")
+   (TeX-add-symbols
+    '("rowstyle" 1)
+    '("framedhref" 2)
+    "talkclass"
+    "talkcar"
+    "talkdate"
+    "talkversion"
+    "talktitle"
+    "talksubtitle"
+    "talkkeywords"
+    "talksubject"
+    "talkblog"
+    "talkpubpdf"
+    "talkcopyright"
+    "talkaffiliation"
+    "talkauthor"
+    "talkgrade"
+    "talkemail"
+    "NN"
+    "RR"
+    "CC"
+    "ZZ"
+    "QQ"
+    "II"
+    "currentrowstyle")
+   (LaTeX-add-amsthm-newtheorems
+    "teorema"
+    "lema"
+    "proposicion"
+    "corolario"
+    "definicion"
+    "ejemplo"
+    "nota")
+   (LaTeX-add-xcolor-definecolors
+    "links"
+    "bluu")
+   (LaTeX-add-array-newcolumntypes
+    "+"
+    "^")
+   (LaTeX-add-polyglossia-langs
+    '("spanish" "defaultlanguage" "")))
+ :latex)
+
