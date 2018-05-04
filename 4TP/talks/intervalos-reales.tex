@@ -1,0 +1,371 @@
+\documentclass[12pt,spanish,x11names]{beamer}
+%-------------------------------------------------------------------------------------------------------
+% \usepackage{pgfpages}
+% \setbeameroption{hide notes}
+% \setbeameroption{show notes}
+% \setbeameroption{show notes on second screen=right}
+\usetheme{Hytex}
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme[RGB={7,29,66}]{structure}
+\usepackage{tcolorbox}
+\usepackage{fourier}
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usepackage[style=spanish]{csquotes}
+\usepackage{pstricks-add}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{pgf,tikz}
+\usetikzlibrary{mindmap,trees,arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{marvosym}
+\setbeamertemplate{caption}[numbered]
+\usepackage{hyperref}
+%-------------------------------------------------------------------------------------------------------
+\def\talkclass{Presentación}
+\def\talkcar{4TP}
+\def\talkdate{\today}
+\def\talkversion{}
+\def\talktitle{Intervalos Reales}
+\def\talksubtitle{Representación gráfica de $\RR$. Operatoria con intervalos.}
+\def\talkkeywords{orden en $\RR$, desigualdades, inecuaciones}
+\def\talksubject{geometría analítica}
+\def\talkblog{https://hsigrist.github.io}
+\def\talkpubpdf{}
+\def\talkcopyright{\myauthor}
+\def\talkaffiliation{Liceo Mixto Los Andes}
+\def\talkauthor{Hans Sigrist}
+\def\talkgrade{Lic. \& Mag. Matemática}
+\def\talkemail{hsigrist@liceomixto.cl}
+\definecolor{links}{HTML}{000000}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\ZZ{\mathbb{Z}}
+\def\QQ{\mathbb{Q}}
+\def\II{\mathbb{I}}
+\definecolor{bluu}{RGB}{7,29,66}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{bluu}{bluu}{\textcolor{white}{#2}}}}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{proposicion}[teorema]{Proposición}
+\newtheorem{corolario}[teorema]{Corolario}
+\newtheorem{definicion}[teorema]{Definición}
+\newtheorem{ejemplo}[teorema]{Ejemplo}
+\newtheorem{nota}[teorema]{Nota}
+%-------------------------------------------------------------------------------------------------------
+\hypersetup{pdfpagemode=FullScreen,colorlinks,linkcolor=,citecolor=black,urlcolor=links,pdftitle={pdftitle},pdfauthor={\talkauthor},pdfsubject={\talksubject},pdfkeywords={\talkkeywords}}
+%-------------------------------------------------------------------------------------------------------
+\setmainfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Biolinum
+    O}
+\setsansfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Libertine
+    O}
+\setmonofont[Mapping={tex-text},Numbers={OldStyle},Ligatures=Rare,Scale=0.8]{Pragmata
+    Pro Mono}
+%-------------------------------------------------------------------------------------------------------
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\everymath{\displaystyle}
+\AtBeginSection[]{\begin{frame}<beamer>\frametitle{Agenda}\tableofcontents[sectionstyle=show/hide,subsectionstyle=hide/show/hide,currentsection]\end{frame}\addtocounter{framenumber}{-1}}
+%-------------------------------------------------------------------------------------------------------
+\title{\talktitle}
+\subtitle{\talksubtitle}
+\author{\talkauthor}
+\institute{\talkaffiliation}
+\date{\footnotesize{\emph{\href{\talkblog}{\talkemail}}}}
+%-------------------------------------------------------------------------------------------------------
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{Expresar información por medio de desigualdades}
+\begin{frame}
+  \frametitle{Conexiones con la industria}
+  \begin{exampleblock}{Expresar por medio de desigualdades}
+    \begin{description}
+    \item[Medio Ambiente] Se considera que la calidad del aire es ``regular'' si el índice de
+      calidad del aire por material particulado (ICAP) es superior a $100$ y
+      menor o igual a $200$.
+    \item[Medicina] En un examen que mide la cantidad de glucosa en la sangre de
+      una persona adulta, se consideran normales los valores que van de $64$ a
+      $110 mg/dL$ (miligramos por decilitro).
+    \item[Física] La longitud de onda
+      de la luz visible es superior a $380 nm$ y menor o igual a $780 nm$.
+    \end{description}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Modelos suyos}
+  \begin{exampleblock}{}
+    \begin{enumerate}
+    \item $r<6$
+    \item $P\geq 4.95$
+    \item $R<4.45$
+    \item $m<n-15$
+    \item $a+b<132$
+    \end{enumerate}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Definición}
+  \begin{block}{Desigualdad}
+    Se denomina \textbf{desigualdad} a toda relación de orden que se establece entre números reales u otras
+    expresiones matemáticas, mediante la comparación:
+    \begin{itemize}
+    \item ``menor que'' ($<$),
+    \item ``menor o igual que'' ($\leq$),
+    \item ``mayor que'' ($>$) o
+    \item ``mayor o igual que'' ($\geq$).
+    \end{itemize}
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{Representación gráfica de $\RR$}
+\begin{frame}
+  \frametitle{Intervalos en $\RR$}
+  \begin{exampleblock}{Intervalo cerrado}
+    \vspace{1cm}
+  \begin{figure}[H]
+    \centering
+    Representación gráfica: 
+    \psset{xunit=1cm, yunit=1cm, yAxis=false}
+    \begin{pspicture}(-1,0)(7,0)
+      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
+      \psline[linewidth=2pt, linecolor=cyan]{*-*}(2,0)(4,0)
+    \end{pspicture}	
+  \end{figure}
+  \vspace{1cm}
+  \begin{equation*}
+   \text{Notación conjunto: } \left\{x\in\RR:2\leq x\leq 4\right\} 
+ \end{equation*}
+ \vspace{.5cm}
+  \begin{equation*}
+   \text{Notación intervalo: } \left[ 2,4 \right] 
+  \end{equation*}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Intervalos en $\RR$}
+  \begin{exampleblock}{Intervalo abierto}
+    \vspace{1cm}
+  \begin{figure}[H]
+    \centering
+    Representación gráfica: 
+    \psset{xunit=1cm, yunit=1cm, yAxis=false}
+    \begin{pspicture}(-1,0)(7,0)
+      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
+      \psline[linewidth=2pt, linecolor=cyan]{o-o}(2,0)(4,0)
+    \end{pspicture}	
+  \end{figure}
+  \vspace{1cm}
+  \begin{equation*}
+   \text{Notación conjunto: } \left\{x\in\RR:2< x< 4\right\} 
+ \end{equation*}
+ \vspace{.5cm}
+  \begin{equation*}
+    \text{Notación intervalo: } \mathopen] 2,4 \mathclose[
+      \end{equation*}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Intervalos en $\RR$}
+  \begin{exampleblock}{Intervalo semi-abierto}
+    \vspace{1cm}
+  \begin{figure}[H]
+    \centering
+    Representación gráfica: 
+    \psset{xunit=1cm, yunit=1cm, yAxis=false}
+    \begin{pspicture}(-1,0)(7,0)
+      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
+      \psline[linewidth=2pt, linecolor=cyan]{*-o}(2,0)(4,0)
+    \end{pspicture}	
+  \end{figure}
+  \vspace{1cm}
+  \begin{equation*}
+   \text{Notación conjunto: } \left\{x\in\RR:2\leq x< 4\right\} 
+ \end{equation*}
+ \vspace{.5cm}
+  \begin{equation*}
+    \text{Notación intervalo: } \mathclose[ 2,4 \mathclose[
+      \end{equation*}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Intervalos en $\RR$}
+  \begin{exampleblock}{Intervalo semi-abierto}
+    \vspace{1cm}
+  \begin{figure}[H]
+    \centering
+    Representación gráfica: 
+    \psset{xunit=1cm, yunit=1cm, yAxis=false}
+    \begin{pspicture}(-1,0)(7,0)
+      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
+      \psline[linewidth=2pt, linecolor=cyan]{o-*}(2,0)(4,0)
+    \end{pspicture}	
+  \end{figure}
+  \vspace{1cm}
+  \begin{equation*}
+   \text{Notación conjunto: } \left\{x\in\RR:2< x\leq 4\right\} 
+ \end{equation*}
+ \vspace{.5cm}
+  \begin{equation*}
+    \text{Notación intervalo: } \mathopen] 2,4 \mathclose]
+      \end{equation*}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Intervalos en $\RR$}
+  \begin{exampleblock}{Intervalo no acotado o infinito}
+    \vspace{1cm}
+  \begin{figure}[H]
+    \centering
+    Representación gráfica: 
+    \psset{xunit=1cm, yunit=1cm, yAxis=false}
+    \begin{pspicture}(-1,0)(7,0)
+      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
+      \psline[linewidth=2pt, linecolor=cyan]{*->}(2,0)(7,0)
+    \end{pspicture}	
+  \end{figure}
+  \vspace{1cm}
+  \begin{equation*}
+   \text{Notación conjunto: } \left\{x\in\RR:x\geq 2 \right\} 
+ \end{equation*}
+ \vspace{.5cm}
+  \begin{equation*}
+    \text{Notación intervalo: } \mathclose[ 2,+\infty \mathopen[
+      \end{equation*}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Intervalos en $\RR$}
+  \begin{exampleblock}{Intervalo no acotado o infinito}
+    \vspace{1cm}
+  \begin{figure}[H]
+    \centering
+    Representación gráfica: 
+    \psset{xunit=1cm, yunit=1cm, yAxis=false}
+    \begin{pspicture}(-1,0)(7,0)
+      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
+      \psline[linewidth=2pt, linecolor=cyan]{o->}(2,0)(7,0)
+    \end{pspicture}	
+  \end{figure}
+  \vspace{1cm}
+  \begin{equation*}
+   \text{Notación conjunto: } \left\{x\in\RR:x> 2\right\} 
+ \end{equation*}
+ \vspace{.5cm}
+  \begin{equation*}
+    \text{Notación intervalo: } \mathopen] 2,+\infty \mathopen[
+      \end{equation*}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Intervalos en $\RR$}
+  \begin{exampleblock}{Intervalo no acotado o infinito}
+    \vspace{1cm}
+  \begin{figure}[H]
+    \centering
+    Representación gráfica: 
+    \psset{xunit=1cm, yunit=1cm, yAxis=false}
+    \begin{pspicture}(-1,0)(7,0)
+      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
+      \psline[linewidth=2pt, linecolor=cyan]{<-*}(-1,0)(4,0)
+    \end{pspicture}	
+  \end{figure}
+  \vspace{1cm}
+  \begin{equation*}
+   \text{Notación conjunto: } \left\{x\in\RR:x\leq 4\right\} 
+ \end{equation*}
+ \vspace{.5cm}
+  \begin{equation*}
+    \text{Notación intervalo: } \mathopen] -\infty,4 \mathclose]
+      \end{equation*}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Intervalos en $\RR$}
+  \begin{exampleblock}{Intervalo no acotado o infinito}
+    \vspace{1cm}
+  \begin{figure}[H]
+    \centering
+    Representación gráfica: 
+    \psset{xunit=1cm, yunit=1cm, yAxis=false}
+    \begin{pspicture}(-1,0)(7,0)
+      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
+      \psline[linewidth=2pt, linecolor=cyan]{<-o}(-1,0)(4,0)
+    \end{pspicture}	
+  \end{figure}
+  \vspace{1cm}
+  \begin{equation*}
+   \text{Notación conjunto: } \left\{x\in\RR:x<4\right\} 
+ \end{equation*}
+ \vspace{.5cm}
+  \begin{equation*}
+    \text{Notación intervalo: } \mathopen] -\infty,4 \mathclose[
+      \end{equation*}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{Actividades}
+\begin{frame}
+  \frametitle{Actividades}
+  \begin{exampleblock}{Encuentra tres números que pertenezcan a cada uno de los intervalos}
+    \begin{enumerate}
+    \item $\mathopen]0,1\mathopen[$
+    \item $\mathopen]1.41,\sqrt{2}\mathopen[$
+    \item $\mathopen]\pi,4\mathclose]$
+    \item $\mathopen]-0.001,0\mathopen[$
+    \item $\mathopen]\sqrt{2},\sqrt{3}\mathopen[$
+    \end{enumerate}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Actividades}
+  \begin{exampleblock}{Exprese como intervalo y represente gráficamente}
+    \begin{enumerate}
+    \item $\left\{ x\in\RR/-\sqrt{3}<x \right\}$
+    \item $\left\{ x\in\RR/\frac{1}{5}<x\leq1.33 \right\}$
+    \item $\left\{ x\in\RR/0<x\leq0.5 \right\}$
+    \item $\left\{ x\in\RR/x\leq-3 \right\}$
+    \item $\left\{ x\in\RR/x>\frac{4}{5} \right\}$
+    \end{enumerate}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Desafío}
+  \begin{alertblock}{Considere los números $0$, $\pi$, $\sqrt{2}$ y $\frac{3}{4}$}
+    \begin{enumerate}
+    \item Encuentra un intervalo que contenga todos estos números.
+    \item Encuentra un intervalo que no contenga ninguno de ellos.
+      \item Para cada número, encuentra un intervalo cerrado que lo contenga y cuyos extremos sean números
+        enteros consecutivos.
+    \end{enumerate}
+  \end{alertblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}[c]\frametitle{Apéndice}
+\centering\decofourleft\quad\decofourright
+
+\textbf{\emph {¡Carpe diem!}}
+
+Una copia del presente trabajo, se encuentra en el enlace \framedhref{\talkpubpdf}{\talktitle}.
+\end{frame}
+\end{document}
+%-------------------------------------------------------------------------------------------------------
+%!TEX program = xelatex
