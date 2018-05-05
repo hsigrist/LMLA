@@ -1,6 +1,6 @@
 \documentclass[12pt,spanish,x11names]{beamer}
-%-------------------------------------------------------------------------------------------------------
-% \usepackage{pgfpages}
+% -------------------------------------------------------------------------------------------------------
+\usepackage{pgfpages}
 % \setbeameroption{hide notes}
 % \setbeameroption{show notes}
 % \setbeameroption{show notes on second screen=right}
@@ -32,12 +32,12 @@
 \def\talkcar{4TP}
 \def\talkdate{\today}
 \def\talkversion{}
-\def\talktitle{Inecuaciones}
-\def\talksubtitle{Desigualdades e inecuaciones en $\RR$}
-\def\talkkeywords{orden en $\RR$, desigualdades, inecuaciones}
+\def\talktitle{Operatoria con conjuntos soluciones}
+\def\talksubtitle{Álgebra de conjuntos en $\RR$}
+\def\talkkeywords{uniones, intersecciones, representación gráfica, desigualdades}
 \def\talksubject{geometría analítica}
 \def\talkblog{https://hsigrist.github.io}
-\def\talkpubpdf{https://github.com/hsigrist/LMLA/raw/5b668c7453dc0470751b70416457501cc4c6ca61/4TP/talks/inecuaciones.pdf}
+\def\talkpubpdf{}
 \def\talkcopyright{\myauthor}
 \def\talkaffiliation{Liceo Mixto Los Andes}
 \def\talkauthor{Hans Sigrist}
@@ -83,281 +83,107 @@
 \titlepage
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
-\section{Expresar información por medio de desigualdades}
+\section{Operatoria en conjuntos}
 \begin{frame}
-  \frametitle{Conexiones con la industria}
-  \begin{exampleblock}{Expresar por medio de desigualdades}
-    \begin{description}
-    \item[Medio Ambiente] Se considera que la calidad del aire es ``regular'' si el índice de
-      calidad del aire por material particulado (ICAP) es superior a $100$ y
-      menor o igual a $200$.
-    \item[Medicina] En un examen que mide la cantidad de glucosa en la sangre de
-      una persona adulta, se consideran normales los valores que van de $64$ a
-      $110 mg/dL$ (miligramos por decilitro).
-    \item[Física] La longitud de onda
-      de la luz visible es superior a $380 nm$ y menor o igual a $780 nm$.
-    \end{description}
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Modelos suyos}
-  \begin{exampleblock}{}
-    \begin{enumerate}
-    \item $r<6$
-    \item $P\geq 4.95$
-    \item $R<4.45$
-    \item $m<n-15$
-    \item $a+b<132$
-    \end{enumerate}
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Definición}
-  \begin{block}{Desigualdad}
-    Se denomina \textbf{desigualdad} a toda relación de orden que se establece entre números reales u otras
-    expresiones matemáticas, mediante la comparación:
-    \begin{itemize}
-    \item ``menor que'' ($<$),
-    \item ``menor o igual que'' ($\leq$),
-    \item ``mayor que'' ($>$) o
-    \item ``mayor o igual que'' ($\geq$).
-    \end{itemize}
-  \end{block}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\section{Representación gráfica de $\RR$}
-\begin{frame}
-  \frametitle{Intervalos en $\RR$}
-  \begin{exampleblock}{Intervalo cerrado}
+  \frametitle{Nuevos intervalos en $\RR$}
+  \begin{exampleblock}{Problema}
+  Considere los intervalos $A=\mathclose[ 1,5 \mathclose]$, $B=\mathopen]
+  3,+\infty \mathopen[$. Determine $A\cup B$ y $A\cap B$.
+     \begin{figure}[H]
+      \centering
+      \psset{xunit=.5cm, yunit=.5cm, yAxis=false}
+      \begin{pspicture}(-1,0)(11,0)
+        \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(12,0)
+        \psline[linewidth=2pt, linecolor=cyan]{*-*}(1,0)(5,0)
+        \psline[linewidth=2pt, linecolor=red]{o->}(3,0)(13,0)
+        \uput[-90](3,2){$A$}
+        \uput[-90](10,2){$B$}
+      \end{pspicture}	
+    \end{figure}
+     \pause
+    \vspace{.4cm}
+   \begin{figure}[H]
+      \centering
+      \psset{xunit=.5cm, yunit=.5cm, yAxis=false}
+      \begin{pspicture}(-1,0)(11,0)
+        \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(12,0)
+        \psline[linewidth=2pt, linecolor=green]{*->}(1,0)(13,0)
+        \uput[-90](7,2){$A\cup B$}
+      \end{pspicture}	
+    \end{figure}
+   \pause
+    \vspace{.4cm}
+   \begin{figure}[H]
+      \centering
+      \psset{xunit=1cm, yunit=1cm, yAxis=false}
+      \begin{pspicture}(0,0)(4,0)
+        \psaxes[Dx=1,subticks=1]{<->}(0,0)(-1,0)(6,0)
+        \psline[linewidth=2pt,linecolor=blue]{o-*}(3,0)(5,0)
+        \uput[-90](4,.8){$A\cap B$}
+      \end{pspicture}	
+    \end{figure}
     \vspace{1cm}
-  \begin{figure}[H]
-    \centering
-    Representación gráfica: 
-    \psset{xunit=1cm, yunit=1cm, yAxis=false}
-    \begin{pspicture}(-1,0)(7,0)
-      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
-      \psline[linewidth=2pt, linecolor=cyan]{*-*}(2,0)(4,0)
-    \end{pspicture}	
-  \end{figure}
-  \vspace{1cm}
-  \begin{equation*}
-   \text{Notación conjunto: } \left\{x\in\RR:2\leq x\leq 4\right\} 
- \end{equation*}
- \vspace{.5cm}
-  \begin{equation*}
-   \text{Notación intervalo: } \left[ 2,4 \right] 
-  \end{equation*}
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Intervalos en $\RR$}
-  \begin{exampleblock}{Intervalo abierto}
-    \vspace{1cm}
-  \begin{figure}[H]
-    \centering
-    Representación gráfica: 
-    \psset{xunit=1cm, yunit=1cm, yAxis=false}
-    \begin{pspicture}(-1,0)(7,0)
-      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
-      \psline[linewidth=2pt, linecolor=cyan]{o-o}(2,0)(4,0)
-    \end{pspicture}	
-  \end{figure}
-  \vspace{1cm}
-  \begin{equation*}
-   \text{Notación conjunto: } \left\{x\in\RR:2< x< 4\right\} 
- \end{equation*}
- \vspace{.5cm}
-  \begin{equation*}
-    \text{Notación intervalo: } \mathopen] 2,4 \mathclose[
-      \end{equation*}
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Intervalos en $\RR$}
-  \begin{exampleblock}{Intervalo semi-abierto}
-    \vspace{1cm}
-  \begin{figure}[H]
-    \centering
-    Representación gráfica: 
-    \psset{xunit=1cm, yunit=1cm, yAxis=false}
-    \begin{pspicture}(-1,0)(7,0)
-      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
-      \psline[linewidth=2pt, linecolor=cyan]{*-o}(2,0)(4,0)
-    \end{pspicture}	
-  \end{figure}
-  \vspace{1cm}
-  \begin{equation*}
-   \text{Notación conjunto: } \left\{x\in\RR:2\leq x< 4\right\} 
- \end{equation*}
- \vspace{.5cm}
-  \begin{equation*}
-    \text{Notación intervalo: } \mathclose[ 2,4 \mathclose[
-      \end{equation*}
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Intervalos en $\RR$}
-  \begin{exampleblock}{Intervalo semi-abierto}
-    \vspace{1cm}
-  \begin{figure}[H]
-    \centering
-    Representación gráfica: 
-    \psset{xunit=1cm, yunit=1cm, yAxis=false}
-    \begin{pspicture}(-1,0)(7,0)
-      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
-      \psline[linewidth=2pt, linecolor=cyan]{o-*}(2,0)(4,0)
-    \end{pspicture}	
-  \end{figure}
-  \vspace{1cm}
-  \begin{equation*}
-   \text{Notación conjunto: } \left\{x\in\RR:2< x\leq 4\right\} 
- \end{equation*}
- \vspace{.5cm}
-  \begin{equation*}
-    \text{Notación intervalo: } \mathopen] 2,4 \mathclose]
-      \end{equation*}
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Intervalos en $\RR$}
-  \begin{exampleblock}{Intervalo no acotado o infinito}
-    \vspace{1cm}
-  \begin{figure}[H]
-    \centering
-    Representación gráfica: 
-    \psset{xunit=1cm, yunit=1cm, yAxis=false}
-    \begin{pspicture}(-1,0)(7,0)
-      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
-      \psline[linewidth=2pt, linecolor=cyan]{*->}(2,0)(7,0)
-    \end{pspicture}	
-  \end{figure}
-  \vspace{1cm}
-  \begin{equation*}
-   \text{Notación conjunto: } \left\{x\in\RR:x\geq 2 \right\} 
- \end{equation*}
- \vspace{.5cm}
-  \begin{equation*}
-    \text{Notación intervalo: } \mathclose[ 2,+\infty \mathopen[
-      \end{equation*}
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Intervalos en $\RR$}
-  \begin{exampleblock}{Intervalo no acotado o infinito}
-    \vspace{1cm}
-  \begin{figure}[H]
-    \centering
-    Representación gráfica: 
-    \psset{xunit=1cm, yunit=1cm, yAxis=false}
-    \begin{pspicture}(-1,0)(7,0)
-      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
-      \psline[linewidth=2pt, linecolor=cyan]{o->}(2,0)(7,0)
-    \end{pspicture}	
-  \end{figure}
-  \vspace{1cm}
-  \begin{equation*}
-   \text{Notación conjunto: } \left\{x\in\RR:x> 2\right\} 
- \end{equation*}
- \vspace{.5cm}
-  \begin{equation*}
-    \text{Notación intervalo: } \mathopen] 2,+\infty \mathopen[
-      \end{equation*}
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Intervalos en $\RR$}
-  \begin{exampleblock}{Intervalo no acotado o infinito}
-    \vspace{1cm}
-  \begin{figure}[H]
-    \centering
-    Representación gráfica: 
-    \psset{xunit=1cm, yunit=1cm, yAxis=false}
-    \begin{pspicture}(-1,0)(7,0)
-      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
-      \psline[linewidth=2pt, linecolor=cyan]{<-*}(-1,0)(4,0)
-    \end{pspicture}	
-  \end{figure}
-  \vspace{1cm}
-  \begin{equation*}
-   \text{Notación conjunto: } \left\{x\in\RR:x\leq 4\right\} 
- \end{equation*}
- \vspace{.5cm}
-  \begin{equation*}
-    \text{Notación intervalo: } \mathopen] -\infty,4 \mathclose]
-      \end{equation*}
-  \end{exampleblock}
-\end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Intervalos en $\RR$}
-  \begin{exampleblock}{Intervalo no acotado o infinito}
-    \vspace{1cm}
-  \begin{figure}[H]
-    \centering
-    Representación gráfica: 
-    \psset{xunit=1cm, yunit=1cm, yAxis=false}
-    \begin{pspicture}(-1,0)(7,0)
-      \psaxes[Dx=1, subticks=1]{<->}(0,0)(-1,0)(6,0)
-      \psline[linewidth=2pt, linecolor=cyan]{<-o}(-1,0)(4,0)
-    \end{pspicture}	
-  \end{figure}
-  \vspace{1cm}
-  \begin{equation*}
-   \text{Notación conjunto: } \left\{x\in\RR:x<4\right\} 
- \end{equation*}
- \vspace{.5cm}
-  \begin{equation*}
-    \text{Notación intervalo: } \mathopen] -\infty,4 \mathclose[
-      \end{equation*}
   \end{exampleblock}
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
 \section{Actividades}
 \begin{frame}
   \frametitle{Actividades}
-  \begin{exampleblock}{Encuentra tres números que pertenezcan a cada uno de los intervalos}
-    \begin{enumerate}
-    \item $\mathopen]0,1\mathopen[$
-    \item $\mathopen]1.41,\sqrt{2}\mathopen[$
-    \item $\mathopen]\pi,4\mathclose]$
-    \item $\mathopen]-0.001,0\mathopen[$
-    \item $\mathopen]\sqrt{2},\sqrt{3}\mathopen[$
-    \end{enumerate}
+  \begin{exampleblock}{Determina las siguientes uniones e intersecciones de intervalos. Expresa tu
+resultado como intervalo y represéntalo gráficamente en la recta real.}
+\begin{enumerate}
+\item $\mathclose[ 2,5 \mathclose[\cup \mathopen]3,18\mathclose[$ 
+\item $\mathopen] -5,1 \mathopen]\cap \mathopen]1,7\mathclose[$ 
+\item $\mathclose[ -\frac{7}{4},\frac{5}{3} \mathclose[\cup \mathopen] 0,+\infty\mathclose[$ 
+\item $\mathclose[ -\frac{7}{4},\frac{5}{3} \mathclose[\cap \mathopen]
+  0,+\infty\mathclose[$
+  \item $\mathclose[ 0,1 \mathclose[\cap \left(\mathopen] -3,1 \mathclose[ \cap
+      \mathclose[0,5 \mathopen] \right)$
+\end{enumerate}
   \end{exampleblock}
 \end{frame}
 %-------------------------------------------------------------------------------------------------------
 \begin{frame}
   \frametitle{Actividades}
-  \begin{exampleblock}{Exprese como intervalo y represente gráficamente}
-    \begin{enumerate}
-    \item $\left\{ x\in\RR/-\sqrt{3}<x \right\}$
-    \item $\left\{ x\in\RR/\frac{1}{5}<x\leq1.33 \right\}$
-    \item $\left\{ x\in\RR/0<x\leq0.5 \right\}$
-    \item $\left\{ x\in\RR/x\leq-3 \right\}$
-    \item $\left\{ x\in\RR/x>\frac{4}{5} \right\}$
-    \end{enumerate}
+  \begin{exampleblock}{Escribe una unión o intersección de intervalos cuyo conjunto solución esté representado en las
+      siguientes figuras.}
+    \vspace{1cm} 
+       \begin{figure}[H]
+      \centering
+      \psset{xunit=1cm, yunit=1cm, yAxis=false}
+      \begin{pspicture}(0,0)(4,0)
+        \psaxes[Dx=1,subticks=1]{<->}(0,0)(-1,0)(5,0)
+        \psline[linewidth=2pt,linecolor=blue]{o->}(3,0)(5,0)
+      \end{pspicture}	
+    \end{figure}
+
+        \begin{figure}[H]
+      \centering
+      \psset{xunit=1.5cm, yunit=1.5cm, yAxis=false}
+      \begin{pspicture}(-2,0)(2,0)
+        \psaxes[Dx=1,subticks=1]{<->}(0,0)(-2,0)(2,0)
+        \psline[linewidth=2pt,linecolor=green]{o-*}(-0.4,0)(0,0)
+        \uput[-90](-0.4,.6){$-2/5$}
+      \end{pspicture}	
+    \end{figure}
+
+      \begin{figure}[H]
+      \centering
+      \psset{xunit=.7cm, yunit=.7cm, yAxis=false}
+      \begin{pspicture}(-1,0)(8,0)
+        \psaxes[Dx=1,subticks=1]{<->}(0,0)(-1,0)(8,0)
+        \psline[linewidth=2pt,linecolor=blue]{*-*}(1.5,0)(6.33,0)
+        \uput[-90](1.5,1.3){$3/2$}
+        \uput[-90](6.3,1.3){$19/3$}
+      \end{pspicture}	
+    \end{figure}
+
+    \vspace{1cm} 
   \end{exampleblock}
 \end{frame}
-%-------------------------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Desafío}
-  \begin{alertblock}{Considere los números $0$, $\pi$, $\sqrt{2}$ y $\frac{3}{4}$}
-    \begin{enumerate}
-    \item Encuentra un intervalo que contenga todos estos números.
-    \item Encuentra un intervalo que no contenga ninguno de ellos.
-      \item Para cada número, encuentra un intervalo cerrado que lo contenga y cuyos extremos sean números
-        enteros consecutivos.
-    \end{enumerate}
-  \end{alertblock}
-\end{frame}
+
+
+
 %-------------------------------------------------------------------------------------------------------
 \begin{frame}[c]\frametitle{Apéndice}
 \centering\decofourleft\quad\decofourright
