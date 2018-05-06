@@ -61,9 +61,9 @@
 %-------------------------------------------------------------------------------------------------------
 \hypersetup{pdfpagemode=FullScreen,colorlinks,linkcolor=,citecolor=black,urlcolor=links,pdftitle={pdftitle},pdfauthor={\talkauthor},pdfsubject={\talksubject},pdfkeywords={\talkkeywords}}
 %-------------------------------------------------------------------------------------------------------
-\setmainfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Biolinum
+\setmainfont[Mapping={tex-text},Ligatures=TeX]{Linux Biolinum
     O}
-\setsansfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Libertine
+\setsansfont[Mapping={tex-text},Ligatures=TeX]{Linux Libertine
     O}
 \setmonofont[Mapping={tex-text},Numbers={OldStyle},Ligatures=Rare,Scale=0.8]{Pragmata
     Pro Mono}
@@ -100,12 +100,73 @@ que la edad de su abuelo?}
     \end{align*}
   \end{exampleblock}
 \end{frame}
-
-
-
-
-
-
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Definición}
+  \begin{block}{Inecuación}
+    \begin{itemize}
+    \item Una \textbf{inecuación} es una \alert{desigualdad} que tiene una o más incógnitas. Para
+    resolverla, debemos encontrar todos los valores de las incógnitas que hacen
+    verdadera la desigualdad.
+    \item El conjunto solución de una inecuación con una incógnita se puede
+    representar mediante un \textbf{intervalo}, o bien, \textbf{gráficamente} en la recta numérica.
+    \end{itemize}
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Ejemplo}
+  \begin{exampleblock}{Determina el conjunto solución de $x-2(x-3)>0$ y
+      represéntalo gráficamente en la recta real.}
+\pause
+\begin{align*}
+  x-2x+6&>0\\
+  -x+6&>0\\
+  6&>x\\
+  \Leftrightarrow x&<6
+\end{align*}
+\begin{figure}[H]
+  \centering
+  \psset{xunit=1cm, yunit=1cm, yAxis=false}
+  \begin{pspicture}(-1,0)(8,0)
+    \psaxes[Dx=1,subticks=1]{<->}(0,0)(-1,0)(8,0)
+    \psline[linewidth=2pt,linecolor=blue]{<-o}(-1,0)(6,0)
+  \end{pspicture}	
+\end{figure}
+\vspace{1cm}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{Actividades}
+\begin{frame}
+  \frametitle{Actividades}
+  \begin{exampleblock}{Resuelve las siguientes inecuaciones lineales con una incógnita. Represente las soluciones como intervalo y gráficamente.}
+\begin{enumerate}
+\item $3+4x<51$
+\item $-3x>18$
+\item $(x+2)(x+1)\geq(x+3)²$
+\item $x+3(x-5)<6-4(2-3x)$
+\item $3\leq\frac{5x-1}{4}$
+\item $\frac{x}{4}+\frac{x}{2}>\frac{x}{3}+4$
+\end{enumerate}
+\end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Actividades}
+  \begin{exampleblock}{Resolución de problemas. Plantee la inecuación en cada
+      caso y represente su solución como conjunto, intervalo y gráficamente.}
+    \begin{enumerate}
+    \item La suma entre un número natural y su sucesor es inferior a $12$. ¿Qué valores
+      puede adoptar tal número?
+    \item Una fábrica paga a sus vendedores $\$880$ por artículo vendido, más
+      una cantidad fija de $\$286100$. Si un vendedor quiere que su sueldo sea
+      superior a $\$340000$, ¿Cuántos artículos debe vender como mínimo?
+    \item La suma de tres números consecutivos es mayor que $60$. ¿Cuál es el
+      menor valor que podría adoptar el número mayor?
+    \end{enumerate}
+  \end{exampleblock}
+\end{frame}
 %-------------------------------------------------------------------------------------------------------
 \begin{frame}[c]\frametitle{Apéndice}
 \centering\decofourleft\quad\decofourright

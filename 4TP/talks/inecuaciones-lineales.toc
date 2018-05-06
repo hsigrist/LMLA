@@ -1,3 +1,4 @@
 \select@language {spanish}
 \select@language {spanish}
 \beamer@sectionintoc {1}{Inecuaciones}{2}{0}{1}
+\beamer@sectionintoc {2}{Actividades}{8}{0}{2}

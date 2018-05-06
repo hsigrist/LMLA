@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.4.26)  5 MAY 2018 20:35
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.4.26)  5 MAY 2018 21:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2092,26 +2092,26 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 62.
 . fontspec info: "defining-font"
 . 
 . Font family 'LinuxBiolinumO(0)' created for font 'Linux Biolinum O' with
-. options [Ligatures=TeX,Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX].
+. options [Ligatures=TeX,Mapping={tex-text},Ligatures=TeX].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
 . - 'normal' (m/n) with NFSS spec.: <->"Linux Biolinum
-. O/OT:script=latn;language=DFLT;+onum;mapping=tex-text;"
+. O/OT:script=latn;language=DFLT;mapping=tex-text;"
 . - 'small caps'  (m/sc) with NFSS spec.: <->"Linux Biolinum
-. O/OT:script=latn;language=DFLT;+onum;+smcp;mapping=tex-text;"
+. O/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
 . - 'bold' (bx/n) with NFSS spec.: <->"Linux Biolinum
-. O/B/OT:script=latn;language=DFLT;+onum;mapping=tex-text;"
+. O/B/OT:script=latn;language=DFLT;mapping=tex-text;"
 . - 'bold small caps'  (bx/sc) with NFSS spec.: <->"Linux Biolinum
-. O/B/OT:script=latn;language=DFLT;+onum;+smcp;mapping=tex-text;"
+. O/B/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
 . - 'italic' (m/it) with NFSS spec.: <->"Linux Biolinum
-. O/I/OT:script=latn;language=DFLT;+onum;mapping=tex-text;"
+. O/I/OT:script=latn;language=DFLT;mapping=tex-text;"
 . - 'italic small caps'  (m/itsc) with NFSS spec.: <->"Linux Biolinum
-. O/I/OT:script=latn;language=DFLT;+onum;+smcp;mapping=tex-text;"
+. O/I/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
 . - 'bold italic' (bx/it) with NFSS spec.: <->"Linux Biolinum
-. O/BI/OT:script=latn;language=DFLT;+onum;mapping=tex-text;"
+. O/BI/OT:script=latn;language=DFLT;mapping=tex-text;"
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: <->"Linux Biolinum
-. O/BI/OT:script=latn;language=DFLT;+onum;+smcp;mapping=tex-text;"
+. O/BI/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
 .................................................
 LaTeX Info: Redefining \rmfamily on input line 65.
 \g__fontspec_family_LinuxLibertineO_int=\count426
@@ -2119,26 +2119,26 @@ LaTeX Info: Redefining \rmfamily on input line 65.
 . fontspec info: "defining-font"
 . 
 . Font family 'LinuxLibertineO(0)' created for font 'Linux Libertine O' with
-. options [Ligatures=TeX,Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX].
+. options [Ligatures=TeX,Mapping={tex-text},Ligatures=TeX].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
 . - 'normal' (m/n) with NFSS spec.: <->"Linux Libertine
-. O/OT:script=latn;language=DFLT;+onum;mapping=tex-text;"
+. O/OT:script=latn;language=DFLT;mapping=tex-text;"
 . - 'small caps'  (m/sc) with NFSS spec.: <->"Linux Libertine
-. O/OT:script=latn;language=DFLT;+onum;+smcp;mapping=tex-text;"
+. O/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
 . - 'bold' (bx/n) with NFSS spec.: <->"Linux Libertine
-. O/B/OT:script=latn;language=DFLT;+onum;mapping=tex-text;"
+. O/B/OT:script=latn;language=DFLT;mapping=tex-text;"
 . - 'bold small caps'  (bx/sc) with NFSS spec.: <->"Linux Libertine
-. O/B/OT:script=latn;language=DFLT;+onum;+smcp;mapping=tex-text;"
+. O/B/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
 . - 'italic' (m/it) with NFSS spec.: <->"Linux Libertine
-. O/I/OT:script=latn;language=DFLT;+onum;mapping=tex-text;"
+. O/I/OT:script=latn;language=DFLT;mapping=tex-text;"
 . - 'italic small caps'  (m/itsc) with NFSS spec.: <->"Linux Libertine
-. O/I/OT:script=latn;language=DFLT;+onum;+smcp;mapping=tex-text;"
+. O/I/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
 . - 'bold italic' (bx/it) with NFSS spec.: <->"Linux Libertine
-. O/BI/OT:script=latn;language=DFLT;+onum;mapping=tex-text;"
+. O/BI/OT:script=latn;language=DFLT;mapping=tex-text;"
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: <->"Linux Libertine
-. O/BI/OT:script=latn;language=DFLT;+onum;+smcp;mapping=tex-text;"
+. O/BI/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
 .................................................
 LaTeX Info: Redefining \sffamily on input line 67.
 
@@ -2498,12 +2498,27 @@ LaTeX Font Info:    Font shape `TU/PragmataProMono(0)/m/n' will be
 
 ] [4
 
+] [5
+
+] [6
+
+] [7
+
 ]
-LaTeX Font Info:    Try loading font information for U+futs on input line 116.
+(./inecuaciones-lineales.toc) [8
+
+]
+Missing character: There is no ² in font cmss12!
+ [9
+
+] [10
+
+]
+LaTeX Font Info:    Try loading font information for U+futs on input line 177.
 
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/ufuts.fd
 File: ufuts.fd 2004/03/26 Fontinst v1.926 font definitions for U/futs.
-) [5
+) [11
 
 ]
 \tf@nav=\write8
@@ -2515,20 +2530,20 @@ File: ufuts.fd 2004/03/26 Fontinst v1.926 font definitions for U/futs.
 \tf@snm=\write10
 \openout10 = `inecuaciones-lineales.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 117.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 117.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 178.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 178.
 
 (./inecuaciones-lineales.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 117.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 117.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 178.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 178.
  ) 
 Here is how much of TeX's memory you used:
- 47391 strings out of 493007
- 981860 string characters out of 6136719
- 1175225 words of memory out of 5000000
- 50397 multiletter control sequences out of 15000+600000
+ 47474 strings out of 493007
+ 983901 string characters out of 6136719
+ 1181159 words of memory out of 5000000
+ 50478 multiletter control sequences out of 15000+600000
  546139 words of font info for 89 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 58i,16n,94p,10432b,777s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,16n,94p,10432b,974s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on inecuaciones-lineales.pdf (5 pages).
+Output written on inecuaciones-lineales.pdf (11 pages).
