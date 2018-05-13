@@ -1,0 +1,116 @@
+\documentclass[12pt,spanish,x11names]{beamer}
+%-------------------------------------------------------------------------------------------------------
+% \usepackage{pgfpages}
+% \setbeameroption{hide notes}
+% \setbeameroption{show notes}
+% \setbeameroption{show notes on second screen=right}
+\usetheme{Hytex}
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme[RGB={7,29,66}]{structure}
+\usepackage{tcolorbox}
+\usepackage{fourier}
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usepackage[style=spanish]{csquotes}
+\usepackage{pstricks-add}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{pgf,tikz}
+\usetikzlibrary{mindmap,trees,arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{marvosym}
+\setbeamertemplate{caption}[numbered]
+\usepackage{hyperref}
+%-------------------------------------------------------------------------------------------------------
+\def\talkclass{Presentación}
+\def\talkcar{3HC}
+\def\talkdate{\today}
+\def\talkversion{}
+\def\talktitle{Modelos Analíticos}
+\def\talksubtitle{Evaluación}
+\def\talkkeywords{pendiente, razones trigonométricas, distancia entre dos
+  puntos, transversal de gravedad, punto medio}
+\def\talksubject{geometría analítica}
+\def\talkblog{https://hsigrist.github.io}
+\def\talkpubpdf{https://www.dropbox.com/s/tuhjx03333fl5vu/todo-es-bullying.pdf?dl=0}
+\def\talkcopyright{\myauthor}
+\def\talkaffiliation{Liceo Mixto Los Andes}
+\def\talkauthor{Hans Sigrist}
+\def\talkgrade{Lic. \& Mag. Matemática}
+\def\talkemail{hsigrist@liceomixto.cl}
+\definecolor{links}{HTML}{000000}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\ZZ{\mathbb{Z}}
+\def\QQ{\mathbb{Q}}
+\def\II{\mathbb{I}}
+\definecolor{bluu}{RGB}{7,29,66}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{bluu}{bluu}{\textcolor{white}{#2}}}}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{proposicion}[teorema]{Proposición}
+\newtheorem{corolario}[teorema]{Corolario}
+\newtheorem{definicion}[teorema]{Definición}
+\newtheorem{ejemplo}[teorema]{Ejemplo}
+\newtheorem{nota}[teorema]{Nota}
+%-------------------------------------------------------------------------------------------------------
+\hypersetup{pdfpagemode=FullScreen,colorlinks,linkcolor=,citecolor=black,urlcolor=links,pdftitle={pdftitle},pdfauthor={\talkauthor},pdfsubject={\talksubject},pdfkeywords={\talkkeywords}}
+%-------------------------------------------------------------------------------------------------------
+\setmainfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Biolinum
+    O}
+\setsansfont[Mapping={tex-text},Numbers={OldStyle},Ligatures=TeX]{Linux Libertine
+    O}
+\setmonofont[Mapping={tex-text},Numbers={OldStyle},Ligatures=Rare,Scale=0.8]{Pragmata
+    Pro Mono}
+%-------------------------------------------------------------------------------------------------------
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\everymath{\displaystyle}
+\AtBeginSection[]{\begin{frame}<beamer>\frametitle{Agenda}\tableofcontents[sectionstyle=show/hide,subsectionstyle=hide/show/hide,currentsection]\end{frame}\addtocounter{framenumber}{-1}}
+%-------------------------------------------------------------------------------------------------------
+\title{\talktitle}
+\subtitle{\talksubtitle}
+\author{\talkauthor}
+\institute{\talkaffiliation}
+\date{\footnotesize{\emph{\href{\talkblog}{\talkemail}}}}
+%-------------------------------------------------------------------------------------------------------
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+% \section{Elementos del triángulo}
+\begin{frame}
+  \frametitle{Transversal de gravedad}
+  \begin{minipage}[t]{.5\linewidth}
+    \begin{enumerate}
+    \item $A(\ 1,0 \ )$
+    \item $B(\ 4,1 \ )$
+    \item $C(\ 2,5 \ )$
+    \item $D(\ 3,3 \ )$
+    \item $d(A,B)=\sqrt{10}\sim 3.2cm$
+    \item $d(B,C)=2\sqrt{5}\sim 4.5cm$
+    \item $d(C,A)=\sqrt{26}\sim 5.1cm$
+    \item $d(A,D)=\sqrt{13}\sim 3.6cm$
+    \item $d(D,B)=\sqrt{5}\sim 2.2cm$
+    \item $d(D,C)=\sqrt{5}\sim 2.2cm$
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}[t]{.45\linewidth}
+    \begin{enumerate}
+    \item (ec. principal) $t_A:y=\frac{3}{2}x-\frac{3}{2}$
+    \item (ec. general) $t_A:-3x+2y+3=0$
+    \item $P_{\triangle ABC}=\sqrt{10}+2\sqrt{5}+\sqrt{26}\sim 12.8 cm$
+    \item $A_{\triangle ABC}=7cm^2$
+    \end{enumerate}
+  \end{minipage}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\end{document}
+%-------------------------------------------------------------------------------------------------------
+% !TEX program = xelatex

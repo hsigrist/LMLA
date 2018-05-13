@@ -1,0 +1,319 @@
+\documentclass[12pt,spanish,x11names]{beamer}
+% -------------------------------------------------------------------------------------------------------
+\usepackage{pgfpages}
+% \setbeameroption{hide notes}
+% \setbeameroption{show notes}
+% \setbeameroption{show notes on second screen=right}
+\usetheme{Hytex}
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme[RGB={7,29,66}]{structure}
+\usepackage{tcolorbox}
+\usepackage{fourier}
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\usepackage[style=spanish]{csquotes}
+\usepackage{pstricks-add}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{pgf,tikz}
+\usetikzlibrary{mindmap,trees,arrows}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{marvosym}
+\setbeamertemplate{caption}[numbered]
+\usepackage{hyperref}
+%-------------------------------------------------------------------------------------------------------
+\def\talkclass{Presentación}
+\def\talkcar{4TP}
+\def\talkdate{\today}
+\def\talkversion{}
+\def\talktitle{La circunferencia}
+\def\talksubtitle{Secciones cónicas como lugares geométricos}
+\def\talkkeywords{circunferencia}
+\def\talksubject{secciones cónicas}
+\def\talkblog{https://hsigrist.github.io}
+\def\talkpubpdf{}
+\def\talkcopyright{\myauthor}
+\def\talkaffiliation{Liceo Mixto Los Andes}
+\def\talkauthor{Hans Sigrist}
+\def\talkgrade{Lic. \& Mag. Matemática}
+\def\talkemail{hsigrist@liceomixto.cl}
+\definecolor{links}{HTML}{000000}
+\def\NN{\mathbb{N}}
+\def\RR{\mathbb{R}}
+\def\ZZ{\mathbb{Z}}
+\def\QQ{\mathbb{Q}}
+\def\II{\mathbb{I}}
+\definecolor{bluu}{RGB}{7,29,66}
+\newcommand{\framedhref}[2]{\href{#1}{\fcolorbox{bluu}{bluu}{\textcolor{white}{#2}}}}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{proposicion}[teorema]{Proposición}
+\newtheorem{corolario}[teorema]{Corolario}
+\newtheorem{definicion}[teorema]{Definición}
+\newtheorem{ejemplo}[teorema]{Ejemplo}
+\newtheorem{nota}[teorema]{Nota}
+%-------------------------------------------------------------------------------------------------------
+\hypersetup{pdfpagemode=FullScreen,colorlinks,linkcolor=,citecolor=black,urlcolor=links,pdftitle={pdftitle},pdfauthor={\talkauthor},pdfsubject={\talksubject},pdfkeywords={\talkkeywords}}
+%-------------------------------------------------------------------------------------------------------
+\setmainfont[Mapping={tex-text},Ligatures=TeX]{Linux Biolinum
+    O}
+\setsansfont[Mapping={tex-text},Ligatures=TeX]{Linux Libertine
+    O}
+\setmonofont[Mapping={tex-text},Numbers={OldStyle},Ligatures=Rare,Scale=0.8]{Pragmata
+    Pro Mono}
+%-------------------------------------------------------------------------------------------------------
+\graphicspath{{/home/hsigrist/Dropbox/images/}}
+\everymath{\displaystyle}
+\AtBeginSection[]{\begin{frame}<beamer>\frametitle{Agenda}\tableofcontents[sectionstyle=show/hide,subsectionstyle=hide/show/hide,currentsection]\end{frame}\addtocounter{framenumber}{-1}}
+%-------------------------------------------------------------------------------------------------------
+\title{\talktitle}
+\subtitle{\talksubtitle}
+\author{\talkauthor}
+\institute{\talkaffiliation}
+\date{\footnotesize{\emph{\href{\talkblog}{\talkemail}}}}
+%-------------------------------------------------------------------------------------------------------
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\section{La circunferencia como lugar geométrico}
+\begin{frame}
+  \frametitle{Secciones cónicas}
+  \begin{block}{Definición}
+    
+  \begin{minipage}[t]{.4\linewidth}
+    
+  \begin{tikzpicture}[parabola/.style={thick, red}, hyperbola/.style={thick, violet}, circle/.style={thick, blue}]
+    \def\b{2}
+    \def\h{2}
+    \def\p{0.5}
+    \pgfmathsetmacro{\rx}{\b/2}
+    \pgfmathsetmacro{\ry}{\rx*\p}
+    \pgfmathsetmacro{\ta}{90-atan2(\h,\ry)}
+    \fill[gray!50]
+    (0, \h) -- (\ta:\rx+0 and \ry) arc (\ta:180-\ta:\rx+0 and \ry) -- cycle;
+    \fill[gray!75] coordinate (bottom) ellipse [x radius=\rx, y radius=\ry];
+    \draw[dashed] (\ta:\rx+0 and \ry) arc (\ta:180-\ta:\rx+0 and \ry);
+    \draw (0, \h) -- (\ta:\rx+0 and \ry) arc (\ta:-180-\ta:\rx+0 and \ry) -- coordinate[pos=.4](hypbend) cycle;
+    \begin{scope}[rotate around={180:(0,\h)}]
+      \fill[gray!50]
+      (0, \h) -- (\ta:\rx+0 and \ry) arc (\ta:180-\ta:\rx+0 and \ry) -- cycle;
+      \fill[gray!75] coordinate (top) ellipse [x radius=\rx, y radius=\ry];
+      \draw (\ta:\rx+0 and \ry) arc (\ta:180-\ta:\rx+0 and \ry) (0, \h) -- coordinate[pos=.3](parabend) (\ta:\rx+0 and \ry) arc (\ta:-180-\ta:\rx+0 and \ry) -- cycle;
+    \end{scope}
+    %% Dots & Axis
+    \fill (top) circle[radius=1pt] (0,\h) circle[radius=1pt] (bottom) circle[radius=1pt];
+    \draw[dotted] (top) -- (bottom);
+    \draw (top) -- ++(-90:\rx+0 and \ry);
+    %% Parabola
+    \path (top) +(50+50*\p:\rx+0 and \ry) coordinate (tmp) +(-50+50*\p:\rx+0 and \ry) coordinate (tmp2);
+    \draw[parabola] (tmp) ..controls ++(-90:0) and ++(\ta+90:\p).. (parabend) node[left]{Parábola} ..controls ++(\ta-90:\p) and ++(-90:0).. (tmp2);
+    %% Circle
+    \def\pos{0.5}
+    \draw[circle] (0,\pos*\h) ellipse [x radius=\pos*\rx, y radius=\pos*\ry] +(180:\pos*\rx) node[above left]{Círculo};
+    %% Hyperbola
+    \path (bottom) +(130-50*\p:\rx+0 and \ry) coordinate (tmp) +(230+50*\p:\rx+0 and \ry) coordinate (tmp2);
+    \draw[hyperbola] (tmp) ..controls ++(90:0) and ++(90-\ta:0.6*\p).. (hypbend) node[left]{Hipérbola} ..controls ++(-\ta-90:0.6*\p) and ++(90:0).. (tmp2);
+  \end{tikzpicture}
+  \end{minipage}
+  \begin{minipage}[b]{.55\linewidth}
+      Considere $L$ una recta en una posición fija en el espacio y $A$ un punto
+      tal que $A\in L$. Si se trazan infintas rectas $L_1$ que pasan por $A$ y
+      forman un cierto ángulo $\alpha$ con $L$, se genera un \textbf{doble cono
+        de revolución}.
+      \vspace{1cm}
+  \end{minipage}
+    \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{La circunferencia}
+  \begin{block}{Definición}
+    \begin{minipage}[b]{.45\linewidth}
+      \begin{tikzpicture}[scale=.75]
+        \tkzInit[xmax=5,ymax=5]
+        \tkzDrawX \tkzDrawY
+        \tkzDefPoint(3,3){O} \tkzDefPoint(4,4){P}
+        \tkzCalcLength[cm](O,P) \tkzGetLength{rOP}
+        \tkzDrawCircle[R,color=bluu](O,\rOP cm)
+        \tkzDrawPoints(O)
+        \tkzDrawPoints(P)
+        \tkzLabelPoint[below](O){$O(h,k)$}
+        \tkzLabelPoint[above right](P){$P(x,y)$}
+        \tkzDrawSegment(O,P)
+        \tkzLabelSegment(O,P){$r$}
+        \tkzDefPoint(4,0){x}
+        \tkzDefPoint(0,4){y}
+        \tkzDrawSegment[style=dashed](P,x)
+        \tkzDrawSegment[style=dashed](P,y)
+        \tkzLabelPoint[below left](x){$x$}
+        \tkzLabelPoint[left](y){$y$}
+      \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}[b]{.45\linewidth}
+      La circunferencia es el lugar geométrico de todos los puntos $P(x,y)$ del
+      plano que se encuentran a una distancia determinada $r$ de un punto dado
+      $O(h,k)$ de dicho plano.
+      \begin{align*}
+        \mathcal{C}(O,r)&=\left\{ P\in\mathcal{P}/OP=r \right\}
+      \end{align*}
+    \end{minipage}
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Ecuación principal de la circunferencia}
+  \begin{block}{Definición}
+    \begin{align*}
+     (x-h)^2+(y-k)^2&=r^2 
+    \end{align*}
+    Esta expresión corresponde a la ecuación principal de la circunferencia, con
+    $h$ y $k$ las coordenadas del centro y $r$ el radio. 
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Ejemplo}
+  \begin{exampleblock}{Determinar la ecuación principal de la circunferencia
+      cuyo centro es $(4,2)$ y su radio es $3$.}
+\pause
+    \begin{tikzpicture}[scale=.75]
+        \tkzInit[xmax=9,ymax=5, ymin=-2]
+        \tkzDrawX \tkzDrawY
+        \tkzDefPoint(4,2){O} \tkzDefPoint(5.92,4.31){P}
+        \tkzCalcLength[cm](O,P) \tkzGetLength{rOP}
+        \tkzDrawCircle[R,color=green](O,\rOP cm)
+        \tkzDrawPoints(O)
+        \tkzDrawPoints(P)
+        \tkzLabelPoint[below](O){$O(4,2)$}
+        \tkzLabelPoint[above right](P){$P(x,y)$}
+        \tkzDrawSegment(O,P)
+        \tkzLabelSegment[left](O,P){$r=3$}
+        \tkzDefPoint(5.92,0){x}
+        \tkzDefPoint(0,4.31){y}
+        \tkzDrawPoints(x)
+        \tkzDrawPoints(y)
+        \tkzDrawSegment[style=dashed](P,x)
+        \tkzDrawSegment[style=dashed](P,y)
+        \tkzLabelPoint[below left](x){$x$}
+        \tkzLabelPoint[left](y){$y$}
+        \tkzLabelCircle[R,right,text centered](O,\rOP cm)(-1){$(x-4)^2+(y-2)^2=9$}
+      \end{tikzpicture}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{La circunferencia centrada en el origen}
+  \begin{block}{Caso $h=k=0$: ecuación canónica de la circunferencia}
+      \begin{tikzpicture}[scale=.75]
+        \tkzInit[xmax=4,xmin=-4,ymax=4,ymin=-4]
+        \tkzDrawX[noticks] \tkzDrawY[noticks]
+        \tkzDefPoint(0,0){O} \tkzDefPoint(2.56,1.57){P}
+        \tkzCalcLength[cm](O,P) \tkzGetLength{rOP}
+        \tkzDrawCircle[R,color=bluu](O,\rOP cm)
+        \tkzDrawPoints(O)
+        \tkzDrawPoints(P)
+        \tkzLabelPoint[below left](O){$O(0,0)$}
+        \tkzLabelPoint[above right](P){$P(x,y)$}
+        \tkzDrawSegment(O,P)
+        \tkzLabelSegment(O,P){$r$}
+        \tkzDefPoint(2.56,0){x}
+        \tkzDefPoint(0,1.57){y}
+        \tkzDrawPoints(x,y)
+        \tkzDrawSegment[style=dashed](P,x)
+        \tkzDrawSegment[style=dashed](P,y)
+        \tkzLabelPoint[below left](x){$x$}
+        \tkzLabelPoint[left](y){$y$}
+        \tkzLabelCircle[R,right=50pt,text centered](O,\rOP cm)(40){$x^2+y^2=r^2$}
+      \end{tikzpicture}
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Ecuación general de la circunferencia}
+  \begin{block}{Definición}
+    A partir de la ecuación principal de la circunferencia:
+    \begin{align*}
+      (x-h)^2+(y-k)^2&=r^2
+    \end{align*}
+    podemos obtener la denominada \textbf{ecuación general de la
+      circunferencia}:
+    \begin{align*}
+      x^2+y^2+Dx+Ey+F&=0
+    \end{align*}
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Ejemplo}
+  \begin{exampleblock}{Determine los coeficientes $D,E$ y $F$ de la ecuación general de la
+      circunferencia con centro en $(2,5)$ y radio $r=6$.}
+    \begin{align*}
+      h=2,k=5,r=6&\Rightarrow (x-2)^2+(y-5)^2=6\\
+                 &\Rightarrow x^2+y^2-4x-10y-7=0\\
+                 &\Rightarrow D=-4,E=-10\wedge F=-7.
+    \end{align*}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Problema}
+  \begin{exampleblock}{Determine la ecuación de la circunferencia si uno de sus
+      diámetros es el segmento que une los puntos  $A(-5,7)$ y $B(7,-3)$.}
+    \pause
+    \begin{align*}
+      (h,k)&=\left(\frac{-5+7}{2},\frac{7-3}{2}\right)\\
+      &=(1,2)\\
+      \Rightarrow&r=\sqrt{(7-1)^2+(-3-2)^2}\\
+       &=\sqrt{36+25}\\
+      &=\sqrt{61}\\
+      \Rightarrow&(x-1)^2+(y-2)^2=\left(\sqrt{61}\right)^2\\
+      \Rightarrow&x^2+y^2-2x-4y-56=0\qed
+    \end{align*}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Parametrización de una circunferencia}
+  \begin{block}{Depende de tres parámetros}
+    De acuerdo a lo visto anteriormente, la ecuación de una circunferencia se
+    puede escribir en su \alert{forma principal}:
+    \begin{align*}
+      (x-h)^2+(y-k)^2&=r^2
+    \end{align*}
+    o bien, en su \alert{forma general}
+    \begin{align*}
+      x^2+y^2+Dx+Ey+F&=0
+    \end{align*}
+    En ambos casos, la ecuación depende de \alert{tres parámetros}:
+    \begin{align*}
+      h,k,r\hspace{.5cm}\vee\hspace{.5cm} D,E,F
+    \end{align*}
+  \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Problema}
+  \begin{exampleblock}{Encontrar la ecuación de la circunferencia que pasa por
+      los puntos $A(1,0)$, $B(3,-2)$ y $C(1,-4)$}
+    
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+\begin{frame}[c]\frametitle{Apéndice}
+\centering\decofourleft\quad\decofourright
+
+\textbf{\emph {¡Carpe diem!}}
+
+Una copia del presente trabajo, se encuentra en el enlace \framedhref{\talkpubpdf}{\talktitle}.
+\end{frame}
+\end{document}
+%-------------------------------------------------------------------------------------------------------
+%!TEX program = xelatex
