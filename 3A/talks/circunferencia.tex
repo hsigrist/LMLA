@@ -1,5 +1,6 @@
 \documentclass[12pt,spanish,x11names]{beamer}
 % -------------------------------------------------------------------------------------------------------
+\usepackage{systeme}
 \usepackage{pgfpages}
 % \setbeameroption{hide notes}
 % \setbeameroption{show notes}
@@ -37,7 +38,7 @@
 \def\talkkeywords{circunferencia}
 \def\talksubject{secciones cónicas}
 \def\talkblog{https://hsigrist.github.io}
-\def\talkpubpdf{}
+\def\talkpubpdf{https://github.com/hsigrist/LMLA/blob/master/3A/talks/circunferencia.pdf}
 \def\talkcopyright{\myauthor}
 \def\talkaffiliation{Liceo Mixto Los Andes}
 \def\talkauthor{Hans Sigrist}
@@ -303,7 +304,24 @@
   \frametitle{Problema}
   \begin{exampleblock}{Encontrar la ecuación de la circunferencia que pasa por
       los puntos $A(1,0)$, $B(3,-2)$ y $C(1,-4)$}
-    
+    \pause
+
+    \[
+      \systeme*{1+0+D\cdot1+E\cdot0+F=0,9+4+D\cdot3+E\cdot(-2)+F=0,1+16+D\cdot1+E\cdot(-4)+F=0}
+      \systeme*{1+D+F=0,13+3D-2E+F=0,17+D-4E+F=0}
+      \systeme*{D=-2,E=4,F=1}
+    \]
+    \begin{align*}
+      \therefore x^2+y^2-2x+4y+1&=0\qed
+    \end{align*}
+  \end{exampleblock}
+\end{frame}
+%-------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{Problema}
+  \begin{exampleblock}{Encontrar la ecuación de la circunferencia que pasa por
+      los puntos $A(-2,5)$, $B(3,2)$ y $C(0,0)$}
   \end{exampleblock}
 \end{frame}
 %-------------------------------------------------------------------------------------------------------

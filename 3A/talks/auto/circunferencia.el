@@ -17,6 +17,7 @@
     "latex2e"
     "beamer"
     "beamer12"
+    "systeme"
     "pgfpages"
     "tcolorbox"
     "fourier"
